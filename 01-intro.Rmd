@@ -1,0 +1,13 @@
+# Introduction
+
+## Antimicrobial resistance
+
+## Quinolone resistance
+### Resistance mechanisms
+#### Acquired
+#### Intrinsic
+### Current knowledge of status in Norway
+### Current knowledge of status in Europe
+
+## Background of project
+Little to no quinolones or fluoroquinolones are used in Norwegian food production animals. Nonetheless, low levels of Quinolone Resistant _E. coli_ have been observed in a high proportion of the samples after screening with a selective method in the Norwegian monitoring programme for antimicrobial resistance [@NORM/NORM-VET2016]
