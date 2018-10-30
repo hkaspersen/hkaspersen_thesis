@@ -9,10 +9,12 @@ fontsize: 12pt
 linestretch: 1.5
 toc-depth: 1
 documentclass: book
-bibliography: [book.bib, packages.bib, library.bib]
+bibliography: [packages.bib, library.bib]
 biblio-style: apalike
 link-citations: yes
 ---
+# Preface
+
 
 # Acknowledgements
 
