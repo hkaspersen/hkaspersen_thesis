@@ -3,3 +3,5 @@ output_word
 _book
 .Rproj.user
 data
+.Rhistory
+_bookdown_files

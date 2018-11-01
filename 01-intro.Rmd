@@ -1,13 +1,21 @@
 # Introduction
 
 ## Antimicrobial resistance
+Background information on antimicrobial resistance in general, health threats, epidemiology, etc.
 
-## Quinolone resistance
-### Resistance mechanisms
-#### Acquired
-#### Intrinsic
-### Current knowledge of status in Norway
-### Current knowledge of status in Europe
+## Quinolones and fluoroquinolones
+General information on quinolones and fluoroquinolones, timeline, function and binding sites.
+
+## Quinolone resistance mechanisms
+
+- Alteration of drug targets: Mutations in intrinsic genes ( _gyrA_, _gyrB_, _parC_, _parE_ ).
+- Reduced drug accumulation: Overexpression of efflux pumps and reduced expression of porins ( Mutations in _marR_, plasmid-mediated efflux pumps: _oqxAB_ ).
+- Expression of small proteins: Plasmid-mediated _qnr_-genes, _mfp_-genes, _mcbG_.
+- Reduced quinolone activity: Compromised structure of the quinolone molecule by the acetyltransferase _aac(6')-ib-cr_.
+
+## Epidemiology of quinolone resistant _E. coli_
+
+## Bioinformatics
 
 ## Background of project
 Little to no quinolones or fluoroquinolones are used in Norwegian food production animals. Nonetheless, low levels of Quinolone Resistant _E. coli_ have been observed in a high proportion of the samples after screening with a selective method in the Norwegian monitoring programme for antimicrobial resistance [@NORM/NORM-VET2016]

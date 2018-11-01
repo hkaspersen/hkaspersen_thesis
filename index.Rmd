@@ -1,29 +1,19 @@
 --- 
-title: "Quinolone resistance despite low antimicrobial usage - mechanisms and possible preventive measures"
+title: "Comparative genomics of quinolone resistant E. coli from animal sources - The application of bioinformatics..."
 subtitle: "Thesis for the degree of Philosophiae Doctor (PhD)"
 author: "Håkon Kaspersen"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
-geometry: "left=4cm,right=3cm,top=2.5cm,bottom=2.5cm"
+geometry: "left=4cm,right=3cm,top=3cm,bottom=3cm"
 fontsize: 12pt
 linestretch: 1.5
 toc-depth: 1
+lof: TRUE
 documentclass: book
 bibliography: [packages.bib, library.bib]
 biblio-style: apalike
 link-citations: yes
 ---
-# Preface
-
-
-# Acknowledgements
-
-
-# Summary (English)
-
-
-# Summary (Norwegian)
-
 
 ```{r include=FALSE}
 # automatically create a bib database for R packages
@@ -31,3 +21,14 @@ knitr::write_bib(c(
   .packages(), 'bookdown', 'knitr', 'rmarkdown'
 ), 'packages.bib')
 ```
+
+# Acknowledgements
+I would like to thank...
+
+# Summary (English)
+
+
+# Summary (Norwegian)
+
+
+
