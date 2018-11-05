@@ -1,5 +1,7 @@
 # Introduction
 
+When did the project start?
+
 ## Antimicrobial resistance
 Background information on antimicrobial resistance in general, health threats, epidemiology, etc.
 
@@ -19,3 +21,4 @@ General information on quinolones and fluoroquinolones, timeline, function and b
 
 ## Background of project
 Little to no quinolones or fluoroquinolones are used in Norwegian food production animals. Nonetheless, low levels of Quinolone Resistant _E. coli_ have been observed in a high proportion of the samples after screening with a selective method in the Norwegian monitoring programme for antimicrobial resistance [@NORM/NORM-VET2016]
+
