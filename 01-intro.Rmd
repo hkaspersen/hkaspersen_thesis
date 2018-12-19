@@ -24,6 +24,7 @@ Perhaps the most established mechanism is alteration of the drug targets: the _g
 ## Epidemiology of quinolone resistant _E. coli_
 
 ## Bioinformatics
+Ever since the eve of high-throughput sequencing platforms in the early 2000s, bioinformatics have become increasingly needed to handle the massive amount of generated data. Bioinformatics can be defined as the use of informatics techniques, such as mathematics, statistics and computer science, to understand biological data on a large scale [@Luscombe2001]. In most cases, DNA or protein sequences represent the biological data, but gene expression data can also be analysed. 
 
 ## Background of project
 Little to no quinolones or fluoroquinolones are used in Norwegian food production animals. Nonetheless, low levels of Quinolone Resistant _E. coli_ have been observed in a high proportion of the samples after screening with a selective method in the Norwegian monitoring programme for antimicrobial resistance [@NORM/NORM-VET2016]
