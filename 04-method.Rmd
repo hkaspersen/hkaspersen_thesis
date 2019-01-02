@@ -25,9 +25,12 @@ Below follows a brief summary of methods used in this study. For detailed method
     + Assembly and annotation
   
 - Phylogeny
-    + Alignments and trees
-    + RaxML
-    + Recombination (ClonalFrameML)
-    + TreeWAS
-  
-- R scripts
+    + Core genome MLST
+    + Alignment with mauve
+    + Gubbins
+    + IQTree
+
+## Statistics
+
+## R scripts
+Various R-scripts have been used to analyse multiple datasets in this project. These are available on github at www.github.com/hkaspersen, and were written with `r version$version.string`.
