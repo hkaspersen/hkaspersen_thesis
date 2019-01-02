@@ -7,19 +7,24 @@ Background information on antimicrobial resistance in general, health threats, e
 
 ## Quinolones and fluoroquinolones
 
-Quinolones are synthetic antimicrobials that were introduced to the market in the late 1960s [@Emmerson2003]. The first quinolone, Nalidixic acid, was discovered as a byproduct of chloroquine synthesis [@Lesher1962], and was clinically in use in 1967. A few decades later, the fluoroquinolones were created, by adding various elements to the Nalidixic acid molecule. These alterations increased the pharmacokinetics of the compound.
+Quinolones are synthetic antimicrobials that were introduced to the market in the late 1960s [@Emmerson2003]. The first quinolone, Nalidixic acid, was discovered as a byproduct of chloroquine synthesis [@Lesher1962], and was clinically in use in 1967. A few decades later, the fluoroquinolones were created, by adding various elements to the Nalidixic acid molecule.
+
+```{r, fig.cap="\\label{fig:figs}Ciprofloxacin and Nalidixic acid molecules", out.width="5cm", out.height="6cm", echo=FALSE, message=FALSE}
+knitr::include_graphics("images/cipnal.png")
+```
 
 ## Quinolone resistance mechanisms
 
-Multiple resistance mechanisms towards quinolones and fluoroquinolones have been discovered in _E. coli_. These mechanisms can be divided into four categories: Alteration of drug target, 
+Multiple resistance mechanisms towards quinolones and fluoroquinolones have been discovered in _E. coli_. These mechanisms can be divided into three categories: Alteration of drug target, expression of plasmid-mediated proteins, and reduced drug accumulation [@Aldred2014a].
 
+### Alteration of drug targets
 Perhaps the most established mechanism is alteration of the drug targets: the _gyrA_, _gyrB_, _parC_, _parE_ genes. Specifically, mutations in the quinolone resistance determining region (QRDR) leads to decreased susceptibility towards these compounds [@Yoshida1991]. In _gyrA_, mutations in the amino acid residues serine 83 and aspartic acid 87 have been shown to increase resistance to quinolones [@Barnard2001].
 
+### Expression of plasmid-mediated proteins
+Plasmid-mediated _qnr_-genes, _mfp_-genes, _mcbG_. Compromised structure of the quinolone molecule by the acetyltransferase _aac(6')-ib-cr_.
 
-- Alteration of drug targets: Mutations in intrinsic genes ( _gyrA_, _gyrB_, _parC_, _parE_ ).
-- Reduced drug accumulation: Over-expression of efflux pumps and reduced expression of porins ( Mutations in _marR_, plasmid-mediated efflux pumps: _oqxAB_ ).
-- Expression of small proteins: Plasmid-mediated _qnr_-genes, _mfp_-genes, _mcbG_.
-- Reduced quinolone activity: Compromised structure of the quinolone molecule by the acetyltransferase _aac(6')-ib-cr_.
+### Reduced drug accumulation
+Over-expression of efflux pumps and reduced expression of porins (Mutations in _marR_, plasmid-mediated efflux pumps: _oqxAB_).
 
 ## Epidemiology of quinolone resistant _E. coli_
 
