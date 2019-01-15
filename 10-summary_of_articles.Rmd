@@ -1,0 +1,13 @@
+# Summary of scientific articles
+
+**1. Occurrence of quinolone resistant _E. coli_ originating from different animal species in Norway**
+
+The aim of the study was to describe and compare the occurrence of quinolone resistant _E. coli_ in various animal species in relation to human population density. Data from 4568 _E. coli_ isolates from the Norwegian monitoring programme for antimicrobial resistance in feed, food and animals from 2006 to 2016 was compiled and analysed. The isolates originated from broilers, layers, cattle, turkeys, dogs, wild birds, red foxes, reindeer, sheep, horses and pigs. Data on the geographical location of origin for the isolates was available for 4050 isolates, and was used to categorize the isolates depending on the human population density of the area. In total, 1.4 % of the isolates were regarded as quinolone resistant, where the highest occurrence was in broilers and wild birds. Human population density was not associated with the occurrence of quinolone resistant _E. coli_. In Norway, fluoroquinolones are not used prophylactically and in almost negligent amounts in various species. This, and the observed interspecies variation, suggests other factors than fluoroquinolone use may be important in the development of quinolone resistant _E. coli_.
+
+**2. Comparative analysis of resistance mechanisms in quinolone resistant _E. coli_ originating from livestock populations and wild animals in Norway**
+
+Text goes here
+
+**3. GWAS article**
+
+Text goes here

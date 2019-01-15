@@ -36,6 +36,9 @@ I would like to thank...
 # Disclosure
 This thesis was written in RStudio with `r version$version.string` using the Bookdown package [@R-bookdown].
 
+# Funding
+This project was funded by the Norwegian Research Council (NFR no. 255383) and the Norwegian food industry.
+
 # Summary (English)
 
 
