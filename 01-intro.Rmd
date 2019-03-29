@@ -7,18 +7,26 @@ Background information on antimicrobial resistance in general, health threats, e
 
 ## Quinolones and fluoroquinolones
 
-Quinolones are synthetic antimicrobials that were introduced to the market in the late 1960s [@Emmerson2003]. The first quinolone, Nalidixic acid, was discovered as a byproduct of chloroquine synthesis [@Lesher1962], and was clinically in use in 1967. A few decades later, the fluoroquinolones were created, by adding various elements to the Nalidixic acid molecule.
+Quinolones are synthetic antimicrobials that were introduced to the market in the late 1960s [@Emmerson2003]. The first quinolone, Nalidixic acid (Figure \@ref(fig:cipnal)), was discovered as a byproduct of chloroquine synthesis [@Lesher1962], and was clinically in use in 1967. A few decades later, the synthesis of novel quinolones increased the effectiveness of nalidixic acid towards gram-positive bacteria, and reduced its toxicity by altering its chemical structure. This structural change involved, among others, the addition of a fluoro-group to the molecule, which also increased its potency towards _Enterobacteriaceae_ [@Emmerson2003]. This also lead to a change in nomenclature for these compounds, as the molecules that harbored this structural change now were called fluoroquinolones.
+Ciprofloxacin (Figure \@ref(fig:cipnal)), a well known fluoroquinolone, is often used in human medicine, and have been listed on World Health Organization (WHO) list of essential medicines up until today [@WHO2015]. In veterinary medicine, the fluoroquinolone enrofloxacin is regularly used.
 
-```{r, fig.cap="\\label{fig:figs}Ciprofloxacin and Nalidixic acid molecules", out.width="5cm", out.height="6cm", echo=FALSE, message=FALSE}
+```{r, fig.cap="\\label{fig:cipnal}Ciprofloxacin and Nalidixic acid molecules", out.width="5cm", out.height="6cm", echo=FALSE, message=FALSE}
 knitr::include_graphics("images/cipnal.png")
 ```
 
-## Quinolone resistance mechanisms
+The main target for quinolones and fluoroquinolones (hereafter called quinolones) in _E. coli_, is the type II topoisomerases DNA gyrase (also known as topoisomerase II) and topoisomerase IV [@Drlica1997]. The type II topoisomerases regulate DNA topology by cutting double-stranded DNA, passing another double-stranded DNA strand through the break, and then seal the break [@Hooper1998]. Both DNA gyrase and Topoisomerase IV is comprised of two subunits, A and B. These are encoded by the genes _gyrA_ and _gyrB_ for DNA gyrase, and _parC_ and _parE_ for topoisomerase IV. The type II topoisomerases are the main target for quinolones in _E. coli_, especially the DNA gyrase. Quinolones bind to these enzymes through a water-metal ion bridge (Figure \@ref(fig:watermetalion)), connecting the quinolone molecule to two specific amino acids; ser 83 and asp 87 in DNA gyrase, and ser 80 and glu 84 in topoisomerase IV [@Aldred2014]. This binding inhibits the ligation function of the enzyme, and fragments the bacterial chromosome, leading to cell death.
 
-Multiple resistance mechanisms towards quinolones and fluoroquinolones have been discovered in _E. coli_. These mechanisms can be divided into three categories: Alteration of drug target, expression of plasmid-mediated proteins, and reduced drug accumulation [@Aldred2014a].
+```{r, fig.cap="\\label{fig:watermetalion}The binding of ciprofloxacin to topoisomerase IV through the water-metal ion bridge", out.width="5cm", out.height="6cm", echo=FALSE, message=FALSE}
+knitr::include_graphics("images/watermetalion.jpg")
+```
 
-### Alteration of drug targets
-Perhaps the most established mechanism is alteration of the drug targets: the _gyrA_, _gyrB_, _parC_, _parE_ genes. Specifically, mutations in the quinolone resistance determining region (QRDR) leads to decreased susceptibility towards these compounds [@Yoshida1991]. In _gyrA_, mutations in the amino acid residues serine 83 and aspartic acid 87 have been shown to increase resistance to quinolones [@Barnard2001].
+
+## Quinolone resistance mechanisms in _E. coli_
+
+Multiple mechanisms that infer resistance towards quinolones have been discovered in _E. coli_, and they are generally dividied into three categories: target-site substitutions, reduced drug accumulation, and plasmid mediated quinolone resistance (PMQR)[@Correia2017,@Aldred2014a].
+
+### Target-site substitutions
+Perhaps the most known resistance mechanism towards quinolones is mutations in the genes that code for the target molecules, _gyrA_, _gyrB_, _parC_, and _parE_. Missense mutations in these genes that lead to a substitution of critical amino acids needed for the binding of quinolones to the target molecules may lead to an increased tolerance towards these compounds. In _E. coli_, substitutions in a stretch of amino acids known as the "quinolone resistance determining region" (QRDR) in these four genes is highly correlated with quinolone resistance. In GyrA, this region is between amino acid (AA) 67 to 106 [@Yoshida1991], in GyrB between AA 333 and 481, ParC between AA 51 and 170, and ParE between AA 366 and 523. <!--need reference here! --> Specific substitutions within these areas are often identified in QREC, e.g. the serine 83 and aspartic acid 87 positions in GyrA [@Barnard2001], or the serine 80 position in ParC. 
 
 ### Expression of plasmid-mediated proteins
 Plasmid-mediated _qnr_-genes, _mfp_-genes, _mcbG_. Compromised structure of the quinolone molecule by the acetyltransferase _aac(6')-ib-cr_.
