@@ -8,6 +8,7 @@ geometry: "left=4cm,right=3cm,top=3cm,bottom=3cm"
 subparagraph: true
 output:
   bookdown::pdf_book:
+    citation_package: natbib
     includes:
       before_body: frontpage.tex
       in_header: preamble.tex
@@ -43,7 +44,6 @@ This project was funded by the Norwegian Research Council (NFR no. 255383) and t
 
 
 # Summary (Norwegian)
-
 
 # Abbreviations
 - QREC: Quinolone Resistant _Escherichia coli_
