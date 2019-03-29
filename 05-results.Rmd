@@ -2,7 +2,7 @@
 
 Can copy from summary of papers.
 
-```{r, echo=FALSE, message=FALSE, fig.cap="\\label{fig:figs}Percent occurrence of QREC in different animal species with 95 % confidence intervals"}
+```{r, echo=FALSE, message=FALSE, fig.cap="\\label{fig:result1}Percent occurrence of QREC in different animal species with 95 % confidence intervals"}
 library(tidyverse)
 
 # Calculates 95 % confidence intervals
