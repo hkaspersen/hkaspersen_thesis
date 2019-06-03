@@ -1,20 +1,29 @@
 # Introduction
 
-When did the project start?
+## _Escherichia coli_
 
-## Antimicrobial resistance
-Background information on antimicrobial resistance in general, health threats, epidemiology, etc.
+### General bacteriology and ecology
+The genus _Escherichia_ has been known since 1985 [@Farmer1985], but it was Theodor Escherich that first identified, in 1985, the species _Bacterium coli_, later called _Escherichia coli_ [@Escherich1989]. _Escherichia coli_ (_E. coli_) is the most studied microorganism on earth [@Vila2016], and is often used as a model organism in various microbiology studies and surveillance. _E. coli_ is a gram-negative, rod-shaped, facultative anaerobic bacteria often found in the gastrointestinal tract of warm-blooded animals and humans. There, it may be present as a commensal or as a pathogen. The presence of _E. coli_ in the gastrointestinal tract has been attributed to the relationship between body mass and gut transit times [@Gordon2003], and the probability of detecting _E. coli_ increases with the body size of the host. Thus, the prevalence of _E. coli_ is higher in larger mammals. Also, gut morphology seem to play a role in the prevalence of _E. coli_ [@OBrien2011].
 
-## Quinolones and fluoroquinolones
+### Population structure
+The _E. coli_ population is generally regarded to have a clonal structure [@Tenaillon2010]. Multiple stable lineages, also known as clones, have been found to exist within the _E. coli_ species, among which very little recombination occurs. These stable lineages are known as phylogroups, specifically A, B1, B2, C, D, E, and F (Figure \@ref(fig:pop_structure)), based on the presence and absence of specific genes [@Clermont2013]. The molecular variability within these lineages have been postulated to be neutral in terms of organism fitness, and thus not affected by natural selection [@Selander2007].
 
+```{r, fig.cap="\\label{fig:pop_structure}Phylogenetic history of \\textit{Escherichia coli}, reprinted with permission from \\citep{Tenaillon2010}.", out.width="14cm", out.height="14cm", echo=FALSE, message=FALSE, fig.align='center'}
+knitr::include_graphics("images/pop_structure.png")
+```
+
+## Monitoring antimicrobial resistance
+As part of the Norwegian government's strategy plan against antimicrobial resistance, the Norwegian monitoring programme for antimicrobial resistance in feed, food and animals (NORM-VET) was implemented in 2000. This programme has since 2014 followed the recommendations for surveillance as given by the EU (2013/652/EU) in parallell with national surveillance needs. NORM-VET reports antimicrobial usage as well as resistance, and the data generated serves as a baseline for specific research projects. Yearly reports are published in collaboration with NORM, which monitors antimicrobial resistance in pathogenic bacteria from humans. 
+
+## Quinolones and Fluoroquinolones
 Quinolones are synthetic antimicrobials that were introduced to the market in the late 1960s [@Emmerson2003]. The first quinolone, Nalidixic acid (Figure \@ref(fig:cipnal)), was discovered as a byproduct of chloroquine synthesis [@Lesher1962], and was clinically in use in 1967. A few decades later, the synthesis of novel quinolones increased the effectiveness of nalidixic acid towards gram-positive bacteria, and reduced its toxicity by altering its chemical structure. This structural change involved, among others, the addition of a fluoro-group to the molecule, which also increased its potency towards _Enterobacteriaceae_ [@Emmerson2003]. This also lead to a change in nomenclature for these compounds, as the molecules that harbored this structural change now were called fluoroquinolones.
 Ciprofloxacin (Figure \@ref(fig:cipnal)), a well known fluoroquinolone, is often used in human medicine, and have been listed on World Health Organization (WHO) list of essential medicines up until today [@WHO2015]. In veterinary medicine, the fluoroquinolone enrofloxacin is regularly used.
 
-```{r, fig.cap="\\label{fig:cipnal}Ciprofloxacin and Nalidixic acid molecules", out.width="5cm", out.height="6cm", echo=FALSE, message=FALSE}
+```{r, fig.cap="\\label{fig:cipnal}Ciprofloxacin and Nalidixic acid molecules", out.width="5cm", out.height="6cm", echo=FALSE, message=FALSE, fig.align='center'}
 knitr::include_graphics("images/cipnal.png")
 ```
 
-The main target for quinolones and fluoroquinolones (hereafter called quinolones) in _E. coli_, is the type II topoisomerases DNA gyrase (also known as topoisomerase II) and topoisomerase IV [@Drlica1997]. The type II topoisomerases regulate DNA topology by cutting double-stranded DNA, passing another double-stranded DNA strand through the break, and then seal the break [@Hooper1998]. Both DNA gyrase and Topoisomerase IV is comprised of two subunits, A and B. These are encoded by the genes _gyrA_ and _gyrB_ for DNA gyrase, and _parC_ and _parE_ for topoisomerase IV. The type II topoisomerases are the main target for quinolones in _E. coli_, especially the DNA gyrase. Quinolones bind to these enzymes through a water-metal ion bridge (Figure \@ref(fig:watermetalion)), connecting the quinolone molecule to two specific amino acids; ser 83 and asp 87 in DNA gyrase, and ser 80 and glu 84 in topoisomerase IV [@Aldred2014]. This binding inhibits the ligation function of the enzyme, and fragments the bacterial chromosome, leading to cell death.
+The main target for quinolones and fluoroquinolones (hereafter called quinolones) in _E. coli_, is the type II topoisomerases DNA gyrase (also known as topoisomerase II) and topoisomerase IV [@Drlica1997]. The type II topoisomerases regulate DNA topology by cutting DNA strands, passing another DNA strand through the break, and then seal the break [@Hooper1998]. Both DNA gyrase and Topoisomerase IV is comprised of two subunits, A and B. These are encoded by the genes _gyrA_ and _gyrB_ for DNA gyrase, and _parC_ and _parE_ for topoisomerase IV. The type II topoisomerases are the main target for quinolones in _E. coli_, especially the DNA gyrase. Quinolones bind to these enzymes through a water-metal ion bridge (Figure \@ref(fig:watermetalion)), connecting the quinolone molecule to two specific amino acids; ser 83 and asp 87 in DNA gyrase, and ser 80 and glu 84 in topoisomerase IV [@Aldred2014]. This binding inhibits the ligation function of the enzyme, and fragments the bacterial chromosome, leading to cell death.
 
 ```{r, fig.cap="\\label{fig:watermetalion}The binding of ciprofloxacin to topoisomerase IV through the water-metal ion bridge", out.width="5cm", out.height="6cm", echo=FALSE, message=FALSE}
 knitr::include_graphics("images/watermetalion.jpg")
@@ -36,8 +45,5 @@ Over-expression of efflux pumps and reduced expression of porins (Mutations in _
 
 ## Epidemiology of quinolone resistant _E. coli_
 
-## Bioinformatics
+## Genomic Analysis
 Ever since the eve of high-throughput sequencing platforms in the early 2000s, bioinformatics have become increasingly needed to handle the massive amount of generated data. Bioinformatics can be defined as the use of informatics techniques, such as mathematics, statistics and computer science, to understand biological data on a large scale [@Luscombe2001]. In most cases, DNA or protein sequences represent the biological data, but gene expression data can also be analysed. 
-
-## Background of project
-Fluoroquinolones are barely used in Norwegian food production animals [@NORM/NORM-VET2016]. Because of this, QREC is not expected to be present in these animals, as fluoroquinolones are synthetic and not found in nature. Nonetheless, low levels of QREC have been observed in a high proportion of the samples after screening with a selective method in the Norwegian monitoring programme for antimicrobial resistance [@NORM/NORM-VET2016]. The presence of these bacteria in the animal gut suggests that there are other factors than fluoroquinolone usage that may contribute to the development of fluoroquinolone resistance in _E. coli_. This project aimed at identifying these factors, as well as describing the epidemiology and genomics of the isolates to better understand resistance mechanisms and dissemination of QREC in Norwegian food producing- and wild animals.
