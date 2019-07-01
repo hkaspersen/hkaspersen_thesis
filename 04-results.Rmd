@@ -43,7 +43,8 @@ ggplot(total_res_species, aes(reorder(NORMart, -Percent), Percent))+
                 alpha = 0.6)+
   labs(y = "Percent occurrence of QREC")+
   theme_classic()+
-  theme(axis.title.x = element_blank())
+  theme(axis.title.x = element_blank(),
+        axis.text = element_text(size = 6))
 
 ```
 

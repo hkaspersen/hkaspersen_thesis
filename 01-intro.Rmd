@@ -13,7 +13,7 @@ knitr::include_graphics("images/pop_structure.png")
 ```
 
 ## Monitoring antimicrobial resistance
-As part of the Norwegian government's strategy plan against antimicrobial resistance, the Norwegian monitoring programme for antimicrobial resistance in feed, food and animals (NORM-VET) was implemented in 2000. This programme has since 2014 followed the recommendations for surveillance as given by the EU (2013/652/EU) in parallell with national surveillance needs. NORM-VET reports antimicrobial usage as well as resistance, and the data generated serves as a baseline for specific research projects. Yearly reports are published in collaboration with NORM, which monitors antimicrobial resistance in pathogenic bacteria from humans. 
+As part of the Norwegian government's strategy plan against antimicrobial resistance, the Norwegian monitoring programme for antimicrobial resistance in feed, food and animals (NORM-VET) was implemented in 2000. This programme has since 2014 followed the recommendations for surveillance as given by the EU (2013/652/EU) in parallell with national surveillance needs. NORM-VET reports antimicrobial usage as well as resistance, and the data generated serves as a baseline for specific research projects. Yearly reports are published in collaboration with NORM, which monitors antimicrobial resistance in pathogenic bacteria from humans.
 
 ## Quinolones and Fluoroquinolones
 Quinolones are synthetic antimicrobials that were introduced to the market in the late 1960s [@Emmerson2003]. The first quinolone, Nalidixic acid, was discovered as a byproduct of chloroquine synthesis [@Lesher1962], and was clinically in use in 1967. A few decades later, the synthesis of novel quinolones increased the effectiveness of nalidixic acid towards gram-positive bacteria, and reduced its toxicity by altering its chemical structure. This structural change involved, among others, the addition of a fluoro-group to the molecule, which also increased its potency towards _Enterobacteriaceae_ [@Emmerson2003]. This also lead to a change in nomenclature for these compounds, as the molecules that harbored this structural change now were called fluoroquinolones.
@@ -29,7 +29,7 @@ Multiple mechanisms that infer resistance towards quinolones have been discovere
 knitr::include_graphics("images/mechanisms.jpg")
 ```
 
-### chromosomal mutations
+### Chromosomal mutations
 Perhaps the most known resistance mechanism towards quinolones is mutations in the genes that code for the target molecules, _gyrA_, _gyrB_, _parC_, and _parE_. Missense mutations in these genes that lead to a substitution of critical amino acids needed for the binding of quinolones to the target molecules may lead to an increased tolerance towards these compounds. In _E. coli_, substitutions in a stretch of amino acids known as the "quinolone resistance determining region" (QRDR) in these four genes is highly correlated with quinolone resistance. In GyrA, this region is between amino acid (AA) 67 to 106 [@Yoshida1991], in GyrB between AA 333 and 481, ParC between AA 51 and 170, and ParE between AA 366 and 523. <!--need reference here! --> Specific substitutions within these areas are often identified in QREC, e.g. the serine 83 and aspartic acid 87 positions in GyrA [@Barnard2001], or the serine 80 position in ParC.
 
 Specific mutations in RNA polymerase subunit B (_rpoB_) have been shown to increase the expression of MdtK, which is a multidrug efflux transporter, resulting in an increase in levofloxacin MIC values [@Pietsch2017a]. 
@@ -52,6 +52,12 @@ The efflux pump OqxAB have been shown to increase resistance towards chloramphen
 The acetyltransferase Aac(6')-ib-cr infers resistance towards quinolones by altering the quinolone molecule itself. This compromised structure reduces the activity of the quinolone [@Robicsek2006a]. In general this leads to a low-level quinolone resistance. 
 
 ## Epidemiology of quinolone resistant _E. coli_
+QREC from a variety of animals have been monitored in NORM-VET since 2006<!--sjekk med AM-->. The relative occurrences of QREC within these animals can be found in Figure \@ref(fig:qrecEpi). When analysing NORM-VET data through the years, broilers seem to have the highest occurrence of QREC when compared to other species [@Kaspersen2018]. However, the occurrence is generally low.
+
+```{r, fig.cap="\\label{fig:qrecEpi}Percent occurrence of QREC per animal species", out.width="12cm", out.height="12cm", echo=FALSE, message=FALSE, fig.pos="H"}
+knitr::include_graphics("images/qrec_epi.png")
+```
+
 
 ## Genomic Analysis
 Ever since the eve of high-throughput sequencing platforms in the early 2000s, bioinformatics have become increasingly needed to handle the massive amount of generated data. Bioinformatics can be defined as the use of informatics techniques, such as mathematics, statistics and computer science, to understand biological data on a large scale [@Luscombe2001]. In most cases, DNA or protein sequences represent the biological data, but gene expression data can also be analysed. 
