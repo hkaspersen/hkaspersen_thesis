@@ -5,4 +5,4 @@ _book
 data
 .Rhistory
 _bookdown_files
-/images/
+/images/*
