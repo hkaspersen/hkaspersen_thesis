@@ -1,6 +1,5 @@
 # Materials and Methods
 
-##
 All _E. coli_ isolates included in this study were isolated through the NORM-VET programme. 
 In Article I, data from NORM-VET between 2006 and 2016 was compiled and analysed, resulting in data from 4568 _E. coli_ isolates.
 In Article II, QREC isolates from broilers, pigs, red foxes and wild birds were included. Here, the QREC isolates were grouped based on their MIC values to ciprofloxacin and nalidixic acid, as well as additional resistances. Up to 20 isolates were randomly selected per group, to a total of 285 isolates.
