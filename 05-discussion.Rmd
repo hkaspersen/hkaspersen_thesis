@@ -3,3 +3,12 @@
 Main part of the thesis is here! Discuss all your results and findings. Also, include your own thoughts and experiences, but be ready to defend them!
 
 Discuss the articles' results as a whole, not just one by one.
+
+## Methodological considerations
+
+### Laboratory methods
+<!-- NORM-VET methods, why are they used? -->
+
+### Bioinformatic methods
+<!-- why did you use the methods you chose? -->
+<!-- how did they perform? -->
