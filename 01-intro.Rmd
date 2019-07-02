@@ -13,7 +13,7 @@ knitr::include_graphics("images/pop_structure.png")
 ```
 
 ## Monitoring antimicrobial resistance
-As part of the Norwegian government's strategy plan against antimicrobial resistance, the Norwegian monitoring programme for antimicrobial resistance in feed, food and animals (NORM-VET) was implemented in 2000. This programme has since 2014 followed the recommendations for surveillance as given by the EU (2013/652/EU) in parallell with national surveillance needs. NORM-VET reports antimicrobial usage as well as resistance, and the data generated serves as a baseline for specific research projects. Yearly reports are published in collaboration with NORM, which monitors antimicrobial resistance in pathogenic bacteria from humans.
+As part of the Norwegian government's strategy plan against antimicrobial resistance, the Norwegian monitoring programme for antimicrobial resistance in feed, food and animals (NORM-VET) was implemented in 2000. This programme has since 2014 followed the recommendations for surveillance as given by the EU (2013/652/EU) in parallel with national surveillance needs. NORM-VET reports antimicrobial usage as well as resistance, and the data generated serves as a baseline for specific research projects. Yearly reports are published in collaboration with NORM, which monitors antimicrobial resistance in pathogenic bacteria from humans.
 
 ## Quinolones and Fluoroquinolones
 Quinolones are synthetic antimicrobials that were introduced to the market in the late 1960s [@Emmerson2003]. The first quinolone, Nalidixic acid, was discovered as a byproduct of chloroquine synthesis [@Lesher1962], and was clinically in use in 1967. A few decades later, the synthesis of novel quinolones increased the effectiveness of nalidixic acid towards gram-positive bacteria, and reduced its toxicity by altering its chemical structure. This structural change involved, among others, the addition of a fluoro-group to the molecule, which also increased its potency towards _Enterobacteriaceae_ [@Emmerson2003]. This also lead to a change in nomenclature for these compounds, as the molecules that harbored this structural change now were called fluoroquinolones.
@@ -23,7 +23,7 @@ The main target for quinolones and fluoroquinolones (hereafter called quinolones
 
 ## Quinolone resistance mechanisms in _E. coli_
 
-Multiple mechanisms that infer resistance towards quinolones have been discovered in _E. coli_, and they are generally dividied into four categories: chromosomal mutations, reduced membrane permeability, efflux pump overexpression, and plasmid mediated quinolone resistance (PMQR)[@Correia2017,@Aldred2014a], see Figure \@ref(fig:mechanisms).
+Multiple mechanisms that infer resistance towards quinolones have been discovered in _E. coli_, and they are generally divided into four categories: chromosomal mutations, reduced membrane permeability, efflux pump over expression, and plasmid mediated quinolone resistance (PMQR)[@Correia2017,@Aldred2014a], see Figure \@ref(fig:mechanisms).
 
 ```{r, fig.cap="\\label{fig:mechanisms}Quinolone resistance mechanisms, reprinted with permission from Microbiology Society \\citep{Correia2017}", out.width="14cm", out.height="10cm", echo=FALSE, message=FALSE, fig.pos="H"}
 knitr::include_graphics("images/mechanisms.jpg")
@@ -47,7 +47,7 @@ Some proteins that infer resistance to quinolones are transcribed from plasmids,
 
 The Qnr proteins are pentapeptide proteins that are capable of protecting the DNA gyrase and/or topoisomerase IV from quinolone action. The Qnr protein binds to the topoisomerase and prevents the quinolone from stabilizing the lethal gyrase-DNA-quinolone cleavage complex [@Tran2005,@Tran2005a,@Robicsek2006], thus effectively reducing the possible targets for the quinolones. Multiple subtypes of the Qnr proteins have been identified, namely QnrA, QnrB, QnrC, QnrD, QnrS, and QnrVC [@Strahilevitz2009], based on their amino acid sequence. The origin of these proteins is mostly unknown, but variants of the _qnrA_ gene have been identified in the chromosome of _Shewanella algae_, a water-dwelling bacterium, suggesting a reservoir for these proteins [@Poirel2005b].
 
-The efflux pump OqxAB have been shown to increase resistance towards chloramphenicol and quinolones, and to be dependent on the host TolC outer membrane protein in _E. coli_ [@Hansen2004,@Hansen2007]. Similarly, QepA have been found to increase resistance towards ciprofloxacin, norfloxacin and entrofloxacin due to efflux [@Yamane2007]. Interestingly, since quinolones are synthetic antimicrobials, innate transporters for quinolones were not expected to exist in nature. However, it has been speculated that these pumps have evolved as a response to molecules with a structural similarity to quinolones [@Yamane2007].
+The efflux pump OqxAB have been shown to increase resistance towards chloramphenicol and quinolones, and to be dependent on the host TolC outer membrane protein in _E. coli_ [@Hansen2004,@Hansen2007]. Similarly, QepA have been found to increase resistance towards ciprofloxacin, norfloxacin and enrofloxacin due to efflux [@Yamane2007]. Interestingly, since quinolones are synthetic antimicrobials, innate transporters for quinolones were not expected to exist in nature. However, it has been speculated that these pumps have evolved as a response to molecules with a structural similarity to quinolones [@Yamane2007].
 
 The acetyltransferase Aac(6')-ib-cr infers resistance towards quinolones by altering the quinolone molecule itself. This compromised structure reduces the activity of the quinolone [@Robicsek2006a]. In general this leads to a low-level quinolone resistance. 
 
@@ -60,4 +60,16 @@ knitr::include_graphics("images/qrec_epi.png")
 
 
 ## Genomic Analysis
-Ever since the eve of high-throughput sequencing platforms in the early 2000s, bioinformatics have become increasingly needed to handle the massive amount of generated data. Bioinformatics can be defined as the use of informatics techniques, such as mathematics, statistics and computer science, to understand biological data on a large scale [@Luscombe2001]. In most cases, DNA or protein sequences represent the biological data, but gene expression data can also be analysed. 
+<!-- intro to bioinformatics -->
+<!-- standard software -->
+<!-- databases -->
+
+Ever since the eve of high-throughput sequencing platforms in the early 2000s, bioinformatics have become increasingly needed to handle the massive amount of generated data. Bioinformatics can be defined as the use of informatics techniques, such as mathematics, statistics and computer science, to understand biological data on a large scale [@Luscombe2001]. In most cases, DNA or protein sequences represent the biological data, but gene expression data can also be analysed.
+
+A myriad of bioinformatic software have been and are being created. However, some programs have become the gold standard for many bioinformaticians. Such programs include, but are not limited to:
+
+- fastQC: Raw read quality control (https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
+- Trimmomatic: Trim sequence data [@Bolger2014]
+- SPAdes: Genome assembly [@Bankevich2012]
+- Prokka: Genome annotation [@Seemann2014]
+- Roary: Pan genome analysis [@Page2015]
