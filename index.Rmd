@@ -12,7 +12,7 @@ output:
     includes:
       before_body: frontpage.tex
       in_header: preamble.tex
-fontsize: 12pt
+fontsize: 11pt
 linestretch: 1.2
 toc-depth: 1
 toc-bib: true
