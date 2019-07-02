@@ -11,6 +11,6 @@ The identified quinolone resistance mechanisms were concordant with previously d
 A high diversity was seen in the QREC population structure. Nonetheless, similar QREC isolates were detected in multiple species with similar resistance mechanism patterns. This indicates dissemination events of similar QREC isolates between animal species, and also within the broiler production pyramid.
 
 
-**3. GWAS article**
+**3. Broiler article**
 
 Text goes here
