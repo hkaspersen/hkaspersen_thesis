@@ -1,5 +1,36 @@
 # Introduction
 
+## Norwegian husbandry
+
+### Broiler production
+The Norwegian broiler production is a pyramidal structure with the broilers at the bottom and purebred animals at the top [@Mo2016a]. Hatching eggs are imported from grandparent animals in Sweden which originate mostly from Scotland or Germany. The eggs are hatched in Norwegian hatcheries, and become parent animals. These are reared for around 18 weeks, and are subsequently used for breeding of broiler chickens until around 60 weeks old. The broiler chickens are hatched in hatcheries, and distributed to broiler farms all over the country. Only a few hatcheries exist in Norway. Broiler chickens are reared for 28 - 32 days, depending on weight, then slaughtered [@Nortura2019]. Broiler farms are heated and closed from the outside environment. Also, a maximum of 36 kg of chickens are allowed per square meter, which is less than in other EU countries [@Nortura2019].
+
+### Swine production
+
+
+### Other animals
+Norwegian cattle is produced in two ways: either by milk production or by cattle that is not used for milk production. Dairy cows covers approximately 70% of beef on the Norwegian market [@Nortura2019b], and are slaughtered at around four years of age. The remaining 30% of the beef on the market is from cows that are not used for milk production, which are slaughtered at 16 - 18 months of age.
+
+Sheep are left grazing in outlying fields most of the year, but are kept inside during the winter season. Similar to dairy cows, they are slaughtered at around four years of age [@Nortura2019c].
+
+
+## Monitoring antimicrobial resistance and usage
+
+### NORM-VET
+As part of the Norwegian government's strategy plan against antimicrobial resistance, the Norwegian monitoring programme for antimicrobial resistance in feed, food and animals (NORM-VET) was implemented in 2000. The National Institute of Nutrition and Seafood Research, the Norwegian Food Safety Authority, and the Norwegian Veterinary Institute are all participating in NORM-VET. The programme has since 2014 followed the recommendations for surveillance as given by the EU (2013/652/EU) in parallel with national surveillance needs. NORM-VET reports antimicrobial usage as well as resistance, and the data generated serves as a baseline for specific research projects. Yearly reports are published (https://www.vetinst.no/en/surveillance-programmes/norm-norm-vet-report) in collaboration with NORM, which monitors antimicrobial resistance in pathogenic bacteria from humans. A variety of animal species have been sampled in NORM-VET, including cattle, pigs, dogs, broilers, layers, horses, red foxes, reindeer, sheep, turkeys, and multiple wild bird species. Not all animal species are sampled each year, due to the NORM-VET sample regime. The sample material is commonly faecal or caecal matter, but meat and boot swab samples are also included some years. In broiler and turkey flocks, 10 samples were collected from each flock. The 10 samples are then pooled before culturing.
+
+Culturing and isolation methods have been used to identify _E. coli_ from the samples collected. These isolates are used as an indicator for the presence of resistance in the sampled animal's microflora. Quinolone resistance in indicator _E. coli_ has been monitored in NORM-VET since 2000. First, samples are plated onto lactose-bromothymol blue agar (pre-2013) or MacConkey agar (2013 until today). Then, a random _E. coli_ colony is subjected to susceptibility testing. In 2014, a selective method was introduced. Here, the samples were plated onto MacConkey agar with 0.06 mg/L ciprofloxacin, which is the epidemiological cut-off (ECOFF) for ciprofloxacin in _E. coli_ as defined by the European Committee on Antimicrobial Susceptibility Testing (EUCAST, www.eucast.org). Similar to the method above, one random colony of _E. coli_ was selected and subjected to susceptibility testing. Susceptibility testing was done by broth microdilution.
+
+Prophylactic use of antimicrobial compounds in Norwegian livestock is prohibited, and is only used to treat diseased animals. The use of quinolones to treat livestock in Norway is very low, see Figure \@ref(fig:quinUsage) [@NORM/NORM-VET2017].
+
+```{r, fig.cap="\\label{fig:quinUsage}Overall sales, in kg active substance, of quinolones and macrolides for therapeutic use in terrestrial livestock animals in Norway in 1993 - 2017 \\citep{NORM/NORM-VET2017}", echo=FALSE, message=FALSE, fig.align='center'}
+knitr::include_graphics("images/quin_usage.png")
+```
+
+
+
+
+
 ## _Escherichia coli_
 
 ### General bacteriology and ecology
@@ -11,26 +42,6 @@ The _E. coli_ population is generally regarded to have a clonal structure [@Tena
 ```{r, fig.cap="\\label{fig:popstructure}Phylogenetic history of \\textit{Escherichia coli}, reprinted with permission from Springer Nature \\citep{Tenaillon2010}", out.width="14cm", out.height="14cm", echo=FALSE, message=FALSE, fig.align='center'}
 knitr::include_graphics("images/pop_structure.png")
 ```
-
-
-
-
-
-
-
-
-## Monitoring antimicrobial resistance and usage
-As part of the Norwegian government's strategy plan against antimicrobial resistance, the Norwegian monitoring programme for antimicrobial resistance in feed, food and animals (NORM-VET) was implemented in 2000. The National Institute of Nutrition and Seafood Research, the Norwegian Food Safety Authority, and the Norwegian Veterinary Institute are all participating in NORM-VET. The programme has since 2014 followed the recommendations for surveillance as given by the EU (2013/652/EU) in parallel with national surveillance needs. NORM-VET reports antimicrobial usage as well as resistance, and the data generated serves as a baseline for specific research projects. Yearly reports are published (https://www.vetinst.no/en/surveillance-programmes/norm-norm-vet-report) in collaboration with NORM, which monitors antimicrobial resistance in pathogenic bacteria from humans. A variety of animal species have been sampled in NORM-VET, including cattle, pigs, dogs, broilers, layers, horses, red foxes, reindeer, sheep, turkeys, and multiple wild bird species. Not all animal species are sampled each year, due to the NORM-VET sample regime. The sample material is commonly faecal or caecal matter, but meat and boot swab samples are also included some years. In broiler and turkey flocks, 10 samples were collected from each flock. The 10 samples are then pooled before culturing.
-
-Culturing and isolation methods have been used to identify _E. coli_ from the samples collected. These isolates are used as an indicator for the presence of resistance in the sampled animal's microflora. Quinolone resistance in indicator _E. coli_ has been monitored in NORM-VET since 2000. First, samples are plated onto lactose-bromothymol blue agar (pre-2013) or MacConkey agar (2013 until today). Then, a random _E. coli_ colony is subjected to susceptibility testing. In 2014, a selective method was introduced. Here, the samples were plated onto MacConkey agar with 0.06 mg/L ciprofloxacin, which is the epidemiological cut-off (ECOFF) for ciprofloxacin in _E. coli_ as defined by the European Committee on Antimicrobial Susceptibility Testing (EUCAST, www.eucast.org). Similar to the method above, one random colony of _E. coli_ was selected and subjected to susceptibility testing. Susceptibility testing was done by broth microdilution.
-
-In Norway, the use of quinolones in livestock is very low, see Figure \@ref(fig:quinUsage).
-
-```{r, fig.cap="\\label{fig:quinUsage}Overall sales, in kg active substance, of quinolones and macrolides for therapeutic use in terrestrial livestock animals in Norway in 1993 - 2017", echo=FALSE, message=FALSE, fig.align='center'}
-knitr::include_graphics("images/quin_usage.png")
-```
-
-
 
 
 
@@ -56,7 +67,7 @@ knitr::include_graphics("images/mechanisms.jpg")
 ```
 
 ### Chromosomal mutations
-Perhaps the most known resistance mechanism towards quinolones is mutations in the genes that code for the target molecules, _gyrA_, _gyrB_, _parC_, and _parE_. Missense mutations in these genes that lead to a substitution of critical amino acids needed for the binding of quinolones to the target molecules may lead to an increased tolerance towards these compounds. In _E. coli_, substitutions in a stretch of amino acids known as the "quinolone resistance determining region" (QRDR) in these four genes is highly correlated with quinolone resistance. In GyrA, this region is between amino acid (AA) 67 to 106 [@Yoshida1991], in GyrB between AA 333 and 481, ParC between AA 51 and 170, and ParE between AA 366 and 523. <!--need reference here! --> Specific substitutions within these areas are often identified in QREC, e.g. the serine 83 and aspartic acid 87 positions in GyrA [@Barnard2001], or the serine 80 position in ParC.
+Perhaps the most known resistance mechanism towards quinolones is mutations in the genes that code for the target molecules, _gyrA_, _gyrB_, _parC_, and _parE_. Missense mutations in these genes that lead to a substitution of critical amino acids needed for the binding of quinolones to the target molecules may lead to an increased tolerance towards these compounds. In _E. coli_, substitutions in a stretch of amino acids known as the "quinolone resistance determining region" (QRDR) in these four genes is highly correlated with quinolone resistance. In GyrA, this region is between amino acid (AA) 67 to 106 [@Yoshida1991], in GyrB between AA 333 and 481, ParC between AA 51 and 170, and ParE between AA 366 and 523. Specific substitutions within these areas are often identified in QREC, e.g. the serine 83 and aspartic acid 87 positions in GyrA [@Barnard2001], or the serine 80 position in ParC.
 
 Specific mutations in RNA polymerase subunit B (_rpoB_) have been shown to increase the expression of MdtK, which is a multidrug efflux transporter, resulting in an increase in levofloxacin MIC values [@Pietsch2017a]. 
 
@@ -87,13 +98,15 @@ The acetyltransferase Aac(6')-ib-cr infers resistance towards quinolones by alte
 
 
 ## Epidemiology of quinolone resistant _E. coli_
+
+### In Norway
 QREC from a variety of animals have been monitored in NORM-VET since 2006<!--sjekk med AM-->. The relative occurrences of QREC within these animals can be found in Figure \@ref(fig:qrecEpi). When analysing NORM-VET data through the years, broilers seem to have the highest occurrence of QREC when compared to other species [@Kaspersen2018]. However, the occurrence is generally low.
 
 ```{r, fig.cap="\\label{fig:qrecEpi}Percent occurrence of QREC per animal species", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center"}
 knitr::include_graphics("images/qrec_epi.png")
 ```
 
-
+### In Europe
 
 
 
@@ -109,7 +122,7 @@ knitr::include_graphics("images/qrec_epi.png")
 
 Ever since the eve of high-throughput sequencing platforms in the early 2000s, bioinformatics have become increasingly needed to handle the massive amount of generated data. Bioinformatics can be defined as the use of informatics techniques, such as mathematics, statistics and computer science, to understand biological data on a large scale [@Luscombe2001]. In most cases, DNA or protein sequences represent the biological data, but gene expression data can also be analysed.
 
-A myriad of bioinformatic software have been and are being created. However, some programs have become the gold standard for many bioinformaticians. Such programs include, but are not limited to:
+A myriad of bioinformatic software have been and are being created. However, some programs have become the gold standard for most bioinformaticians. Such programs include, but are not limited to:
 
 - fastQC: Raw read quality control (https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
 - Trimmomatic: Trim sequence data [@Bolger2014]
