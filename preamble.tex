@@ -1,9 +1,14 @@
 \usepackage{titlesec}
+\usepackage{pdfpages}
+\usepackage{natbib}
 \titleformat{\chapter}
   {\normalfont\LARGE\bfseries}{\thechapter}{1em}{}
 \titlespacing*{\chapter}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+\AtBeginDocument{\let\maketitle\relax}
 \usepackage{makeidx}
 \makeindex
+\usepackage{caption}
+\captionsetup[figure]{textfont={small,it}, labelfont={normalsize,bf,it}}
 \usepackage[nottoc]{tocbibind}
 \usepackage{graphicx}
 \usepackage{float}
@@ -14,3 +19,4 @@
 } {
     \endorigfigure
 }
+\raggedbottom
