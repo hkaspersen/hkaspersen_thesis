@@ -15,7 +15,6 @@ linestretch: 1.2
 toc-depth: 1
 documentclass: book
 bibliography: [packages.bib, library.bib]
-biblio-style: apalike
 link-citations: yes
 ---
 
@@ -58,9 +57,7 @@ tibble(
                    "WGS",
                    "MDR"))%>%
   arrange(Term) %>% # i.e. alphabetical order by Term
-  kable(booktab = T) %>% # booktab = T gives us a pretty APA-ish table
-  kable_styling(position = "center",
-                full_width = T)
+  kable(booktab = T)
 ```
 
 # List of publications
