@@ -1,0 +1,7 @@
+# (APPENDIX) Appendix {-}
+
+# Enclosed articles I - III
+
+\newpage
+
+\includepdf[pages={-}]{art1}
