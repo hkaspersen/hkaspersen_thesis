@@ -1,6 +1,4 @@
 --- 
-title: "Comparative genomics of quinolone resistant E. coli from animal sources - The application of bioinformatics..."
-subtitle: "Thesis for the degree of Philosophiae Doctor (PhD)"
 author: "Håkon Kaspersen"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -8,15 +6,13 @@ geometry: "left=4cm,right=3cm,top=3cm,bottom=3cm"
 subparagraph: true
 output:
   bookdown::pdf_book:
-    citation_package: natbib
+    citation_package: none
     includes:
       before_body: frontpage.tex
       in_header: preamble.tex
 fontsize: 11pt
 linestretch: 1.2
 toc-depth: 1
-toc-bib: true
-lof: TRUE
 documentclass: book
 bibliography: [packages.bib, library.bib]
 biblio-style: apalike
@@ -26,7 +22,7 @@ link-citations: yes
 ```{r include=FALSE}
 # automatically create a bib database for R packages
 
-packages <- c("bookdown","knitr","rmarkdown","tidyverse")
+packages <- c("bookdown","knitr","rmarkdown","tidyverse","kableExtra")
 
 knitr::write_bib(c(.packages(), packages), 'packages.bib')
 ```
@@ -46,11 +42,26 @@ This project was funded by the Norwegian Research Council (NFR no. 255383) and t
 # Summary (Norwegian)
 
 # Abbreviations
-- QREC: Quinolone Resistant _Escherichia coli_
-- AMR: Antimicrobial Resistance
-- WGS: Whole Genome Sequencing
-- MDR: Multi Drug Resistance
 
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+
+tibble(
+  Term = c("Quinolone resistant E. coli",
+           "Antimicrobial resistance",
+           "Whole genome sequencing",
+           "Multi drug resistance"),
+  Abbreviation = c("QREC",
+                   "AMR",
+                   "WGS",
+                   "MDR"))%>%
+  arrange(Term) %>% # i.e. alphabetical order by Term
+  kable(booktab = T) %>% # booktab = T gives us a pretty APA-ish table
+  kable_styling(position = "center",
+                full_width = T)
+```
 
 # List of publications
 
