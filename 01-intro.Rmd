@@ -23,7 +23,7 @@ Culturing and isolation methods have been used to identify _E. coli_ from the sa
 
 Prophylactic use of antimicrobial compounds in Norwegian livestock is prohibited, and is only used to treat diseased animals. The use of quinolones to treat livestock in Norway is very low, see Figure \@ref(fig:quinUsage) [@NORM/NORM-VET2017].
 
-```{r, fig.cap="\\label{fig:quinUsage}Overall sales, in kg active substance, of quinolones and macrolides for therapeutic use in terrestrial livestock animals in Norway in 1993 - 2017, taken from the NORM/NORM-VET 2017 report", echo=FALSE, message=FALSE, fig.align='center'}
+```{r, fig.cap="\\label{fig:quinUsage}Overall sales, in kg active substance, of quinolones and macrolides for therapeutic use in terrestrial livestock animals in Norway in 1993 - 2017, reprinted with permission (NORM/NORM-VET 2017).", echo=FALSE, message=FALSE, fig.align='center'}
 knitr::include_graphics("images/quin_usage.png")
 ```
 
@@ -39,7 +39,7 @@ The genus _Escherichia_ has been known since 1985 [@Farmer1985], but it was Theo
 ### Population structure
 The _E. coli_ population is generally regarded to have a clonal structure [@Tenaillon2010]. Multiple stable lineages, also known as clones, have been found to exist within the _E. coli_ species, among which very little recombination occurs. These stable lineages are known as phylogroups, specifically A, B1, B2, C, D, E, and F (Figure \@ref(fig:popstructure)), based on the presence and absence of specific genes [@Clermont2013]. The molecular variability within these lineages have been postulated to be neutral in terms of organism fitness, and thus not affected by natural selection [@Selander2007].
 
-```{r, fig.cap="\\label{fig:popstructure}Phylogenetic history of \\textit{Escherichia coli}, reprinted with permission from Springer Nature", out.width="14cm", out.height="14cm", echo=FALSE, message=FALSE, fig.align='center'}
+```{r, fig.cap="\\label{fig:popstructure}Phylogenetic history of \\textit{Escherichia coli}, reprinted with permission from Springer Nature (Tenaillon et al. 2010).", out.width="14cm", out.height="14cm", echo=FALSE, message=FALSE, fig.align='center'}
 knitr::include_graphics("images/pop_structure.png")
 ```
 
@@ -52,7 +52,7 @@ Ciprofloxacin, a well known fluoroquinolone, is often used in human medicine, an
 The main target for quinolones and fluoroquinolones (hereafter called quinolones) in _E. coli_, is the type II topoisomerases DNA gyrase (also known as topoisomerase II) and topoisomerase IV [@Drlica1997]. The type II topoisomerases regulate DNA topology by cutting DNA strands, passing another DNA strand through the break, and then seal the break [@Hooper1998]. Both DNA gyrase and Topoisomerase IV is comprised of two subunits, A and B. These are encoded by the genes _gyrA_ and _gyrB_ for DNA gyrase, and _parC_ and _parE_ for topoisomerase IV. The type II topoisomerases are the main target for quinolones in _E. coli_, especially the DNA gyrase. Quinolones bind to these enzymes through a water-metal ion bridge (Figure \@ref(fig:watermetalion)), connecting the quinolone molecule to two specific amino acids; ser 83 and asp 87 in DNA gyrase, and ser 80 and glu 84 in topoisomerase IV [@Aldred2014]. This binding inhibits the ligation function of the enzyme, and fragments the bacterial chromosome, leading to cell death.
 
 
-```{r, fig.cap="\\label{fig:watermetalion}Overview of the water-metal ion bridge that mediates the quinolone-topoisomerase IV interaction, reprinted with permission from the American Chemical Society,", out.width="8cm", out.height="8cm", echo=FALSE, message=FALSE, fig.align='center'}
+```{r, fig.cap="\\label{fig:watermetalion}Overview of the water-metal ion bridge that mediates the quinolone-topoisomerase IV interaction, reprinted with permission from the American Chemical Society (Aldred et al. 2014).", out.width="8cm", out.height="8cm", echo=FALSE, message=FALSE, fig.align='center'}
 knitr::include_graphics("images/watermetalion.jpg")
 ```
 
