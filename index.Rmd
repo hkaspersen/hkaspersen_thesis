@@ -6,7 +6,7 @@ geometry: "left=4cm,right=3cm,top=3cm,bottom=3cm"
 subparagraph: true
 output:
   bookdown::pdf_book:
-    citation_package: none
+    citation_package: natbib
     includes:
       before_body: frontpage.tex
       in_header: preamble.tex
@@ -15,6 +15,7 @@ linestretch: 1.2
 toc-depth: 1
 documentclass: book
 bibliography: [packages.bib, library.bib]
+biblio-style: apalike
 link-citations: yes
 ---
 
@@ -51,13 +52,17 @@ tibble(
   Term = c("Quinolone resistant E. coli",
            "Antimicrobial resistance",
            "Whole genome sequencing",
-           "Multi drug resistance"),
+           "Multi drug resistance",
+           "Epidemiological cut off",
+           "Quinolone sensitive E. coli"),
   Abbreviation = c("QREC",
                    "AMR",
                    "WGS",
-                   "MDR"))%>%
+                   "MDR",
+                   "ECOFF",
+                   "QSEC"))%>%
   arrange(Term) %>% # i.e. alphabetical order by Term
-  kable(booktab = T)
+  kable(booktab = T) # create nice table
 ```
 
 # List of publications
