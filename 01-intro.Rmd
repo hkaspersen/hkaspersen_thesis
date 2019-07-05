@@ -13,8 +13,11 @@ Norwegian cattle is produced in two ways: either by milk production or by cattle
 
 Sheep are left grazing in outlying fields most of the year, but are kept inside during the winter season. Similar to dairy cows, they are slaughtered at around four years of age [@Nortura2019c].
 
+## Antimicrobial resistance
+<!--general information on antimicrobial resistance-->
+<!--antimicrobial resistance testing-->
 
-## Monitoring antimicrobial resistance and usage
+## Monitoring antimicrobial resistance
 
 ### The Norwegian monitoring programme
 As part of the Norwegian government's strategy plan against antimicrobial resistance, the Norwegian monitoring programme for antimicrobial resistance in feed, food and animals (NORM-VET) was implemented in 2000. The National Institute of Nutrition and Seafood Research, the Norwegian Food Safety Authority, and the Norwegian Veterinary Institute are all participants in this programme. The programme has since 2014 followed the recommendations for surveillance as given by the EU (2013/652/EU) in parallel with national surveillance needs. NORM-VET reports antimicrobial usage as well as resistance, and the data generated serves as a baseline for specific research projects. Yearly reports are published (https://www.vetinst.no/en/surveillance-programmes/norm-norm-vet-report) in collaboration with NORM, which monitors antimicrobial resistance in pathogenic bacteria in humans. A variety of animal species have been sampled in NORM-VET, including cattle, pigs, dogs, broilers, layers, horses, red foxes, reindeer, sheep, turkeys, and multiple wild bird species. Not all animal species are sampled each year, due to the NORM-VET sample regime. The sample material is commonly faecal or caecal matter, but meat and boot swab samples are also included some years. In broiler and turkey flocks, 10 samples were collected from each flock. The 10 samples are then pooled before culturing.
@@ -23,11 +26,23 @@ Culturing and isolation methods have been used to identify _E. coli_ from the sa
 
 Prophylactic use of antimicrobial compounds in Norwegian livestock is prohibited, and is only used to treat diseased animals. The use of quinolones to treat livestock in Norway is very low, see Figure \@ref(fig:quinUsage) [@NORM/NORM-VET2017].
 
-```{r, fig.cap="\\label{fig:quinUsage}Overall sales, in kg active substance, of quinolones and macrolides for therapeutic use in terrestrial livestock animals in Norway in 1993 - 2017, reprinted with permission (NORM/NORM-VET 2017).", echo=FALSE, message=FALSE, fig.align='center'}
+```{r, fig.cap="\\label{fig:quinUsage}Overall sales, in kg active substance, of quinolones and macrolides for therapeutic use in terrestrial livestock animals in Norway in 1993 - 2017, reprinted with permission \\citep{NORM/NORM-VET2017}.", echo=FALSE, message=FALSE, fig.align='center'}
 knitr::include_graphics("images/quin_usage.png")
 ```
 
 
+## Quinolones and Fluoroquinolones
+Quinolones are synthetic antimicrobials that were introduced to the market in the late 1960s [@Emmerson2003]. The first quinolone, Nalidixic acid, was discovered as a byproduct of chloroquine synthesis [@Lesher1962], and was clinically in use in 1967. A few decades later, the synthesis of novel quinolones increased the effectiveness of nalidixic acid towards gram-positive bacteria, and reduced its toxicity by altering its chemical structure. This structural change involved, among others, the addition of a fluoro-group to the molecule, which also increased its potency towards _Enterobacteriaceae_ [@Emmerson2003]. This also lead to a change in nomenclature for these compounds, as the molecules that harbored this structural change now were called fluoroquinolones.
+Ciprofloxacin, a well known fluoroquinolone, is often used in human medicine, and have been listed on World Health Organization (WHO) list of essential medicines up until today [@WHO2015]. In veterinary medicine, the fluoroquinolone enrofloxacin is regularly used.
+
+The main target for quinolones and fluoroquinolones (hereafter called quinolones) in _E. coli_, is the type II topoisomerases DNA gyrase (also known as topoisomerase II) and topoisomerase IV [@Drlica1997]. The type II topoisomerases regulate DNA topology by cutting DNA strands, passing another DNA strand through the break, and then seal the break [@Hooper1998]. Both DNA gyrase and Topoisomerase IV is comprised of two subunits, A and B. These are encoded by the genes _gyrA_ and _gyrB_ for DNA gyrase, and _parC_ and _parE_ for topoisomerase IV. The type II topoisomerases are the main target for quinolones in _E. coli_, especially the DNA gyrase. Quinolones bind to these enzymes through a water-metal ion bridge (Figure \@ref(fig:watermetalion)), connecting the quinolone molecule to two specific amino acids; ser 83 and asp 87 in DNA gyrase, and ser 80 and glu 84 in topoisomerase IV [@Aldred2014]. This binding inhibits the ligation function of the enzyme, and fragments the bacterial chromosome, leading to cell death.
+
+
+```{r, fig.cap="\\label{fig:watermetalion}Overview of the water-metal ion bridge that mediates the quinolone-topoisomerase IV interaction, reprinted with permission from the American Chemical Society \\citep{Aldred2014}.", out.width="8cm", out.height="8cm", echo=FALSE, message=FALSE, fig.align='center'}
+knitr::include_graphics("images/watermetalion.jpg")
+```
+
+## Quinolone usage
 
 
 
@@ -39,32 +54,15 @@ The genus _Escherichia_ has been known since 1985 [@Farmer1985], but it was Theo
 ### Population structure
 The _E. coli_ population is generally regarded to have a clonal structure [@Tenaillon2010]. Multiple stable lineages, also known as clones, have been found to exist within the _E. coli_ species, among which very little recombination occurs. These stable lineages are known as phylogroups, specifically A, B1, B2, C, D, E, and F (Figure \@ref(fig:popstructure)), based on the presence and absence of specific genes [@Clermont2013]. The molecular variability within these lineages have been postulated to be neutral in terms of organism fitness, and thus not affected by natural selection [@Selander2007].
 
-```{r, fig.cap="\\label{fig:popstructure}Phylogenetic history of \\textit{Escherichia coli}, reprinted with permission from Springer Nature (Tenaillon et al. 2010).", out.width="14cm", out.height="14cm", echo=FALSE, message=FALSE, fig.align='center'}
+```{r, fig.cap="\\label{fig:popstructure}Phylogenetic history of \\textit{Escherichia coli}, reprinted with permission from Springer Nature \\citep{Tenaillon2010}.", out.width="14cm", out.height="14cm", echo=FALSE, message=FALSE, fig.align='center'}
 knitr::include_graphics("images/pop_structure.png")
 ```
-
-
-
-## Quinolones and Fluoroquinolones
-Quinolones are synthetic antimicrobials that were introduced to the market in the late 1960s [@Emmerson2003]. The first quinolone, Nalidixic acid, was discovered as a byproduct of chloroquine synthesis [@Lesher1962], and was clinically in use in 1967. A few decades later, the synthesis of novel quinolones increased the effectiveness of nalidixic acid towards gram-positive bacteria, and reduced its toxicity by altering its chemical structure. This structural change involved, among others, the addition of a fluoro-group to the molecule, which also increased its potency towards _Enterobacteriaceae_ [@Emmerson2003]. This also lead to a change in nomenclature for these compounds, as the molecules that harbored this structural change now were called fluoroquinolones.
-Ciprofloxacin, a well known fluoroquinolone, is often used in human medicine, and have been listed on World Health Organization (WHO) list of essential medicines up until today [@WHO2015]. In veterinary medicine, the fluoroquinolone enrofloxacin is regularly used.
-
-The main target for quinolones and fluoroquinolones (hereafter called quinolones) in _E. coli_, is the type II topoisomerases DNA gyrase (also known as topoisomerase II) and topoisomerase IV [@Drlica1997]. The type II topoisomerases regulate DNA topology by cutting DNA strands, passing another DNA strand through the break, and then seal the break [@Hooper1998]. Both DNA gyrase and Topoisomerase IV is comprised of two subunits, A and B. These are encoded by the genes _gyrA_ and _gyrB_ for DNA gyrase, and _parC_ and _parE_ for topoisomerase IV. The type II topoisomerases are the main target for quinolones in _E. coli_, especially the DNA gyrase. Quinolones bind to these enzymes through a water-metal ion bridge (Figure \@ref(fig:watermetalion)), connecting the quinolone molecule to two specific amino acids; ser 83 and asp 87 in DNA gyrase, and ser 80 and glu 84 in topoisomerase IV [@Aldred2014]. This binding inhibits the ligation function of the enzyme, and fragments the bacterial chromosome, leading to cell death.
-
-
-```{r, fig.cap="\\label{fig:watermetalion}Overview of the water-metal ion bridge that mediates the quinolone-topoisomerase IV interaction, reprinted with permission from the American Chemical Society (Aldred et al. 2014).", out.width="8cm", out.height="8cm", echo=FALSE, message=FALSE, fig.align='center'}
-knitr::include_graphics("images/watermetalion.jpg")
-```
-
-
-
-
 
 ## Quinolone resistance mechanisms in _E. coli_
 
 Multiple mechanisms that infer resistance towards quinolones have been discovered in _E. coli_, and they are generally divided into four categories: chromosomal mutations, reduced membrane permeability, efflux pump over expression, and plasmid mediated quinolone resistance (PMQR)[@Correia2017,@Aldred2014a], see Figure \@ref(fig:mechanisms).
 
-```{r, fig.cap="\\label{fig:mechanisms}Quinolone resistance mechanisms, reprinted with permission from Microbiology Society", out.width="14cm", out.height="10cm", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center"}
+```{r, fig.cap="\\label{fig:mechanisms}Quinolone resistance mechanisms, reprinted with permission from Microbiology Society \\citep{Correia2017}", out.width="14cm", out.height="10cm", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center"}
 knitr::include_graphics("images/mechanisms.jpg")
 ```
 
@@ -76,7 +74,7 @@ Specific mutations in RNA polymerase subunit B (_rpoB_) have been shown to incre
 Favourable mutations, such as those conferring antimicrobial resistance, are relatively rare. However, some bacteria are hypermutators with an elevated mutation rate [@Gross1981]. This elevated mutation rate may be due to the presence of mutator alleles, which can accelerate adaptation and increase the chance for a favorable mutation [@Taddei1997]. Mutations in mutator genes such as _mutS_, _mutL_, and _uvrD_ have been shown to increase MIC-values towards ciprofloxacin in _Pseudomonas aeruginosa_ [@Wiegand2008]. These genes code for proteins that either corrects mismatched DNA produced by multiple mechanisms [@Modrich1989], or have proof-reading activity.
 
 ### Reduced membrane permeability
-Porin channels in the bacterial membrane are essential for the entry of quinolones into the cell [@Correia2017]. Specific chromosomal regulons are involved in the expression of these membrane proteins, exemplified by the _mar_, _soxRS_ and _rob_ regulons [@Correia2017]. Mutations in these genes may decrease the expression of the Omp-type porins, or prevent _ompF_ mRNA expression, which in turn reduces the drug concentration in the cell [@Oethinger1998,@Cohen1989,@Koutsolioutsou2005,@Amabile-Cuevas1991,@White1997]. Mutations in the regulator gene _soxR_ may alter the expression of _soxS_, which then may regulate the expression of _micF_ in response to superoxide stress, which prevents the _ompF_ mRNA expression [@Amabile-Cuevas1991].
+Porin channels in the gram negative bacterial membrane are essential for the entry of quinolones into the cell [@Correia2017]. Specific chromosomal regulons are involved in the expression of these membrane proteins, exemplified by the _mar_, _soxRS_ and _rob_ regulons [@Correia2017]. Mutations in these genes may decrease the expression of the Omp-type porins, or prevent _ompF_ mRNA expression, which in turn reduces the drug concentration in the cell [@Oethinger1998,@Cohen1989,@Koutsolioutsou2005,@Amabile-Cuevas1991,@White1997]. Mutations in the regulator gene _soxR_ may alter the expression of _soxS_, which then may regulate the expression of _micF_ in response to superoxide stress, which prevents the _ompF_ mRNA expression [@Amabile-Cuevas1991]. Reduced expression of the membrane porins OpmF, OmpC, OmpD and OmpA have been linked to resistance towards quinolones and other antimicrobials [@Bore2007]. 
 
 ### Efflux pump overexpression
 In _E. coli_, the AcrAB-TolC efflux pump have been identified as a major facilitator of quinolone efflux [@Sato2013,@Weston2017]. Mutations in specific regulatory genes such as _marR_ may activate _acrAB_ and _tolC_, thus increasing their expression [@Alekshun1999a]. This will in turn reduce the drug concentration in the cell.
@@ -84,18 +82,11 @@ In _E. coli_, the AcrAB-TolC efflux pump have been identified as a major facilit
 ### Plasmid mediated quinolone resistance
 Some proteins that infer resistance to quinolones are transcribed from plasmids, such as the quinolone resistance proteins (Qnr), the efflux pumps OqxAB and QepA, and the acetyltransferase Aac(6')-ib-cr.
 
-The Qnr proteins are pentapeptide proteins that are capable of protecting the DNA gyrase and/or topoisomerase IV from quinolone action. The Qnr protein binds to the topoisomerase and prevents the quinolone from stabilizing the lethal gyrase-DNA-quinolone cleavage complex [@Tran2005,@Tran2005a,@Robicsek2006], thus effectively reducing the possible targets for the quinolones. Multiple subtypes of the Qnr proteins have been identified, namely QnrA, QnrB, QnrC, QnrD, QnrS, and QnrVC [@Strahilevitz2009], based on their amino acid sequence. The origin of these proteins is mostly unknown, but variants of the _qnrA_ gene have been identified in the chromosome of _Shewanella algae_, a water-dwelling bacterium, suggesting a reservoir for these proteins [@Poirel2005b]. Other PMQR genes been identified, such as _mfpA_, _mfpA~MT~_, and _mcbG_. Similar to the _qnr_ genes, _mfpA_ codes for a pentapeptide protein with 18.9% sequence similarity with QnrA [@Strahilevitz2009]. The expression of _mfpA_ seem to confer a four- to eightfold increase in MIC values toward ciprofloxacin [@Montero2001b]. The mechanism by which MfpA confers resistance to quinolones is thought to be similar to the Qnr proteins, by binding to the topoisomerase and effectively protecting them from quinolone action [@Hegde2005]. Similarly, _mcbG_ codes for a pentapeptide repeat protein with 19.6% sequence similarity to QnrA. However, this protein seem to protect the DNA gyrase from the inhibitory action of microcin, which is a peptide antibiotic [@Garrido1988]. The mechanism by which the protein protects DNA gyrase is currently unknown.
+The Qnr proteins are pentapeptide proteins that are capable of protecting the DNA gyrase and/or topoisomerase IV from quinolone action. The Qnr protein binds to the topoisomerase and prevents the quinolone from stabilizing the lethal gyrase-DNA-quinolone cleavage complex [@Tran2005,@Tran2005a,@Robicsek2006], thus effectively reducing the possible targets for the quinolones. Multiple subtypes of the Qnr proteins have been identified, namely QnrA, QnrB, QnrC, QnrD, QnrS, and QnrVC [@Strahilevitz2009], based on their amino acid sequence. The origin of these proteins is mostly unknown, but variants of the _qnrA_ gene have been identified in the chromosome of _Shewanella algae_, a water-dwelling bacterium, suggesting a reservoir for these proteins [@Poirel2005b]. Other PMQR genes have been identified, such as _mfpA_, _mfpA~MT~_, and _mcbG_. Similar to the _qnr_ genes, _mfpA_ codes for a pentapeptide protein with 18.9% sequence similarity with QnrA [@Strahilevitz2009]. The expression of _mfpA_ seem to confer a four- to eightfold increase in MIC values toward ciprofloxacin [@Montero2001b]. The mechanism by which MfpA confers resistance to quinolones is thought to be similar to the Qnr proteins, by binding to the topoisomerase and effectively protecting them from quinolone action [@Hegde2005]. Similarly, _mcbG_ codes for a pentapeptide repeat protein with 19.6% sequence similarity to QnrA. However, this protein seem to protect the DNA gyrase from the inhibitory action of microcin, which is a peptide antibiotic [@Garrido1988]. The mechanism by which the protein protects DNA gyrase is currently unknown.
 
 The efflux pump OqxAB have been shown to increase resistance towards chloramphenicol and quinolones, and is dependent on the host TolC outer membrane protein in _E. coli_ [@Hansen2004,@Hansen2007]. Similarly, QepA have been found to increase resistance towards ciprofloxacin, norfloxacin and enrofloxacin due to efflux [@Yamane2007]. Interestingly, since quinolones are synthetic antimicrobials, innate transporters for quinolones were not expected to exist in nature. However, it has been speculated that these pumps have evolved as a response to molecules with a structural similarity to quinolones [@Yamane2007].
 
 The acetyltransferase AAC(6')-Ib-cr infers resistance towards quinolones by altering the quinolone molecule itself. The enzyme acetylates the amino nitrogen on the piperazinyl substituent of ciprofloxacin and norfloxacin [@Robicsek2006a]. This compromised structure reduces the activity of the quinolone [@Robicsek2006a]. The AAC(6')-Ib-cr enzyme is a variant of the AAC(6')-Ib proteins, with the specific substitutions W102R and D179Y that are necessary for quinolone resistance [@Robicsek2006a]. Expression of this protein usually leads to a relatively low MIC-value, approximately three- to fourfold increase towards ciprofloxacin and norfloxacin [@Strahilevitz2009]. The increase in MIC conferred by this enzyme is generally lower than the Qnr proteins, mostly due to substrate specificity.
-
-
-
-
-
-
-
 
 
 ## Epidemiology of quinolone resistant _E. coli_
@@ -113,14 +104,20 @@ knitr::include_graphics("images/qrec_epi.png")
 
 
 
-
-
-
 ## Genomic Analysis
+### High-throughput sequencing
+Following the sequencing of the Human Genome in 2004 with Sanger sequencing, a multi-million dollar sequencing initiative formed [@Schloss2004], resulting in the emergence of multiple high-throughput sequencing (HTS) technologies. Throughout the years, Illumina has quickly become the dominant short-read technology by which high-throughtput sequencing have developed. With the MiSeq, HiSeq and NextSeq sequencers, HTS has rapidly become both cheaper and more efficient. The MiSeq sequencer has been readily used for bacterial genomes, due to their relatively fast instrument run time and the small size of the genomes [@Reuter2015].
+
+The process of HTS is similar to that of Sanger sequencing. First, the genomic DNA (gDNA) is fragmented and enriched either by PCR or by hybridization [@Morey2013]. 
+
+<!-- sequencing -->
+  <!-- library prep -->
+  <!-- Illumina sequencing -->
+
+### Bioinformatics
 <!-- intro to bioinformatics -->
 <!-- standard software -->
-<!-- databases -->
-
+  <!-- explanation on the tools? -->
 Ever since the eve of high-throughput sequencing platforms in the early 2000s, bioinformatics have become increasingly needed to handle the massive amount of generated data. Bioinformatics can be defined as the use of informatics techniques, such as mathematics, statistics and computer science, to understand biological data on a large scale [@Luscombe2001]. In most cases, DNA or protein sequences represent the biological data, but gene expression data can also be analysed.
 
 A myriad of bioinformatic software have been and are being created. However, some programs have become the gold standard for most bioinformaticians. Such programs include, but are not limited to:
@@ -130,3 +127,10 @@ A myriad of bioinformatic software have been and are being created. However, som
 - SPAdes: Genome assembly [@Bankevich2012]
 - Prokka: Genome annotation [@Seemann2014]
 - Roary: Pan genome analysis [@Page2015]
+
+
+### Databases
+<!-- databases -->
+<!-- genes in databases as 'wild type' -->
+When looking for certain mutations and the presence/absence of genes, one is reliant on a well-curated database. For antimicrobial resistance, multiple databases have been created, but only some of them are manually curated, for example the ResFinder database (https://bitbucket.org/genomicepidemiology/resfinder_db/src/master/). 
+
