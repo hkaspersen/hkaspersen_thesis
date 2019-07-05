@@ -4,4 +4,23 @@
 
 \newpage
 
+## Article 1
+
+\newpage
+
+<!-- article 1 -->
 \includepdf[pages={-}]{art1}
+
+\newpage
+
+## Article 2
+
+\newpage
+
+<!-- article 2 -->
+\includepdf[pages={-}]{art2}
+
+\newpage
+
+<!-- article 3 -->
+<!--\includepdf[pages={-}]{art3}-->
