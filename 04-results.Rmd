@@ -1,6 +1,0 @@
-# Results
-
-## Epidemiological study
-In the epidemiological study, 65 isolates were identified as QREC of 4568 isolates. This equates to a QREC occurrence of 1.4% (95% CI: [1.1 - 1.8]) in total across all species. QREC was not detected in reindeer, sheep, or horses. The occurrence was highest in broilers and wild birds. A possible association between the occurrence of QREC and human population density was only detected for layers.
-
-## QREC WGS study
