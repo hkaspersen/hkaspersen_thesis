@@ -25,22 +25,12 @@ Systematic misuse of antimicrobials have been attributed to the increased emerge
 ## Monitoring antimicrobial resistance
 
 ### Antimicrobial resistance surveillance
-Harmonized monitoring of AMR in commensal _E. coli_ from food and food-producing animals has since 2014 been obligatory for all EU/EEA member states, as implemented by the European Commission (SANCO/11591/2012). The commission describes the sampling frame and analysis of isolates. Commensal _E. coli_ is usually isolated from caecal samples, and antimicrobial susceptibility testing (AST) is carried out using broth microdilution. With this method, the minimum inhibitory concentration (MIC) value is determined for multiple antimicrobials. A MIC value is defined as the lowest concentration of the antimicrobial needed to inhibit growth of a microorganism [@Andrews2001].  
+Harmonized monitoring of AMR in commensal _E. coli_ from food and food-producing animals has since 2014 been obligatory for all EU/EEA member states, as implemented by the European Commission (SANCO/11591/2012). The commission describes the sampling frame and analysis of isolates. Commensal _E. coli_ is usually isolated from caecal samples, and antimicrobial susceptibility testing (AST) is carried out using broth microdilution. With this method, the minimum inhibitory concentration (MIC) value is determined for multiple antimicrobials. A MIC value is defined as the lowest concentration of the antimicrobial needed to inhibit growth of a microorganism [@Andrews2001]. Certain thresholds have been defined when categorizing isolates from AST results, based on MIC values. Usually, microorganisms are defined as sensitive (wild type), intermediate, or resistant. These definitions all rely on the MIC values to their respective antimicrobials, based on guidelines from the European Committe on Antimicrobial Susceptibility Testing (EUCAST, www.eucast.org). If resistance is acheieved by a single step, for example by chromosomal mutation or acquisition of a plasmid, the isolate may be expected to fall into two groups, either sensitive or resistant. However, if resistance is achieved in a step-wise fashion, the isolate may fall somewhere in between these two groups [@Bywater2006]. To separate the intermediate isolates from the sensitive, the epidemiological cut-off value (ECOFF) was implemented. The ECOFF is defined as the MIC value above the distribution of MIC values for the sensitive isolates, see Figure \@ref(fig:ecoff). It is important to distinguish between resistant isolates and intermediate isolates, as the intermediate isolates may still respond in a clinical setting. However, monitoring this group of isolates is important, as they may easily become resistant with the acquisition of additional resistance mechanisms.
 
+For simplicity, in this thesis, all _E. coli_ isolates are coined as resistant if they have a MIC value above the ECOFF.
 
-The minimum inhibitory concentration is 
-
-
-Certain thresholds have been defined when categorizing isolates from AST results, based on minimum inhibitory concentration (MIC) values. MIC values are defined as the concentration of antimicrobial where growth is inhibited.
-
-
-
-
-
-The epidemiological cut-off values (ECOFF), as defined by the European Committee on Antimicrobial Susceptibility Testing (EUCAST, www.eucast.org), are used to define the isolate as resistant or sensitive. The ECOFF is defined from the distribution of MIC-values (Figure \@ref(img:ecoff)). 
-
-```{r, fig.cap="\\label{fig:ecoff}Distribution of MIC-values showing wild-type, intermediate and resistant bacterial sub-populations. Reprinted with permission from Veterinary Microbiology \\citep{Bywater2006}.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center"}
-knitr::include_graphics("images/ecoff.jpg")
+```{r, fig.cap="\\label{fig:ecoff}Distribution of MIC-values for ciprofloxacin in E. coli. Data: www.eucast.org.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center"}
+knitr::include_graphics("images/micdist.jpg")
 ```
 
 ### The Norwegian monitoring programme
@@ -65,10 +55,6 @@ The main target for quinolones and fluoroquinolones (hereafter called quinolones
 ```{r, fig.cap="\\label{fig:watermetalion}Overview of the water-metal ion bridge that mediates the quinolone-topoisomerase IV interaction, reprinted with permission from the American Chemical Society \\citep{Aldred2014}.", out.width="8cm", out.height="8cm", echo=FALSE, message=FALSE, fig.align='center'}
 knitr::include_graphics("images/watermetalion.jpg")
 ```
-
-## Quinolone usage
-
-
 
 ## _Escherichia coli_
 
