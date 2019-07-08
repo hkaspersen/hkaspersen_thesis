@@ -14,10 +14,34 @@ Norwegian cattle is produced in two ways: either by milk production or by cattle
 Sheep are left grazing in outlying fields most of the year, but are kept inside during the winter season. Similar to dairy cows, they are slaughtered at around four years of age [@Nortura2019c].
 
 ## Antimicrobial resistance
-<!--general information on antimicrobial resistance-->
-<!--antimicrobial resistance testing-->
+Multiple definitions on antimicrobial resistance exist. In a clinical setting, antimicrobial resistance is defined as the ability of microorganisms to change in response to the presence of antimicrobials or other factors. This change makes the microorganism able to survive antimicrobial treatment [@WHO2018]. In a laboratory setting, the microorganism is regarded as resistant if it grows in the presence of antimicrobials at a higher concentration than the wild-type <!-- Need ref! --> . The discovery of antimicrobials in the early 20th century revolutionized medicine, and the discovery of Penicillin in 1928 by Sir Alexander Fleming and subsequent production in the late 1940s was the turning point for treating bacterial infections. However, already in 1945, Alexander Fleming warned about the mis-use of antimicrobials, stating that exposing bacteria to sub-lethal concentrations in the lab rendered them resistant, and that this also may happen in the body [@Fleming1945].
+
+> *"It is not difficult to make microbes resistant to penicillin in the laboratory by exposing them to concentrations not sufficient to kill them, and the same thing occasionally happened in the body"*
+>
+> `r tufte::quote_footer("--- Sir Alexander Fleming, Nobel lecture, 1945")`
+
+Systematic misuse of antimicrobials have been attributed to the increased emergence of AMR [@WHO2015a]. To tackle this problem, the World Health Organization (WHO) has implemented a Global Action Plan in 2015 to increase knowledge about AMR and provide guidance for the optimal use of antimicrobial agents [@WHO2015a]. Exposing bacteria to sub-lethal concentrations of antimicrobial compounds is known to generate resistant phenotypes. However, resistance to antimicrobial compounds have been found in prehistoric microbial samples [@Dcosta2011], suggesting that antimicrobial resistance is a natural phenomenon. Other factors, such as environmental stress factors, is also linked to the development of AMR in the absence of antimicrobial selective pressure [@McMahon2007,@Poole2012].
 
 ## Monitoring antimicrobial resistance
+
+### Antimicrobial resistance surveillance
+Harmonized monitoring of AMR in commensal _E. coli_ from food and food-producing animals has since 2014 been obligatory for all EU/EEA member states, as implemented by the European Commission (SANCO/11591/2012). The commission describes the sampling frame and analysis of isolates. Commensal _E. coli_ is usually isolated from caecal samples, and antimicrobial susceptibility testing (AST) is carried out using broth microdilution. With this method, the minimum inhibitory concentration (MIC) value is determined for multiple antimicrobials. A MIC value is defined as the lowest concentration of the antimicrobial needed to inhibit growth of a microorganism [@Andrews2001].  
+
+
+The minimum inhibitory concentration is 
+
+
+Certain thresholds have been defined when categorizing isolates from AST results, based on minimum inhibitory concentration (MIC) values. MIC values are defined as the concentration of antimicrobial where growth is inhibited.
+
+
+
+
+
+The epidemiological cut-off values (ECOFF), as defined by the European Committee on Antimicrobial Susceptibility Testing (EUCAST, www.eucast.org), are used to define the isolate as resistant or sensitive. The ECOFF is defined from the distribution of MIC-values (Figure \@ref(img:ecoff)). 
+
+```{r, fig.cap="\\label{fig:ecoff}Distribution of MIC-values showing wild-type, intermediate and resistant bacterial sub-populations. Reprinted with permission from Veterinary Microbiology \\citep{Bywater2006}.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center"}
+knitr::include_graphics("images/ecoff.jpg")
+```
 
 ### The Norwegian monitoring programme
 As part of the Norwegian government's strategy plan against antimicrobial resistance, the Norwegian monitoring programme for antimicrobial resistance in feed, food and animals (NORM-VET) was implemented in 2000. The National Institute of Nutrition and Seafood Research, the Norwegian Food Safety Authority, and the Norwegian Veterinary Institute are all participants in this programme. The programme has since 2014 followed the recommendations for surveillance as given by the EU (2013/652/EU) in parallel with national surveillance needs. NORM-VET reports antimicrobial usage as well as resistance, and the data generated serves as a baseline for specific research projects. Yearly reports are published (https://www.vetinst.no/en/surveillance-programmes/norm-norm-vet-report) in collaboration with NORM, which monitors antimicrobial resistance in pathogenic bacteria in humans. A variety of animal species have been sampled in NORM-VET, including cattle, pigs, dogs, broilers, layers, horses, red foxes, reindeer, sheep, turkeys, and multiple wild bird species. Not all animal species are sampled each year, due to the NORM-VET sample regime. The sample material is commonly faecal or caecal matter, but meat and boot swab samples are also included some years. In broiler and turkey flocks, 10 samples were collected from each flock. The 10 samples are then pooled before culturing.
@@ -69,15 +93,13 @@ knitr::include_graphics("images/mechanisms.jpg")
 ### Chromosomal mutations
 Perhaps the most known resistance mechanism towards quinolones is mutations in the genes that code for the target molecules, _gyrA_, _gyrB_, _parC_, and _parE_. Missense mutations in these genes that lead to a substitution of critical amino acids needed for the binding of quinolones to the target molecules may lead to an increased tolerance towards these compounds. In _E. coli_, substitutions in a stretch of amino acids known as the "quinolone resistance determining region" (QRDR) in these four genes is highly correlated with quinolone resistance. In GyrA, this region is between amino acid (AA) 67 to 106 [@Yoshida1991], in GyrB between AA 333 and 481, ParC between AA 51 and 170, and ParE between AA 366 and 523. Specific substitutions within these areas are often identified in QREC, e.g. the serine 83 and aspartic acid 87 positions in GyrA [@Barnard2001], or the serine 80 position in ParC. Mutations in one type II enzyme usually confers a 10 fold increase or less in drug resistance, while mutations in both is often found in isolates with 10-100 fold increase in drug resistance [@Aldred2014a].
 
-Specific mutations in RNA polymerase subunit B (_rpoB_) have been shown to increase the expression of MdtK, which is a multidrug efflux transporter, resulting in an increase in levofloxacin MIC values [@Pietsch2017a]. 
-
 Favourable mutations, such as those conferring antimicrobial resistance, are relatively rare. However, some bacteria are hypermutators with an elevated mutation rate [@Gross1981]. This elevated mutation rate may be due to the presence of mutator alleles, which can accelerate adaptation and increase the chance for a favorable mutation [@Taddei1997]. Mutations in mutator genes such as _mutS_, _mutL_, and _uvrD_ have been shown to increase MIC-values towards ciprofloxacin in _Pseudomonas aeruginosa_ [@Wiegand2008]. These genes code for proteins that either corrects mismatched DNA produced by multiple mechanisms [@Modrich1989], or have proof-reading activity.
 
 ### Reduced membrane permeability
 Porin channels in the gram negative bacterial membrane are essential for the entry of quinolones into the cell [@Correia2017]. Specific chromosomal regulons are involved in the expression of these membrane proteins, exemplified by the _mar_, _soxRS_ and _rob_ regulons [@Correia2017]. Mutations in these genes may decrease the expression of the Omp-type porins, or prevent _ompF_ mRNA expression, which in turn reduces the drug concentration in the cell [@Oethinger1998,@Cohen1989,@Koutsolioutsou2005,@Amabile-Cuevas1991,@White1997]. Mutations in the regulator gene _soxR_ may alter the expression of _soxS_, which then may regulate the expression of _micF_ in response to superoxide stress, which prevents the _ompF_ mRNA expression [@Amabile-Cuevas1991]. Reduced expression of the membrane porins OpmF, OmpC, OmpD and OmpA have been linked to resistance towards quinolones and other antimicrobials [@Bore2007]. 
 
 ### Efflux pump overexpression
-In _E. coli_, the AcrAB-TolC efflux pump have been identified as a major facilitator of quinolone efflux [@Sato2013,@Weston2017]. Mutations in specific regulatory genes such as _marR_ may activate _acrAB_ and _tolC_, thus increasing their expression [@Alekshun1999a]. This will in turn reduce the drug concentration in the cell.
+In _E. coli_, the AcrAB-TolC efflux pump have been identified as a major facilitator of quinolone efflux [@Sato2013,@Weston2017]. Mutations in specific regulatory genes such as _marR_ may activate _acrAB_ and _tolC_, thus increasing their expression [@Alekshun1999a]. This will in turn reduce the drug concentration in the cell. Certain mutations in RNA polymerase subunit B (_rpoB_) have been shown to increase the expression of MdtK, which is a multidrug efflux transporter, resulting in an increase in levofloxacin MIC values [@Pietsch2017a].
 
 ### Plasmid mediated quinolone resistance
 Some proteins that infer resistance to quinolones are transcribed from plasmids, such as the quinolone resistance proteins (Qnr), the efflux pumps OqxAB and QepA, and the acetyltransferase Aac(6')-ib-cr.
@@ -92,7 +114,7 @@ The acetyltransferase AAC(6')-Ib-cr infers resistance towards quinolones by alte
 ## Epidemiology of quinolone resistant _E. coli_
 
 ### In Norway
-QREC from a variety of animals have been monitored in NORM-VET since 2006<!--sjekk med AM-->. The relative occurrences of QREC within these animals can be found in Figure \@ref(fig:qrecEpi). When analysing NORM-VET data through the years, broilers seem to have the highest occurrence of QREC when compared to other species [@Kaspersen2018]. However, the occurrence is generally low.
+QREC from a variety of animals have been monitored in NORM-VET since 2006<!--sjekk med AM-->. The relative occurrences of QREC within these animals can be found in Figure \@ref(fig:qrecEpi). When analysing NORM-VET data through the years, broilers seem to have the highest occurrence of QREC when compared to other species [@Kaspersen2018]. However, the occurrence is generally low when compared to other countries in Europe.
 
 ```{r, fig.cap="\\label{fig:qrecEpi}Percent occurrence of QREC per animal species. Illustration: H. Kaspersen.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center"}
 knitr::include_graphics("images/qrec_epi.png")
@@ -100,17 +122,15 @@ knitr::include_graphics("images/qrec_epi.png")
 
 ### In Europe
 
-```{r, fig.cap="\\label{fig:ecdcData}Mean occurrence of quinolone resistance in indicator \\textit{E. coli} from 2014 - 2017. Data taken from European Union summary reports on antimicrobial resistance in zoonotic and indicator bacteria from humans, animals and food 2014 - 2017 \\citep{EFSA2016b,Food2017,Food2018,Food2019}", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="120%"}
+```{r, fig.cap="\\label{fig:ecdcData}Mean occurrence of quinolone resistance in indicator E. coli from 2014 - 2017. Data taken from European Union summary reports on antimicrobial resistance in zoonotic and indicator bacteria from humans, animals and food 2014 - 2017 \\citep{EFSA2016b,Food2017,Food2018,Food2019}. Illustration: Håkon Kaspersen", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="150%"}
 knitr::include_graphics("images/ecdcdata.png")
 ```
 
-
-
 ## Genomic Analysis
 ### High-throughput sequencing
-Following the sequencing of the Human Genome in 2004 with Sanger sequencing, a multi-million dollar sequencing initiative formed [@Schloss2008], resulting in the emergence of multiple high-throughput sequencing (HTS) technologies. Throughout the years, Illumina has quickly become the dominant short-read technology by which high-throughtput sequencing have developed. With the MiSeq, HiSeq and NextSeq sequencers, HTS has rapidly become both cheaper and more efficient. The MiSeq sequencer has been readily used for bacterial genomes, due to their relatively fast instrument run time and the small size of the genomes [@Reuter2015].
+Following the sequencing of the Human Genome in 2004 with Sanger sequencing, a multi-million dollar sequencing initiative formed [@Schloss2008], resulting in the emergence of multiple high-throughput sequencing (HTS) technologies. Throughout the years, Illumina has quickly become the dominant short-read technology by which high-throughtput sequencing have developed. With the MiSeq, HiSeq and NextSeq sequencers, HTS has rapidly become both cheaper and more efficient. The MiSeq sequencer has been readily used for bacterial genomes, due to the relatively fast instrument run time and the small size of the genomes [@Reuter2015].
 
-The process of HTS is similar to that of Sanger sequencing. First, the genomic DNA (gDNA) is fragmented and enriched either by PCR or by hybridization [@Morey2013], through a process called library preparation. Here, the genomic DNA fragments are adapter ligated and prepared for sequencing. Then, the prepared fragments are placed on a flowcell and a clonal array is generated by bridge PCR [@Morey2013], see Figure \@ref(fig:seqmet). This is done to amplify the signal for the sequencer to detect. Afterwards, sequencing-by-synthesis is performed to identify the bases in each DNA fragment, summarised in Figure \@ref(fig:seqmet).
+The process of HTS builds upon that of Sanger sequencing. First, the genomic DNA (gDNA) is fragmented and enriched either by PCR or by hybridization [@Morey2013], through a process called library preparation. Here, the genomic DNA fragments are adapter ligated and prepared for sequencing. Then, the prepared fragments are placed on a flowcell and a clonal array is generated by bridge PCR [@Morey2013], see Figure \@ref(fig:seqmet). This is done to amplify the signal for the sequencer to detect. Afterwards, sequencing-by-synthesis is performed to identify the bases in each DNA fragment, summarised in Figure \@ref(fig:seqmet).
 
 ```{r, fig.cap="\\label{fig:seqmet}Steps in Illumina sequencing; A: Generation of the clonal array by bridge PCR. The DNA fragments are denatured, then bind to the flow cell oligonucleotides by the attached adapters. The free end of the DNA fragment then hybridize to an adjacent oligonucleotide. Then, the polymerase extends the oligonucleotide to form a double-stranded fragment. The fragments are then denatured, resulting in two separate fragments relatively close to each other. This is then repeated to form clusters of fragments on the flowcell. B: Sequencing by synthesis, which takes place in the clonal clusters created in A. Bases are added to the reaction, and only one base can be added at a time due to a 3' block. Fluorescence is emitted after incorporation, and is registered by the instrument. Lastly, the 3' block is removed and the process is repeated. Modified and reprinted with permission from Elsevier \\citep{Morey2013}.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="90%"}
 knitr::include_graphics("images/seqmet.jpg")
