@@ -9,7 +9,7 @@
 \newpage
 
 <!-- article 1 -->
-\includepdf[pages={-}]{art1}
+<!-- \includepdf[pages={-}]{art1} -->
 
 \newpage
 
@@ -18,7 +18,7 @@
 \newpage
 
 <!-- article 2 -->
-\includepdf[pages={-}]{art2}
+<!-- \includepdf[pages={-}]{art2} -->
 
 \newpage
 
