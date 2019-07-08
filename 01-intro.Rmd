@@ -26,7 +26,7 @@ Culturing and isolation methods have been used to identify _E. coli_ from the sa
 
 Prophylactic use of antimicrobial compounds in Norwegian livestock is prohibited, and is only used to treat diseased animals. The use of quinolones to treat livestock in Norway is very low, see Figure \@ref(fig:quinUsage) [@NORM/NORM-VET2017].
 
-```{r, fig.cap="\\label{fig:quinUsage}Overall sales, in kg active substance, of quinolones and macrolides for therapeutic use in terrestrial livestock animals in Norway in 1993 - 2017, reprinted with permission \\citep{NORM/NORM-VET2017}.", echo=FALSE, message=FALSE, fig.align='center'}
+```{r, fig.cap="\\label{fig:quinUsage}Overall sales, in kg active substance, of quinolones and macrolides for therapeutic use in terrestrial livestock animals in Norway in 1993 - 2017, reprinted with permission \\citep{NORM/NORM-VET2017}.", echo=FALSE, message=FALSE, out.width="95%"}
 knitr::include_graphics("images/quin_usage.png")
 ```
 
@@ -62,7 +62,7 @@ knitr::include_graphics("images/pop_structure.png")
 
 Multiple mechanisms that infer resistance towards quinolones have been discovered in _E. coli_, and they are generally divided into four categories: chromosomal mutations, reduced membrane permeability, efflux pump over expression, and plasmid mediated quinolone resistance (PMQR)[@Correia2017,@Aldred2014a], see Figure \@ref(fig:mechanisms).
 
-```{r, fig.cap="\\label{fig:mechanisms}Quinolone resistance mechanisms, reprinted with permission from Microbiology Society \\citep{Correia2017}", out.width="14cm", out.height="10cm", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center"}
+```{r, fig.cap="\\label{fig:mechanisms}Quinolone resistance mechanisms, reprinted with permission from Microbiology Society \\citep{Correia2017}.", out.width="14cm", out.height="10cm", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center"}
 knitr::include_graphics("images/mechanisms.jpg")
 ```
 
@@ -94,31 +94,40 @@ The acetyltransferase AAC(6')-Ib-cr infers resistance towards quinolones by alte
 ### In Norway
 QREC from a variety of animals have been monitored in NORM-VET since 2006<!--sjekk med AM-->. The relative occurrences of QREC within these animals can be found in Figure \@ref(fig:qrecEpi). When analysing NORM-VET data through the years, broilers seem to have the highest occurrence of QREC when compared to other species [@Kaspersen2018]. However, the occurrence is generally low.
 
-```{r, fig.cap="\\label{fig:qrecEpi}Percent occurrence of QREC per animal species. Illustration: H. Kaspersen", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center"}
+```{r, fig.cap="\\label{fig:qrecEpi}Percent occurrence of QREC per animal species. Illustration: H. Kaspersen.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center"}
 knitr::include_graphics("images/qrec_epi.png")
 ```
 
 ### In Europe
 
-
+```{r, fig.cap="\\label{fig:ecdcData}Mean occurrence of quinolone resistance in indicator \\textit{E. coli} from 2014 - 2017. Data taken from European Union summary reports on antimicrobial resistance in zoonotic and indicator bacteria from humans, animals and food 2014 - 2017 \\citep{EFSA2016b,Food2017,Food2018,Food2019}", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="120%"}
+knitr::include_graphics("images/ecdcdata.png")
+```
 
 
 
 ## Genomic Analysis
 ### High-throughput sequencing
-Following the sequencing of the Human Genome in 2004 with Sanger sequencing, a multi-million dollar sequencing initiative formed [@Schloss2004], resulting in the emergence of multiple high-throughput sequencing (HTS) technologies. Throughout the years, Illumina has quickly become the dominant short-read technology by which high-throughtput sequencing have developed. With the MiSeq, HiSeq and NextSeq sequencers, HTS has rapidly become both cheaper and more efficient. The MiSeq sequencer has been readily used for bacterial genomes, due to their relatively fast instrument run time and the small size of the genomes [@Reuter2015].
+Following the sequencing of the Human Genome in 2004 with Sanger sequencing, a multi-million dollar sequencing initiative formed [@Schloss2008], resulting in the emergence of multiple high-throughput sequencing (HTS) technologies. Throughout the years, Illumina has quickly become the dominant short-read technology by which high-throughtput sequencing have developed. With the MiSeq, HiSeq and NextSeq sequencers, HTS has rapidly become both cheaper and more efficient. The MiSeq sequencer has been readily used for bacterial genomes, due to their relatively fast instrument run time and the small size of the genomes [@Reuter2015].
 
-The process of HTS is similar to that of Sanger sequencing. First, the genomic DNA (gDNA) is fragmented and enriched either by PCR or by hybridization [@Morey2013]. 
+The process of HTS is similar to that of Sanger sequencing. First, the genomic DNA (gDNA) is fragmented and enriched either by PCR or by hybridization [@Morey2013], through a process called library preparation. Here, the genomic DNA fragments are adapter ligated and prepared for sequencing. Then, the prepared fragments are placed on a flowcell and a clonal array is generated by bridge PCR [@Morey2013], see Figure \@ref(fig:seqmet). This is done to amplify the signal for the sequencer to detect. Afterwards, sequencing-by-synthesis is performed to identify the bases in each DNA fragment, summarised in Figure \@ref(fig:seqmet).
 
-<!-- sequencing -->
-  <!-- library prep -->
-  <!-- Illumina sequencing -->
+```{r, fig.cap="\\label{fig:seqmet}Steps in Illumina sequencing; A: Generation of the clonal array by bridge PCR. The DNA fragments are denatured, then bind to the flow cell oligonucleotides by the attached adapters. The free end of the DNA fragment then hybridize to an adjacent oligonucleotide. Then, the polymerase extends the oligonucleotide to form a double-stranded fragment. The fragments are then denatured, resulting in two separate fragments relatively close to each other. This is then repeated to form clusters of fragments on the flowcell. B: Sequencing by synthesis, which takes place in the clonal clusters created in A. Bases are added to the reaction, and only one base can be added at a time due to a 3' block. Fluorescence is emitted after incorporation, and is registered by the instrument. Lastly, the 3' block is removed and the process is repeated. Modified and reprinted with permission from Elsevier \\citep{Morey2013}.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="90%"}
+knitr::include_graphics("images/seqmet.jpg")
+```
 
-### Bioinformatics
+
+### Analysis of genomic data
 <!-- intro to bioinformatics -->
 <!-- standard software -->
   <!-- explanation on the tools? -->
 Ever since the eve of high-throughput sequencing platforms in the early 2000s, bioinformatics have become increasingly needed to handle the massive amount of generated data. Bioinformatics can be defined as the use of informatics techniques, such as mathematics, statistics and computer science, to understand biological data on a large scale [@Luscombe2001]. In most cases, DNA or protein sequences represent the biological data, but gene expression data can also be analysed.
+
+The main analysis pathway of culture-based genomic data is shown in Figure \@ref(fig:bioinfo). Briefly, DNA is extracted from pure cultures and sequenced. Then, the quality controlled reads are either assembled into contigs, or a read mapping method is used. Then, downstream analyses like network analyses, resistance profiling and ordination may be done. 
+
+```{r, fig.cap="\\label{fig:bioinfo}Main analysis pathway for culture-based genomic data, reprinted and modified with permission from Springer Nature \\citep{Boolchandani2019}.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="110%"}
+knitr::include_graphics("images/bioinfo.jpg")
+```
 
 A myriad of bioinformatic software have been and are being created. However, some programs have become the gold standard for most bioinformaticians. Such programs include, but are not limited to:
 
@@ -132,5 +141,5 @@ A myriad of bioinformatic software have been and are being created. However, som
 ### Databases
 <!-- databases -->
 <!-- genes in databases as 'wild type' -->
-When looking for certain mutations and the presence/absence of genes, one is reliant on a well-curated database. For antimicrobial resistance, multiple databases have been created, but only some of them are manually curated, for example the ResFinder database (https://bitbucket.org/genomicepidemiology/resfinder_db/src/master/). 
+When looking for certain mutations and the presence/absence of genes, one is reliant on a well-curated database. For antimicrobial resistance, multiple databases have been created, but only some of them are manually curated, for example the ResFinder database
 
