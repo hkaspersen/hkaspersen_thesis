@@ -1,5 +1,7 @@
 # Materials and Methods
 
+Here follows a summary of methods used - for details, see enclosed articles.
+
 ## Isolate information
 All _E. coli_ isolates included in this study were isolated through the NORM-VET programme. 
 In Article I, data from NORM-VET between 2006 and 2016 was compiled and analysed, resulting in data from 4568 _E. coli_ isolates.
@@ -12,7 +14,11 @@ DNA was isolated from pure bacterial cultures using the QIAmp DNA mini kit (Qiag
 The Nextera XT/Flex (Illumina) library preparation kits were used for preparing the libraries for sequencing. Sequencing was done on Illumina HiSeq platforms, either Hiseq 2000, Hiseq 2500 rapid run, Hiseq 3/4000, or Hiseq X. The sequencing and library preparation service was provided by the Norwegian Sequencing Centre (www.sequencing.uio.no), a national technology platform hosted by the University of Oslo and supported by the "Functional Genomics" and "Infrastructure" programs of the Research Council of Norway and the Southeastern Regional Health Authorities.
 
 ## Bioinformatic analyses
-All raw reads in this study were quality controlled with FastQC (https://www.bioinformatics.babraham.ac.uk/projects/fastqc/). Possible contaminant reads were identified with Mash screen [@Ondov2016]. Residual phiX was removed with bbduk (https://jgi.doe.gov/data-and-tools/bbtools/) by mapping reads to the phiX genome (NC_001422.1). Unmapped sequences were then trimmed with trimmomatic [@Bolger2014]
+All raw reads in this study were quality controlled with FastQC (https://www.bioinformatics.babraham.ac.uk/projects/fastqc/). Possible contaminant reads were identified with Mash screen [@Ondov2016]. Residual phiX was removed with bbduk (https://jgi.doe.gov/data-and-tools/bbtools/) by mapping reads to the phiX genome (NC_001422.1). Unmapped sequences were then trimmed with trimmomatic [@Bolger2014].
+
+## Clustering analysis
+Multi locus sequence typing (MLST) and core genome MLST (cgMLST) was used to get an overview of the relatedness between isolates. The "_Escherichia coli_ #1" was used for MLST [@Wirth2006], and the cgMLST scheme was downloaded from Zenodo (https://zenodo.org/record/1323690#.XMqp8ZgzZaQ) [@Alikhan2018]. Both schemes were hosted by EnteroBase. Pairwise distances were calculated from the cgMLST alleles and clustered in R. 
+
 
 ## Code and statistical analyses
 All statistical analyses and visualizations were done in `r version$version.string`. All code is published on github: www.github.com/hkaspersen.
