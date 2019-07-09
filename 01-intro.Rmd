@@ -62,7 +62,7 @@ knitr::include_graphics("images/watermetalion.jpg")
 The genus _Escherichia_ has been known since 1985 [@Farmer1985], but it was Theodor Escherich that first identified, in 1985, the species _Bacterium coli_, later called _Escherichia coli_ [@Escherich1989]. _Escherichia coli_ (_E. coli_) is the most studied microorganism on earth [@Vila2016], and is often used as a model organism in various microbiology studies and surveillance. _E. coli_ is a gram-negative, rod-shaped, facultative anaerobic bacteria often found in the gastrointestinal tract of warm-blooded animals and humans. There, it may be present as a commensal or as a pathogen. The presence of _E. coli_ in the gastrointestinal tract has been attributed to the relationship between body mass and gut transit times [@Gordon2003], and the probability of detecting _E. coli_ increases with the body size of the host. Thus, the prevalence of _E. coli_ is higher in larger mammals. Also, gut morphology seem to play a role in the prevalence of _E. coli_ [@OBrien2011].
 
 ### Population structure
-The _E. coli_ population is generally regarded to have a clonal structure [@Tenaillon2010]. Multiple stable lineages, also known as clones, have been found to exist within the _E. coli_ species, among which very little recombination occurs. These stable lineages are known as phylogroups, specifically A, B1, B2, C, D, E, and F (Figure \@ref(fig:popstructure)), based on the presence and absence of specific genes [@Clermont2013]. The molecular variability within these lineages have been postulated to be neutral in terms of organism fitness, and thus not affected by natural selection [@Selander2007].
+The _E. coli_ population is generally regarded to have a clonal structure [@Tenaillon2010]. Multiple stable lineages, also known as clones, have been found to exist within the _E. coli_ species, among which very little recombination occurs. These stable lineages are known as phylogroups, specifically A, B1, B2, D, E, and F (Figure \@ref(fig:popstructure)), based on the presence and absence of specific genes [@Clermont2013]. The molecular variability within these lineages have been postulated to be neutral in terms of organism fitness, and thus not affected by natural selection [@Selander2007].
 
 ```{r, fig.cap="\\label{fig:popstructure}Phylogenetic history of \\textit{Escherichia coli}, reprinted with permission from Springer Nature \\citep{Tenaillon2010}.", out.width="14cm", out.height="14cm", echo=FALSE, message=FALSE, fig.align='center'}
 knitr::include_graphics("images/pop_structure.png")
@@ -115,27 +115,44 @@ knitr::include_graphics("images/ecdcdata.png")
 ```
 
 ## Genomic Analysis
+
+<!-- introduction to bioinformatics -->
+<!-- sequencing technology -->
+    <!-- library prep -->
+    <!-- read length -->
+    <!-- paired-end etc -->
+<!-- Analysis of sequence reads -->
+    <!-- Quality control -->
+    <!-- assembly -->
+    <!-- post-assembly analysis -->
+    <!-- mapping-based analysis -->
+<!-- databases -->
+<!-- phylogenetic analysis -->
+
+The process of analysing genomic data can be compared to piecing together shredded paper - the genomic DNA is fragmented, sequenced, then put together again. Afterwards, the assemblies are analysed in various aspects. Ever since the eve of high-throughput sequencing platforms in the early 2000s, bioinformatics have become increasingly needed to handle the massive amount of generated data. Bioinformatics can be defined as the use of informatics techniques, such as mathematics, statistics and computer science, to understand biological data on a large scale [@Luscombe2001]. In most cases, DNA or protein sequences represent the biological data, and is widely used in phylogenetic analysis, gene identification, and other analyses. In this chapter, the process of genomic analysis is presented in detail.
+
 ### High-throughput sequencing
-Following the sequencing of the Human Genome in 2004 with Sanger sequencing, a multi-million dollar sequencing initiative formed [@Schloss2008], resulting in the emergence of multiple high-throughput sequencing (HTS) technologies. Throughout the years, Illumina has quickly become the dominant short-read technology by which high-throughtput sequencing have developed. With the MiSeq, HiSeq and NextSeq sequencers, HTS has rapidly become both cheaper and more efficient. The MiSeq sequencer has been readily used for bacterial genomes, due to the relatively fast instrument run time and the small size of the genomes [@Reuter2015].
+Following the sequencing of the Human Genome in 2004 with Sanger sequencing, a multi-million dollar sequencing initiative formed [@Schloss2008], resulting in the emergence of multiple high-throughput sequencing (HTS) technologies. Throughout the years, Illumina has quickly become the dominant short-read technology by which high-throughtput sequencing have developed. With the MiSeq, HiSeq and NextSeq sequencers, HTS has rapidly become both cheaper and more efficient. The MiSeq sequencer has been readily used for bacterial genomes, due to the relatively fast instrument run time and the small size of the genomes [@Reuter2015]. The strength of this technology is the massive parallellization of the sequencing process, quickly generating gigabytes of data. Other sequencing companies exist, but Illumina is the dominant on the market for short read sequencers. Companies like Pacific Biosciences and Oxford Nanopore have sequencers specifically for long-read technology.
 
-The process of HTS builds upon that of Sanger sequencing. First, the genomic DNA (gDNA) is fragmented and enriched either by PCR or by hybridization [@Morey2013], through a process called library preparation. Here, the genomic DNA fragments are adapter ligated and prepared for sequencing. Then, the prepared fragments are placed on a flowcell and a clonal array is generated by bridge PCR [@Morey2013], see Figure \@ref(fig:seqmet). This is done to amplify the signal for the sequencer to detect. Afterwards, sequencing-by-synthesis is performed to identify the bases in each DNA fragment, summarised in Figure \@ref(fig:seqmet).
+The process of Illumina HTS builds upon that of Sanger sequencing. First, genomic DNA is extracted and purified to adequate quality. The genomic DNA (gDNA) is then fragmented and enriched either by PCR or by hybridization [@Morey2013], through a process called library preparation. Here, the genomic DNA is fragmented by either mechanical shearing or by enzymes. Adapters are then placed on each end of each DNA fragment, then amplified. Then, the prepared fragments are placed on a flowcell coated with a lawn of adapter oligos, and a clonal array is generated by bridge PCR [@Morey2013], see Figure \@ref(fig:seqmet). The DNA fragments are denatured, then bind to the flow cell oligonucleotides by the attached adapters. The free end of the DNA fragment then hybridize to an adjacent oligonucleotide. Then, the polymerase extends the oligonucleotide to form a double-stranded fragment. The fragments are then denatured, resulting in two separate fragments relatively close to each other. This is then repeated to form clusters of fragments on the flowcell. This is done to amplify the signal for the sequencer to detect. Afterwards, sequencing-by-synthesis is performed to identify the bases in each DNA fragment. First, the reverse strands created in the clustering step is washed away. The fragments are then polymerized to a given length by incorporating fluoresence labelled bases, which are registered by the instrument. The length of the polymerization depends on the sequencer and what the user has specified. In most cases, the read length is between 100 - 250 base pairs [@Illumina2019]. When the forward strands have been sequenced, a new bridge PCR takes place, and the forward strands are cleaved off. The reverse strands are then sequenced in the same manner as the forward strands [@Illumina2019].
 
-```{r, fig.cap="\\label{fig:seqmet}Steps in Illumina sequencing; A: Generation of the clonal array by bridge PCR. The DNA fragments are denatured, then bind to the flow cell oligonucleotides by the attached adapters. The free end of the DNA fragment then hybridize to an adjacent oligonucleotide. Then, the polymerase extends the oligonucleotide to form a double-stranded fragment. The fragments are then denatured, resulting in two separate fragments relatively close to each other. This is then repeated to form clusters of fragments on the flowcell. B: Sequencing by synthesis, which takes place in the clonal clusters created in A. Bases are added to the reaction, and only one base can be added at a time due to a 3' block. Fluorescence is emitted after incorporation, and is registered by the instrument. Lastly, the 3' block is removed and the process is repeated. Modified and reprinted with permission from Elsevier \\citep{Morey2013}.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="90%"}
+```{r, fig.cap="\\label{fig:seqmet}Steps in Illumina sequencing; A: Generation of the clonal array by bridge PCR. B: Sequencing by synthesis, which takes place in the clonal clusters created in A. Modified and reprinted with permission from Elsevier \\citep{Morey2013}.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="90%"}
 knitr::include_graphics("images/seqmet.jpg")
 ```
 
-
-### Analysis of genomic data
-<!-- intro to bioinformatics -->
-<!-- standard software -->
-  <!-- explanation on the tools? -->
-Ever since the eve of high-throughput sequencing platforms in the early 2000s, bioinformatics have become increasingly needed to handle the massive amount of generated data. Bioinformatics can be defined as the use of informatics techniques, such as mathematics, statistics and computer science, to understand biological data on a large scale [@Luscombe2001]. In most cases, DNA or protein sequences represent the biological data, but gene expression data can also be analysed.
-
-The main analysis pathway of culture-based genomic data is shown in Figure \@ref(fig:bioinfo). Briefly, DNA is extracted from pure cultures and sequenced. Then, the quality controlled reads are either assembled into contigs, or a read mapping method is used. Then, downstream analyses like network analyses, resistance profiling and ordination may be done. 
+### Analysis of sequence reads
+Raw reads from the sequencer can be analysed in multiple ways, illustrated in Figure \@ref(fig:bioinfo). Raw reads are quality controlled, to check the quality of the read bases and remove bad quality reads. This is usually done by programs such as fastQC (https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) and Trimmomatic [@Bolger2014]. Afterwards, the reads are used to stitch the genome back together, a process called genome assembly.
 
 ```{r, fig.cap="\\label{fig:bioinfo}Main analysis pathway for culture-based genomic data, reprinted and modified with permission from Springer Nature \\citep{Boolchandani2019}.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="110%"}
 knitr::include_graphics("images/bioinfo.jpg")
 ```
+
+Before delving into genome assembly paradigms, it is important to note that genome assemblies are only plausible reconstructions of the original genomes in the cells from which the DNA was extracted. Therefore, a genome assembly cannot be "true", it is just a representation of the genomic material in the respective cells at the time of extraction.
+
+Genome assembly is a process where the quality controlled reads are put together into longer, contiguous sequences called contigs. This is done on the basis of overlapping sequences in the reads. Multiple approaches to genome assembly have been developed, based on whether or not a reference is used.
+
+
+
 
 A myriad of bioinformatic software have been and are being created. However, some programs have become the gold standard for most bioinformaticians. Such programs include, but are not limited to:
 
