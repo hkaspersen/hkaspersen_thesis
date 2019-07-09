@@ -118,16 +118,17 @@ knitr::include_graphics("images/ecdcdata.png")
 
 <!-- introduction to bioinformatics -->
 <!-- sequencing technology -->
-    <!-- library prep -->
-    <!-- read length -->
-    <!-- paired-end etc -->
+<!-- library prep -->
+<!-- read length -->
+<!-- paired-end etc -->
 <!-- Analysis of sequence reads -->
-    <!-- Quality control -->
-    <!-- assembly -->
-    <!-- post-assembly analysis -->
-    <!-- mapping-based analysis -->
+<!-- Quality control -->
+<!-- assembly -->
+<!-- post-assembly analysis -->
+<!-- mapping-based analysis -->
 <!-- databases -->
 <!-- phylogenetic analysis -->
+
 
 The process of analysing genomic data can be compared to piecing together shredded paper - the genomic DNA is fragmented, sequenced, then put together again. Afterwards, the assemblies are analysed in various aspects. Ever since the eve of high-throughput sequencing platforms in the early 2000s, bioinformatics have become increasingly needed to handle the massive amount of generated data. Bioinformatics can be defined as the use of informatics techniques, such as mathematics, statistics and computer science, to understand biological data on a large scale [@Luscombe2001]. In most cases, DNA or protein sequences represent the biological data, and is widely used in phylogenetic analysis, gene identification, and other analyses. In this chapter, the process of genomic analysis is presented in detail.
 
@@ -149,8 +150,13 @@ knitr::include_graphics("images/bioinfo.jpg")
 
 Before delving into genome assembly paradigms, it is important to note that genome assemblies are only plausible reconstructions of the original genomes in the cells from which the DNA was extracted. Therefore, a genome assembly cannot be "true", it is just a representation of the genomic material in the respective cells at the time of extraction.
 
-Genome assembly is a process where the quality controlled reads are put together into longer, contiguous sequences called contigs. This is done on the basis of overlapping sequences in the reads. Multiple approaches to genome assembly have been developed, based on whether or not a reference is used.
+Genome assembly is a process where the quality controlled reads are put together into longer, contiguous sequences called contigs. This is done on the basis of overlapping sequences in the reads. Multiple approaches to genome assembly have been developed, and is essentially divided into two paradigms: greedy assembly and graph-based assembly [@Simpson2015].
 
+In greedy assembly, the reads are iteratively joined together in decreasing order of quality of the overlaps [@Simpson2015]. Conflicting read overlaps are ignored, and the contigs grow by adding new reads or joining two or more contigs.
+
+```{r, fig.cap="\\label{fig:assembly}Genome assembly paradigms. a: The original genome and the shotgun sequencing reads. b: Greedy assembly approach. c: The overlap, layout, concensus assembly approach. c: De Bruijn graph assembly approach. e: String graph assembly approach. Reprinted with permission from Annual Review of Genomics and Human Genetics \\citep{Simpson2015}.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="99%"}
+knitr::include_graphics("images/assembly.jpg")
+```
 
 
 
