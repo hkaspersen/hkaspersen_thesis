@@ -152,13 +152,17 @@ Before delving into genome assembly paradigms, it is important to note that geno
 
 Genome assembly is a process where the quality controlled reads are put together into longer, contiguous sequences called contigs. This is done on the basis of overlapping sequences in the reads. Multiple approaches to genome assembly have been developed, and is essentially divided into two paradigms: greedy assembly and graph-based assembly [@Simpson2015].
 
-In greedy assembly, the reads are iteratively joined together in decreasing order of quality of the overlaps [@Simpson2015]. Conflicting read overlaps are ignored, and the contigs grow by adding new reads or joining two or more contigs.
+In greedy assembly algorithms, the reads are iteratively joined together in decreasing order of quality of the overlaps [@Simpson2015]. Conflicting read overlaps are ignored, and the contigs grow by adding new reads or joining two or more contigs. The major limitation of this method is that it cannot handle repeated genomic regions [@Simpson2015]. Due to bigger and more complex genomes being sequenced, graph-based algorithms were implemented to handle these issues. Graph-based approaches is separated into overlap-layout-concensus (OLC), De Bruijn, and string graphs. OLC is the simplest of these three, where each read is a vertex in the graph and overlapping sequences are linked with an edge. First, overlapping sequences are identified. This is the most time-consuming part of the assembly. Then, the graph is created, and the correct orientation of the reads as well as their order is identified. Lastly, a concensus sequence is computed and output as contigs [@Simpson2015, @Myers2005]. This method is usually only used for small genomes, and is mostly replaced by De Bruijn graph methods for larger and more complex genomes. 
 
 ```{r, fig.cap="\\label{fig:assembly}Genome assembly paradigms. a: The original genome and the shotgun sequencing reads. b: Greedy assembly approach. c: The overlap, layout, concensus assembly approach. c: De Bruijn graph assembly approach. e: String graph assembly approach. Reprinted with permission from Annual Review of Genomics and Human Genetics \\citep{Simpson2015}.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="99%"}
 knitr::include_graphics("images/assembly.jpg")
 ```
 
+De Bruijn graph algorithms is based on separating the reads into _k_-mers of a specific length, then creating a graph by identifying overlaps, similar to the greedy algorithm. Here, the algorithm "walks" through the graph, and identifies the optimal path where each edge in the graph is visited only once, also known as an Eulerian path [@Pevzner2001]. 
 
+```{r, fig.cap="\\label{fig:debruijn}The two De Bruijn graph based assembly methods for genome assembly: Hamiltonian cycles and Eulerian cycles. Reprinted with permission from Nature Biotechnology \\citep{Compeau2011}.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="100%"}
+knitr::include_graphics("images/debruijn.jpg")
+```
 
 A myriad of bioinformatic software have been and are being created. However, some programs have become the gold standard for most bioinformaticians. Such programs include, but are not limited to:
 
