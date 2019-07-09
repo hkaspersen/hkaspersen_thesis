@@ -73,14 +73,16 @@ tibble(
            "Multi drug resistance",
            "Epidemiological cut off",
            "Quinolone sensitive E. coli",
-           "Minimum inhibitory concentration"),
+           "Minimum inhibitory concentration",
+           "Overlap-layout-concensus"),
   Abbreviation = c("QREC",
                    "AMR",
                    "WGS",
                    "MDR",
                    "ECOFF",
                    "QSEC",
-                   "MIC"))%>%
+                   "MIC",
+                   "OLC"))%>%
   arrange(Term) %>% # i.e. alphabetical order by Term
   kable(booktab = T) # create nice table
 ```
