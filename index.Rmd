@@ -44,7 +44,7 @@ As for my coworkers at NVI, I would like to show my immense gratitute to Solveig
 
 For my colleagues at the Institute of Veterinary Sciences, I would like to thank Erik Paulshus, Karla Meza, Leif Lotherington, Aud Kari Fauske, Gaute Skogtun, Stanislav Iakhno, Mari Røken, Ane Mohn Bjelland, Cristopher Nilsson and Silje Mogstad Finstad for being amazing coworkers and supporters throughout the years. Thank you for the ski trips, barbecues and cabin trips, and the good work environment.
 
-Lastly, I would like to thank my friends and family for being loving and caring during these years. And a special thank you to my partner for being patient with me and always being understanding and supportive, as well as for giving me the happiest year in my life so far.
+Lastly, I would like to thank my friends and family for being loving and caring during these years. And a special thank you to my partner for being patient with me and always being understanding and supportive.
 
 > `r tufte::quote_footer("--- Håkon Kaspersen, Oslo, 2019")`
 
