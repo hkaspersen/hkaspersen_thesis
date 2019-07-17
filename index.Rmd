@@ -49,7 +49,7 @@ Lastly, I would like to thank my friends and family for being loving and caring 
 > `r tufte::quote_footer("--- Håkon Kaspersen, Oslo, 2019")`
 
 # Disclosure
-This thesis was written in RStudio with `r version$version.string` using the Bookdown package [@R-bookdown].
+This thesis was written in RStudio with `r version$version.string` using the Bookdown package [@R-bookdown]. All code is published on github: www.github.com/hkaspersen.
 
 # Funding
 This project was funded by the Norwegian Research Council (NFR no. 255383) and the Norwegian food industry.
