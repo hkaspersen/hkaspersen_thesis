@@ -1,1 +1,13 @@
 # Conclusions
+
+- Low occurrence of QREC in various animal species in Norway
+
+- Significant difference in QREC occurrence between animal species in Norway
+
+- High diversity of QREC in broilers, pigs, red foxes and wild birds in Norway
+
+- Litte PMQR determinants in animals in Norway
+
+- QREC from broilers had a lower intra-species similarity than the other species
+
+- Closely related isolates with similar resistance mechanisms were identified in multiple animal species, indicating dissemination events
