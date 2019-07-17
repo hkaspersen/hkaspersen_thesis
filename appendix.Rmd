@@ -3,9 +3,11 @@
 # Enclosed articles I - III
 
 \newpage
+\newpage
 
 ## Article 1
 
+\newpage
 \newpage
 
 <!-- article 1 -->
@@ -15,6 +17,7 @@
 
 ## Article 2
 
+\newpage
 \newpage
 
 <!-- article 2 -->
