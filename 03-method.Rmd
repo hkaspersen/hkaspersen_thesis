@@ -25,7 +25,7 @@ Multi locus sequence typing (MLST) and core genome MLST (cgMLST) was used to get
 <!-- Chapter 3 -->
 ## Statistical methods
 Statistical analysis was done in R version 3.4.2 (Article 1) and `r version$version.string` (Article 2 and 3) [@R-base].
-Significant differences between groups was calculated by using $\chi^2^-test. Confidence intervals were calculated by using the two-sided exact binomial test at 95% confidence level.
+Significant differences between groups was calculated by using $\chi$^2^-test. Confidence intervals were calculated by using the two-sided exact binomial test at 95% confidence level.
 
 Relatedness was determined by calculating pairwise distances between isolates. To test if individuals within animal groups were more closely related than randomly expected, the individuals within animal groups were permuted in 1000 iterations. Percentage of distances below 0.1 and above 0.8 was calculated in each iteration. Non-exact p-values was then calculated on the basis of how many expected values from x iterations were above the observed value. 
 
