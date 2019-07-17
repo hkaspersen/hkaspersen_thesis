@@ -2,25 +2,27 @@
 
 Here follows a summary of methods used - for details, see enclosed articles.
 
-## Isolate information
-All _E. coli_ isolates included in this study were isolated through the NORM-VET programme. 
-In Article I, data from NORM-VET between 2006 and 2016 was compiled and analysed, resulting in data from 4568 _E. coli_ isolates.
-In Article II, QREC isolates from broilers, pigs, red foxes and wild birds were included. Here, the QREC isolates were grouped based on their animal species of origin, MIC values to ciprofloxacin and nalidixic acid, as well as additional resistances. Up to 10 isolates were randomly selected per group, to a total of 285 isolates.
-In article III, broiler farms that were sampled at least three times were selected, with at least one QREC and one sensitive _E. coli_ isolate. In total, 106 isolates were included, 41 of which were QREC and 65 sensitive _E. coli_, divided over 22 different broiler farms.
+<!-- Chapter 1  -->
+## Laboratory methods
 
-## DNA isolation and whole genome sequencing
-DNA was isolated from pure bacterial cultures using the QIAmp DNA mini kit (Qiagen). DNA quality was measured on a NanoDrop^TM^ One spectrophotometer (Thermo Scientific), and DNA concentration was measured on a broad-range DNA Qubit assay (Qiagen). DNA integrity was assessed by gel electrophoresis and on a Fragment Analyser^TM^ Automated CE System Instrument (FSV2-DE2-100, Advanced Analytical).
+### Isolate information
+All _E. coli_ isolates included in this study were isolated through the NORM-VET programme, and the methods used for isolating _E. coli_ and susceptibility testing is described in Section \@ref(norwmonitor).
 
-The Nextera XT/Flex (Illumina) library preparation kits were used for preparing the libraries for sequencing. Sequencing was done on Illumina HiSeq platforms, either Hiseq 2000, Hiseq 2500 rapid run, Hiseq 3/4000, or Hiseq X. The sequencing and library preparation service was provided by the Norwegian Sequencing Centre (www.sequencing.uio.no), a national technology platform hosted by the University of Oslo and supported by the "Functional Genomics" and "Infrastructure" programs of the Research Council of Norway and the Southeastern Regional Health Authorities.
+### DNA isolation and sequencing
+QREC isolates were plated onto MacConkey agar with 0.06 mg/L ciprofloxacin to confirm resistance. DNA was isolated from pure bacterial cultures using the QIAmp DNA mini kit (Qiagen). DNA quality was measured on a NanoDrop^TM^ One spectrophotometer (Thermo Scientific), and DNA concentration was measured with a broad-range DNA Qubit assay (Qiagen). DNA integrity was assessed by gel electrophoresis and/or on a Fragment Analyser^TM^ Automated CE System Instrument (FSV2-DE2-100, Advanced Analytical).
 
-## Bioinformatic analyses
+The Nextera XT/Flex (Illumina) library preparation kits were used for preparing the libraries for sequencing. Sequencing was done on Illumina HiSeq platforms, either Hiseq 2000, Hiseq 2500 rapid run, Hiseq 3/4000, or Hiseq X. The sequencing and library preparation service was provided by the Norwegian Sequencing Centre (NSC, www.sequencing.uio.no), a national technology platform hosted by the University of Oslo and supported by the "Functional Genomics" and "Infrastructure" programs of the Research Council of Norway and the Southeastern Regional Health Authorities. Both library preparation and sequencing was performed by NSC.
+
+<!-- Chapter 2  -->
+## Genomic analysis methods
+### Quality control, genome assembly and annotation
 All raw reads in this study were quality controlled with FastQC (https://www.bioinformatics.babraham.ac.uk/projects/fastqc/). Possible contaminant reads were identified with Mash screen [@Ondov2016]. Residual phiX was removed with bbduk (https://jgi.doe.gov/data-and-tools/bbtools/) by mapping reads to the phiX genome (NC_001422.1). Unmapped sequences were then trimmed with trimmomatic [@Bolger2014].
 
-## Clustering analysis
-Multi locus sequence typing (MLST) and core genome MLST (cgMLST) was used to get an overview of the relatedness between isolates. The "_Escherichia coli_ #1" was used for MLST [@Wirth2006], and the cgMLST scheme was downloaded from Zenodo (https://zenodo.org/record/1323690#.XMqp8ZgzZaQ) [@Alikhan2018]. Both schemes were hosted by EnteroBase. Pairwise distances were calculated from the cgMLST alleles and clustered in R. 
+### Clustering and phylogenetic analysis
+Multi locus sequence typing (MLST) and core genome MLST (cgMLST) was used to get an overview of the relatedness between isolates. The "_Escherichia coli_ #1" scheme was used for MLST [@Wirth2006], and the cgMLST scheme was downloaded from Zenodo (https://zenodo.org/record/1323690#.XMqp8ZgzZaQ) [@Alikhan2018]. Both schemes were hosted by EnteroBase. Pairwise distances were calculated from the cgMLST alleles and clustered in R. 
 
 
-## Code and statistical analyses
-All statistical analyses and visualizations were done in `r version$version.string`. All code is published on github: www.github.com/hkaspersen.
+<!-- Chapter 3 -->
+## Statistical methods
 
-### Packages
+
