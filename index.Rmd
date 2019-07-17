@@ -30,8 +30,7 @@ packages <- c("bookdown",
               "ggmap",
               "rworldmap",
               "kableExtra",
-              "tufte",
-              "vegan")
+              "tufte")
 
 knitr::write_bib(c(.packages(), packages), 'packages.bib')
 ```
