@@ -6,9 +6,9 @@
 \AtBeginDocument{\let\maketitle\relax}
 \usepackage{makeidx}
 \makeindex
+\usepackage[nottoc]{tocbibind}
 \usepackage{caption}
 \captionsetup[figure]{textfont={small,it}, labelfont={normalsize,bf,it}}
-\usepackage[nottoc]{tocbibind}
 \usepackage{graphicx}
 \usepackage{float}
 \let\origfigure\figure
@@ -19,10 +19,20 @@
     \endorigfigure
 }
 \raggedbottom
-\usepackage{afterpage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{13.6pt} % as requested by fancyhdr's warning
 
-\newcommand\blankpage{%
-    \null
-    \thispagestyle{empty}%
-    \addtocounter{page}{-1}%
-    \newpage}
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
+\makeatletter
+\renewcommand{\chaptermark}[1]{%
+  \if@mainmatter
+    \markboth{Chapter \thechapter{}: #1}{}%
+  \else
+    \markboth{#1}{}%
+  \fi
+}
+\makeatother
+\usepackage{epigraph}
+\setcounter{secnumdepth}{1}
+\setcounter{tocdepth}{1}
