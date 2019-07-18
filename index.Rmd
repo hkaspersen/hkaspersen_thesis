@@ -19,7 +19,7 @@ bibliography: [packages.bib, library.bib]
 biblio-style: apalike
 link-citations: yes
 ---
-
+\pagestyle{empty}
 # Acknowledgements {-}
 The work of this thesis was carried out at the Norwegian Veterinary Institute (NVI), Oslo, Norway, from 2016 to 2019. The Ph. D. project was part of a project named "Quinolone resistant *E. coli* despite low antimicrobial usage: mechanisms and possible preventive measures", in collaboration with the Institute of Veterinary Sciences, Norwegian University of Life Sciences, and the private industry.
 
@@ -42,6 +42,7 @@ This project was funded by the Norwegian Research Council (NFR no. 255383) and t
 \tableofcontents
 
 \mainmatter
+\pagestyle{fancy}
 ```{r include=FALSE}
 # automatically create a bib database for R packages
 
