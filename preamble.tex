@@ -1,14 +1,14 @@
 \usepackage{titlesec}
 \usepackage{pdfpages}
 \titleformat{\chapter}
-  {\normalfont\LARGE\bfseries}{\thechapter}{1em}{}
+  {\normalfont\LARGE\bfseries}{\thechapter}{1em}{}  % set title format
 \titlespacing*{\chapter}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
 \AtBeginDocument{\let\maketitle\relax}
 \usepackage{makeidx}
 \makeindex
 \usepackage[nottoc]{tocbibind}
 \usepackage{caption}
-\captionsetup[figure]{textfont={small,it}, labelfont={normalsize,bf,it}}
+\captionsetup[figure]{textfont={small,it}, labelfont={normalsize,bf,it}}  % set figure caption font size and style
 \usepackage{graphicx}
 \usepackage{float}
 \let\origfigure\figure
@@ -20,12 +20,10 @@
 }
 \raggedbottom
 \usepackage{fancyhdr}
-\pagestyle{fancy}
 \setlength{\headheight}{13.6pt} % as requested by fancyhdr's warning
-
 \renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
 \makeatletter
-\renewcommand{\chaptermark}[1]{%
+\renewcommand{\chaptermark}[1]{%    % change settings for including headers
   \if@mainmatter
     \markboth{Chapter \thechapter{}: #1}{}%
   \else
