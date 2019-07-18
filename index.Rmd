@@ -6,19 +6,42 @@ geometry: "left=4cm,right=3cm,top=3cm,bottom=3cm"
 subparagraph: true
 output:
   bookdown::pdf_book:
+    toc: false
     citation_package: natbib
     includes:
       before_body: frontpage.tex
+      after_body: after_body.tex
       in_header: preamble.tex
 fontsize: 11pt
 linestretch: 1.2
-toc-depth: 1
 documentclass: book
 bibliography: [packages.bib, library.bib]
 biblio-style: apalike
 link-citations: yes
 ---
 
+# Acknowledgements {-}
+The work of this thesis was carried out at the Norwegian Veterinary Institute (NVI), Oslo, Norway, from 2016 to 2019. The Ph. D. project was part of a project named "Quinolone resistant *E. coli* despite low antimicrobial usage: mechanisms and possible preventive measures", in collaboration with the Institute of Veterinary Sciences, Norwegian University of Life Sciences, and the private industry.
+
+During my time as a Ph.D. student I've been acquainted with many supportive and fantastic people, both at NVI and the Institute of Veterinary Sciences at NMBU. I am humbled by all the support and kind words I have recieved during these three years. First and foremost, I would like to thank my main supervisor, Dr. Karin Lagesen, for being available at all times, giving structured feedback, and for sparking my interest for bioinformatics. I would like to thank Dr. Anne Margrete Urdahl for being readily available at the next door office. I am grateful that we have the same taste in coffee, as I especially enjoyed your thoughtful gesture of bringing me coffee every now and then from a coffee shop rather than the in-house coffee at the Institute. Furthermore, I thank Dr. Roger Simm for his knowledge in molecular biology, and the helpful discussions we had about genes and mutations. Dr. Madelaine Norström, your help in extracting data from the internal data system at the institute was invaluable, and your knowledge of epidemiology and statistics have been a pillar in both the isolate selection process and analysis. Lastly, I would like to thank Henning Sørum for his innate curiosity of science and seemingly endless knowledge. 
+
+As for my coworkers at NVI, I would like to show my immense gratitute to Solveig Sølverød Mo, Camilla Sekse and Jannice Schau Slettemeås, who have been amazingly supportive both at a personal and professional level. Thank you for the helpful discussions and coffee breaks, and the general interest you have shown in my work. Your everyday support meant more to me than you may have realized. I would like to extend my gratitute toward the rest of the Research group for food safety and animal health - thank you for the friday cake discussions and support.
+
+For my colleagues at the Institute of Veterinary Sciences, I would like to thank Erik Paulshus, Karla Meza, Leif Lotherington, Aud Kari Fauske, Gaute Skogtun, Stanislav Iakhno, Mari Røken, Ane Mohn Bjelland, Cristopher Nilsson and Silje Mogstad Finstad for being amazing coworkers and supporters throughout the years. Thank you for the ski trips, barbecues and cabin trips, and the good work environment.
+
+Lastly, I would like to thank my friends and family for being loving and caring during these years. And a special thank you to my partner for being patient with me and always being understanding and supportive.
+
+`r tufte::quote_footer("--- Håkon Kaspersen, Oslo, 2019")`
+
+# Disclosure {-}
+This thesis was written in RStudio with R version 3.6.1 (2019-07-05) using the Bookdown package [@R-bookdown]. All code is published on github: www.github.com/hkaspersen.
+
+# Funding {-}
+This project was funded by the Norwegian Research Council (NFR no. 255383) and the Norwegian food industry.
+
+\tableofcontents
+
+\mainmatter
 ```{r include=FALSE}
 # automatically create a bib database for R packages
 
@@ -35,27 +58,7 @@ packages <- c("bookdown",
 knitr::write_bib(c(.packages(), packages), 'packages.bib')
 ```
 
-# Acknowledgements
-The work of this thesis was carried out at the Norwegian Veterinary Institute (NVI), Oslo, Norway, from 2016 to 2019. The Ph. D. project was part of a project named "Quinolone resistant *E. coli* despite low antimicrobial usage: mechanisms and possible preventive measures", in collaboration with the Institute of Veterinary Sciences, Norwegian University of Life Sciences, and the private industry.
-
-During my time as a Ph.D. student I've been acquainted with many supportive and fantastic people, both at NVI and the Institute of Veterinary Sciences at NMBU. I am humbled by all the support and kind words I have recieved during these three years. First and foremost, I would like to thank my main supervisor, Dr. Karin Lagesen, for being available at all times, giving structured feedback, and for sparking my interest for bioinformatics. I would like to thank Dr. Anne Margrete Urdahl for being readily available at the next door office. I am grateful that we have the same taste in coffee, as I especially enjoyed your thoughtful gesture of bringing me coffee every now and then from a coffee shop rather than the in-house coffee at the Institute. Furthermore, I thank Dr. Roger Simm for his knowledge in molecular biology, and the helpful discussions we had about genes and mutations. Dr. Madelaine Norström, your help in extracting data from the internal data system at the institute was invaluable, and your knowledge of epidemiology and statistics have been a pillar in both the isolate selection process and analysis. Lastly, I would like to thank Henning Sørum for his innate curiosity of science and seemingly endless knowledge. 
-
-As for my coworkers at NVI, I would like to show my immense gratitute to Solveig Sølverød Mo, Camilla Sekse and Jannice Schau Slettemeås, who have been amazingly supportive both at a personal and professional level. Thank you for the helpful discussions and coffee breaks, and the general interest you have shown in my work. Your everyday support meant more to me than you may have realized. I would like to extend my gratitute toward the rest of the Research group for food safety and animal health - thank you for the friday cake discussions and support.
-
-For my colleagues at the Institute of Veterinary Sciences, I would like to thank Erik Paulshus, Karla Meza, Leif Lotherington, Aud Kari Fauske, Gaute Skogtun, Stanislav Iakhno, Mari Røken, Ane Mohn Bjelland, Cristopher Nilsson and Silje Mogstad Finstad for being amazing coworkers and supporters throughout the years. Thank you for the ski trips, barbecues and cabin trips, and the good work environment.
-
-Lastly, I would like to thank my friends and family for being loving and caring during these years. And a special thank you to my partner for being patient with me and always being understanding and supportive.
-
-> `r tufte::quote_footer("--- Håkon Kaspersen, Oslo, 2019")`
-
-# Disclosure
-This thesis was written in RStudio with `r version$version.string` using the Bookdown package [@R-bookdown]. All code is published on github: www.github.com/hkaspersen.
-
-# Funding
-This project was funded by the Norwegian Research Council (NFR no. 255383) and the Norwegian food industry.
-
 # Summary (English)
-
 
 # Summary (Norwegian)
 
@@ -73,16 +76,14 @@ tibble(
            "Multi drug resistance",
            "Epidemiological cut off",
            "Quinolone sensitive E. coli",
-           "Minimum inhibitory concentration",
-           "Overlap-layout-concensus"),
+           "Minimum inhibitory concentration"),
   Abbreviation = c("QREC",
                    "AMR",
                    "WGS",
                    "MDR",
                    "ECOFF",
                    "QSEC",
-                   "MIC",
-                   "OLC"))%>%
+                   "MIC"))%>%
   arrange(Term) %>% # i.e. alphabetical order by Term
   kable(booktab = T) # create nice table
 ```
