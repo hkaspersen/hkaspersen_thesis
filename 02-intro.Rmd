@@ -46,7 +46,7 @@ knitr::include_graphics("images/quin_usage.png")
 The Norwegian broiler production is a pyramidal structure with the broilers at the bottom and purebred animals at the top [@Mo2016a]. Hatching eggs are imported from grandparent animals in Sweden which originate mostly from Scotland or Germany. The eggs are hatched in Norwegian hatcheries, and become parent animals. These are reared for around 18 weeks, and are subsequently used for breeding of broiler chickens until around 60 weeks old. The broiler chickens are hatched in hatcheries, and distributed to broiler farms all over the country. Only a few hatcheries exist in Norway. Broiler chickens are reared for 28 - 32 days, depending on weight, then slaughtered [@Nortura2019]. Broiler farms are heated and closed from the outside environment. Also, a maximum of 36 kg of chickens are allowed per square meter, which is less than in other EU countries [@Nortura2019].
 
 ### Swine production
-Swine production in Norway also has a pyramidal structure similar to the broiler production. Here, the breeding herds are at the top, and the production herds at the bottom [@Kristoffersen2016].
+Swine production in Norway also has a pyramidal structure with unidirectional flow of animals, similar to the broiler production [@Kristoffersen2016]. However, the import of live pigs from other countries to the commercial pig population is negligible [@Animalia2018]. The genetic nucleus herds, where the purebred grand parent animals are produced, are at the top of the pyramid. Hybrid parent animals are produced in multiplier herds, either by recruiting purebred animals from the nucleus herds or having a self-recruitment strategy. These animals are distributed to multiplier herds, where parent animals are produced. Gilts from the multiplier herds are distributed to piglet producing herds (either farrow to finish or farrow to grower herds). The piglet producing herds have a mean weaning age of 33 days, followed by a growing stage until the grower pig is approx. 30 kg and 10-11 weeks of age. The grower pig is then transferred to a fattening unit at the same farm or to a specialized fattening pig farm. In general, the distribution of fattening pigs is shorter in geographic distance compared to parent and grandparent animals. Specific concession limits regulates the maximum amount of animals allowed at a farm at any given time (Carl Andreas Grøntvedt, personal communication, 19.08.2019).
 
 ### Other animals
 Norwegian cattle is produced in two ways: either by milk production or by cattle that is not used for milk production. Dairy cows covers approximately 70% of beef on the Norwegian market [@Nortura2019b], and are slaughtered at around four years of age. The remaining 30% of the beef on the market is from cows that are not used for milk production, which are slaughtered at 16 - 18 months of age.
@@ -174,15 +174,52 @@ Before delving into the details of genome assembly, it is important to note that
 Genome assembly is a process where the quality controlled reads are put together into longer, contiguous sequences called contigs. This is done on the basis of overlapping sequences in the reads. Multiple approaches to genome assembly have been developed, but the graph-based assembly is most frequently used, especially de Bruijn graph based methods [@Simpson2015].
 
 De Bruijn graph algorithms is based on separating the reads into _k_-mers of a specific length, then creating a graph by identifying overlaps, similar to the greedy algorithm. The _k_-mers should always be of odd length to avoid palindromes [@Miller2010]. Then, the algorithm "walks" through the graph, and identifies the optimal path where each edge in the graph is visited only once, also known as an Eulerian path [@Pevzner2001], see Figure \@ref(fig:debruijn). In reality, however, a perfect eulerian path is not possible, as sequencing errors and repeats obscure the graph [@Pevzner2001].
-When dividing each read into _k_-mers, the difficulty of putting them back together is increased by the _k_-mers that contain sequencing errors. These _k_-mers will create diverging paths in the de Bruijn graph, further complicating the assembly. THe algorithm may then take an errouneous path through the graph, resulting in an inaccurate concensus sequence. 
+When dividing each read into _k_-mers, the difficulty of putting them back together is increased by the _k_-mers that contain sequencing errors. These _k_-mers will create diverging paths in the de Bruijn graph, further complicating the assembly. The algorithm may then take an erroneous path through the graph, resulting in an inaccurate concensus sequence. 
 
 
-```{r, fig.cap="\\label{fig:debruijn}The two De Bruijn graph based assembly methods for genome assembly: Hamiltonian cycles and Eulerian cycles. Reprinted with permission from Nature Biotechnology \\citep{Compeau2011}.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="100%"}
+```{r, fig.cap="\\label{fig:debruijn}The two de Bruijn graph based assembly methods for genome assembly: Hamiltonian cycles and Eulerian cycles. Reprinted with permission from Nature Biotechnology \\citep{Compeau2011}.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="100%"}
 knitr::include_graphics("images/debruijn.jpg")
 ```
 
-### Databases
-<!-- databases -->
-<!-- genes in databases as 'wild type' -->
-When looking for certain mutations and the presence/absence of genes, one is reliant on a well-curated database. For antimicrobial resistance, multiple databases have been created, but only some of them are manually curated, for example the ResFinder database
+## Computational identification of antimicrobial resistance genes
+Identification of resistance genes, either presence/absence or variants within specific intrinsic genes, is usually done by read-based methods (mapping) or assembly-based methods (BLAST). Using alignment-based approaches for the detection of AMR genes have been shown to be superior to using assembled sequences [@Clausen2016], as the complicated process of _de novo_ genome assembly may lead to the AMR determinants being missed [@Hunt2017]. In this thesis, the resistance genes and variants were identified directly from the sequencing reads by using the Antimicrobial Resistance Identification By Assembly (ARIBA) tool [@Hunt2017]. Resistance towards quinolones in _E. coli_ is usually related to mutations in intrinsic genes, i.e. genes that are naturally present in _E. coli_ and doesn't confer resistance in its wild-type form. In addition, some PMQR genes are also related to quinolone resistance. Therefore, we needed a tool that could identify both mutations in intrinsic genes and plasmid-mediated genes at high accuracy and with the possibility of specifying which databases to use. ARIBA is a tool that fulfills these criteria. 
+
+ARIBA utilizes multiple tools to identify both acquired resistance genes and resistance-related mutations in intrinsic genes. First, the reference sequences in the specified database is clustered by similarity with CD-HIT [@Huang2010]. Then, the raw reads are mapped to the reference sequences by using minimap [@Li2016]. This produces a set of reads for each reference cluster (Figure \@ref(fig:mapping)). Each set of reads are then assembled independently by using fermi-lite (https://github.com/lh3/fermi-lite), and the closest reference sequence in the cluster is identified for each assembled contig with nucmer [@Kurtz2004]. Then, the assembly is compared to this reference sequence to identify completeness and variants by using nucmer and show-snps [@Kurtz2004]. This information is used to generate a bitwise flag which is used to assess the success of the assembly [@Hunt2017]. The raw reads are then mapped to the respective assemblies with Bowtie2 [@Langmead2012] and possible variants are identified with SAMtools [@Li2009a]. Finally, a report is created with all the resulting data [@Hunt2017].
+
+```{r, fig.cap="\\label{fig:mapping}Overview of the ARIBA mapping and targeted assembly pipeline, reprinted with permission from Microbiology Society \\citep{Hunt2017}.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center"}
+knitr::include_graphics("images/mapping.png")
+```
+
+When working with databases, one should be aware of the limitations they infer on the resulting data. In the case of acquired resistance, one can only identify the genes which are included in the database. Potential novel genes may therefore be missed. In the case of mutations in intrinsic genes, all genes of interest in this study was included in the database used. However, whether or not the identified mutations have been induced or are naturally present in their respective environment of origin is not simple to deduce. Some mutations in different lineages of _E. coli_ have been found to be selectively neutral, and may not have been induced by selective pressure.
+
+
+## Clustering and phylogenomic analysis
+
+
+
+
+
+
+
+
+
+
+
+- Distance calculation
+- Maximum likelihood
+- Substitution models
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
