@@ -12,3 +12,5 @@ Discuss the articles' results as a whole, not just one by one.
 ### Bioinformatic methods
 <!-- why did you use the methods you chose? -->
 <!-- how did they perform? -->
+
+- ARIBA: Filtering on bitwise flags: may have created false negatives
