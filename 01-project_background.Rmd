@@ -4,13 +4,10 @@
 The use of antimicrobial agents in Norwegian livestock is among the lowest in the world [@NORM/NORM-VET2017], and the prevalence of antimicrobial resistant bacteria is generally low. However, antimicrobial resistance have been found to develop through other mechanisms than antimicrobial exposure [@Knoppel2017, @ElMeouche2018, @Wiegand2008]. In Norwegian livestock, the use of quinolones is nearly negligible [@NORM/NORM-VET2017], and resistance towards quinolones has been a rare finding. Nonetheless, after introducing a selective method in the Norwegian monitoring programme for antimicrobial resistance in feed, food and animals (NORM-VET), QREC was detected in a high proportion of the samples. The source of emergence of QREC in these animal species is unknown, since no selective pressure is expected in these populations. Furthermore, quinolones are synthetic antimicrobials not found in nature, and intrinsic resistance mechanisms toward these compounds was not expected to exist in nature. Since livestock is ultimately consumed by humans, contamination with resistant bacteria in these animals is of great concern. Therefore, investigating possible causes for the development of QREC in these animals is important to prevent dissemination of resistant bacteria into the human population.
 
 ## Aims
+- Identify occurrence of quinolone resistance in various production compartments and the environment
 
-- Get an overview of the occurrence of QREC in multiple animal species in Norway
+- Characterize genomic factors that may explain the observed quinolone resistance
 
-- Describe quinolone resistance mechanisms present in the QREC population
+- Identify possible associations between isolates from various origins, and/or environmental factors
 
-- Describe the population structure of QREC
-
-- Compare the QREC population structure to QSEC population structure
-
-- Identify possible mechanisms by which the emerge of QREC can be attributed to
+- Investigate possible underlying risk factors for the occurrence of quinolone resistance
