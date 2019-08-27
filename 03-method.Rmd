@@ -18,9 +18,14 @@ The Nextera XT/Flex (Illumina) library preparation kits were used for preparing 
 ### Quality control, genome assembly and annotation
 All raw reads in this study were quality controlled with FastQC (https://www.bioinformatics.babraham.ac.uk/projects/fastqc/). Possible contaminant reads were identified with Mash screen [@Ondov2016]. Residual phiX was removed with bbduk (https://jgi.doe.gov/data-and-tools/bbtools/) by mapping reads to the phiX genome (NC_001422.1). Unmapped sequences were then trimmed with trimmomatic [@Bolger2014]. SPAdes [@Bankevich2012] was used to assemble the genomes, and Pilon [@Walker2014] was subsequently used for error correction. Prokka [@Seemann2014] was used to annotate the pilon-corrected genomes. 
 
-### AMR gene identification and MLST
+### AMR gene identification and MLST {#aribaflag}
 ARIBA was used to determine the sequence types of the isolates, with the _E. coli_ scheme hosted by Enterobase [@Wirth2006].
-ARIBA was also used to identify acquired resistance genes with the resfinder database [@Zankari2012], and mutations in intrinsic genes with the MEGARes database [@Lakin2017].
+ARIBA was also used to identify acquired resistance genes with the resfinder database [@Zankari2012], and mutations in intrinsic genes with the MEGARes database [@Lakin2017]. All ARIBA flags which fulfilled the following criteria was accepted (see https://github.com/sanger-pathogens/ariba/wiki/Task:-flag for details):
+
+- At least 95% of the reference sequence matches the assembly on only one contig
+
+- No ambiguity in the scaffolding graph
+
 
 ### Phylogenetic analysis
 A core gene alignment was generated with Roary [@Page2015], and constant sites was removed using snp-sites [@Page2016]. IQTree [@Nguyen2015] was used to generate a ML-tree from the resulting alignment, with ultrafast bootstrap approximation and model finder plus with the ascertainment bias correction (ASC). 
