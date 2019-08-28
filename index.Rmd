@@ -59,6 +59,7 @@ knitr::write_bib(c(.packages(), packages), 'packages.bib')
 ```
 
 # Summary (English)
+The monitoring programme for antimicrobial resistance in feed, food and animals (NORM-VET) have monitored quinolone resistant _E. coli_ (QREC) in multiple animal species since 2006. Sample material is cultured according to EU regulations, which includes culturing of indicator _E. coli_. The programme has since 2009 indicated a low occurrence of QREC in the tested animal species. However, an increased occurrence in broilers was observed in 2009, which instigated further investigations with selective culturing methods. A selective method was introduced in 2014, and the results revealed a very high occurrence of QREC in broilers. The use of quinolones is known to induce quinolone resistance in commensal _E. coli_. However, the use of quinolones is nearly negligible in Norwegian food producing animals, which raised the question of the origin of these bacteria. The goal of this study was to identify the occurrence of QREC in multiple animal species, characterize genomic factors that may explain the observed resistance, identify possible associations between isolates from various origins, and investigate possible underlying risk factors for the occurrence of QREC. Data from NORM-VET 2006 to 2016 was compiled and analysed to get an overview of the occurrence of QREC in multiple animal species. QREC isolates were whole genome sequenced, and the quinolone resistance mechanisms were characterized. Furthermore, phylogenetic analysis was used to describe the relationship between the QREC isolates. The phylogenetic relationship between QREC and sensitive isolates was also determined, together with the presence of mutations in major mutator genes. The results indicate that there is an interspecies variation in QREC occurrence, which may indicate that other factors than quinolone usage may play a role in the occurrence of QREC. Furthermore, quinolone resistance mechanisms identified in the QREC isolates followed the population structure, and phylogenetically related QREC isolates were identified in samples from broilers and red foxes, and also in samples from pigs. Lastly, the phylogenetic relationship between sensitive _E. coli_ isolates and QREC seem to be separate. Taken together, the results indicate a clonal expansion of closely related QREC isolates through the norwegian broiler and pig production chain. This expansion is worrisome, and measures should be taken to ensure their exclusion from the food production. 
 
 # Summary (Norwegian)
 
@@ -94,7 +95,8 @@ tibble(
 
 1. **Occurrence of quinolone resistant _E. coli_ originating from different animal species in Norway**. Håkon Kaspersen, Anne Margrete Urdahl, Roger Simm, Jannice Schau Slettemeås, Karin Lagesen, Madelaine Norström (2018). _Veterinary Microbiology_, 217(February):25-31. (10.1016/j.vetmic.2018.02.022).
 
-2. **Closely related quinolone resistant Escherichia coli in different animal species in Norway – part of the normal flora or dissemination events?**
-Håkon Kaspersen, Camilla Sekse, Jannice Schau Slettemeås, Roger Simm, Anne Margrete Urdahl, Madelaine Norström, Karin Lagesen.
+2. **Phylogeny reveals unexpected similarity and possible persistence of quinolone resistant _Escherichia coli_ in different animal species in Norway**
+Håkon Kaspersen, Camilla Sekse, Eve Zeyl Fiskebeck, Jannice Schau Slettemeås, Roger Simm, Anne Margrete Urdahl, Madelaine Norström, Karin Lagesen.
 
 3. **Broiler study**
+Håkon Kaspersen, Eve Zeyl Fiskebeck, Roger Simm, Camilla Sekse, Jannice Schau Slettemeås, Anne Margrete Urdahl, Madelaine Norström, Karin Lagesen.
