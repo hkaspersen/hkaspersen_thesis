@@ -10,7 +10,7 @@
 <!-- how did they perform? -->
 
 #### Assembly
-When dividing each read into _k_-mers, the difficulty of putting them back together is increased by the _k_-mers that contain sequencing errors. These _k_-mers will create diverging paths in the de Bruijn graph, further complicating the assembly. The algorithm may then take an erroneous path through the graph, resulting in an inaccurate concensus sequence. In reality, however, a perfect eulerian path is not possible, as sequencing errors and repeats obscure the graph [@Pevzner2001].
+The software SPAdes was used to assemble reads into assemblies. When dividing each read into _k_-mers, the difficulty of putting them back together is increased by the _k_-mers that contain sequencing errors. These _k_-mers will create diverging paths in the de Bruijn graph, further complicating the assembly. The algorithm may then take an erroneous path through the graph, resulting in an inaccurate concensus sequence. In reality, however, a perfect eulerian path is not possible, as sequencing errors and repeats obscure the graph [@Pevzner2001].
 
 
 #### Identification of AMR genes and variants
