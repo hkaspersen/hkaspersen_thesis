@@ -155,11 +155,11 @@ Genome assembly is a process where the quality controlled reads are put together
 knitr::include_graphics("images/debruijn.jpg")
 ```
 
-### Genome alignments
-
+### Genome alignment
+To be able to determine patterns of change between sequences, the sequences need to be aligned [@Higgins2009]. The nucleotides in the sequences are assumed to have diverged from a common ancestor, therefore the process of alignment is based on a hypothesis of homology between the sequences [@Higgins2009]. In a sequence alignment, each sequence is aligned to one another into columns. Each column contain a single nucleotide, where most of the nucleotides are homologous. The alignment therefore contains blocks of highly similar sequences, also called locally colinear blocks (LCBs), and gaps where sequences are either missing or highly divergent.
 
 ### Genome annotation
-
+Genome annotation is the process where relevant features in the genome is identified and labelled [@Richardson2013]. First, genes are predicted from the assemblies using software that identifies coding regions, such as open reading frames (ORFs). Then, the predicted genes are compared to a database of known genes and the most significant match is identified by alignment methods. The annotation of this match is then transferred to the predicted gene [@Richardson2013,@Seemann2014].
 
 ### Computational identification of AMR genes
 Identification of resistance genes, either presence/absence of genes or variants within specific intrinsic genes, can be done by using read-based methods. In short, this method utilize a database with sequences of the variants or genes that is relevant for the analysis. These sequences are used as references when mapping the raw reads from the sample in question. A local assembly is generated from the mapped reads, and the presence/absence of genes and variants is determined by mapping the raw reads back to the assembly [@Hunt2017]. Quality metrics on the respective gene or variant may also be given, depending on the software used. The process is summarized in Figure \@ref(fig:mapping), based on the software Antimicrobial Resistance Identification By Assembly (ARIBA) [@Hunt2017].
