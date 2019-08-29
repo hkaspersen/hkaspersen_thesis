@@ -78,7 +78,8 @@ tibble(
            "Epidemiological cut off",
            "Quinolone sensitive E. coli",
            "Minimum inhibitory concentration",
-           "Norwegian Sequencing Centre"),
+           "Norwegian Sequencing Centre",
+           "Locally colinear blocks"),
   Abbreviation = c("QREC",
                    "AMR",
                    "WGS",
@@ -86,17 +87,19 @@ tibble(
                    "ECOFF",
                    "QSEC",
                    "MIC",
-                   "NSC"))%>%
+                   "NSC",
+                   "LCB"))%>%
   arrange(Term) %>% # i.e. alphabetical order by Term
   kable(booktab = T) # create nice table
 ```
 
 # List of publications
 
-1. **Occurrence of quinolone resistant _E. coli_ originating from different animal species in Norway**. Håkon Kaspersen, Anne Margrete Urdahl, Roger Simm, Jannice Schau Slettemeås, Karin Lagesen, Madelaine Norström (2018). _Veterinary Microbiology_, 217(February):25-31. (10.1016/j.vetmic.2018.02.022).
+1. **Occurrence of quinolone resistant _E. coli_ originating from different animal species in Norway.**
+Håkon Kaspersen, Anne Margrete Urdahl, Roger Simm, Jannice Schau Slettemeås, Karin Lagesen, Madelaine Norström (2018). _Veterinary Microbiology_, 217(February):25-31. (10.1016/j.vetmic.2018.02.022).
 
-2. **Phylogeny reveals unexpected similarity and possible persistence of quinolone resistant _Escherichia coli_ in different animal species in Norway**
+2. **Phylogeny reveals unexpected similarity and possible persistence of quinolone resistant _Escherichia coli_ in different animal species in Norway.**
 Håkon Kaspersen, Camilla Sekse, Eve Zeyl Fiskebeck, Jannice Schau Slettemeås, Roger Simm, Anne Margrete Urdahl, Madelaine Norström, Karin Lagesen.
 
-3. **Broiler study**
+3. **Broiler study.**
 Håkon Kaspersen, Eve Zeyl Fiskebeck, Roger Simm, Camilla Sekse, Jannice Schau Slettemeås, Anne Margrete Urdahl, Madelaine Norström, Karin Lagesen.
