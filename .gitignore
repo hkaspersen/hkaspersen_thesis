@@ -7,3 +7,4 @@ data
 _bookdown_files
 /images/*
 *.pdf
+*.bib
