@@ -1,19 +1,32 @@
+# Libraries
+library(ggplot2)
+library(dplyr)
+
+
+# Read and clean data from EUCAST
 micdist <- read.table("data/micdist.txt",
                       sep = "\t",
                       header = TRUE,
                       stringsAsFactors = FALSE) %>%
-  mutate(percent = n / sum(n)* 100,
+  mutate(percent = n / sum(n)* 100, # calculate percentage
          group = case_when(MIC <= 0.064 ~ "Sensitive",
                            MIC > 0.064 & MIC <= 0.5 ~ "Intermediate",
                            MIC > 0.5 ~ "Resistant"),
-         group = factor(group, ordered = TRUE, levels = c("Sensitive","Intermediate","Resistant")))
+         group = factor(group,
+                        ordered = TRUE,
+                        levels = c("Sensitive",
+                                   "Intermediate",
+                                   "Resistant"))) # group variables
 
+# Set color palette
 palette <- c("Sensitive" = "#67a9cf",
              "Intermediate" = "#f7f7f7",
              "Resistant" = "#ef8a62")
 
 
-p <- ggplot(micdist, aes(factor(MIC), percent, fill = group)) +
+# Plot data
+p <- ggplot(micdist,
+            aes(factor(MIC), percent, fill = group)) +
   geom_col(color = "black") + 
   geom_segment(aes(xend = 6.5, y = 7, x = 6.5, yend = 4),
                arrow = arrow(length = unit(0.3, "cm"),
@@ -42,6 +55,8 @@ p <- ggplot(micdist, aes(factor(MIC), percent, fill = group)) +
                                    vjust = 0.4),
         legend.position = c(0.85,0.85))
 
+
+# Save plot
 ggsave("images/micdist.png",
        p,
        device = "png",
