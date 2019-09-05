@@ -8,3 +8,4 @@ _bookdown_files
 /images/*
 *.pdf
 *.bib
+/reviews/*
