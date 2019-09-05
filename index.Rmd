@@ -16,7 +16,6 @@ fontsize: 11pt
 linestretch: 1.2
 documentclass: book
 bibliography: [packages.bib, library.bib]
-biblio-style: apalike
 link-citations: yes
 ---
 \pagestyle{empty}
@@ -76,19 +75,19 @@ tibble(
            "Whole genome sequencing",
            "Multi drug resistance",
            "Epidemiological cut off",
-           "Quinolone sensitive E. coli",
            "Minimum inhibitory concentration",
            "Norwegian Sequencing Centre",
-           "Locally colinear blocks"),
+           "Locally colinear blocks",
+           "Maximum likelihood"),
   Abbreviation = c("QREC",
                    "AMR",
                    "WGS",
                    "MDR",
                    "ECOFF",
-                   "QSEC",
                    "MIC",
                    "NSC",
-                   "LCB"))%>%
+                   "LCB",
+                   "ML"))%>%
   arrange(Term) %>% # i.e. alphabetical order by Term
   kable(booktab = T) # create nice table
 ```
