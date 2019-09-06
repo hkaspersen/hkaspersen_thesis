@@ -6,6 +6,8 @@ geometry: "left=4cm,right=3cm,top=3cm,bottom=3cm"
 subparagraph: true
 output:
   bookdown::pdf_book:
+    latex_engine: xelatex
+    fig_caption: yes
     toc: false
     citation_package: natbib
     includes:
@@ -15,7 +17,7 @@ output:
 fontsize: 11pt
 linestretch: 1.2
 documentclass: book
-bibliography: [packages.bib, library.bib]
+bibliography: [packages.bib, libraryzotero.bib]
 link-citations: yes
 ---
 \pagestyle{empty}
@@ -52,7 +54,8 @@ packages <- c("bookdown",
               "ggmap",
               "rworldmap",
               "kableExtra",
-              "tufte")
+              "tufte",
+              "vegan")
 
 knitr::write_bib(c(.packages(), packages), 'packages.bib')
 ```
