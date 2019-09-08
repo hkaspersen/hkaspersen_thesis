@@ -18,6 +18,7 @@ fontsize: 11pt
 linestretch: 1.2
 documentclass: book
 bibliography: [packages.bib, libraryzotero.bib]
+biblio-style: [plainnatnew.bst]
 link-citations: yes
 ---
 \pagestyle{empty}

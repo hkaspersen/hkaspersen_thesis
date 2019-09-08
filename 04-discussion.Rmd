@@ -13,14 +13,27 @@
 The software SPAdes was used to assemble reads into assemblies. When dividing each read into _k_-mers, the difficulty of putting them back together is increased by the _k_-mers that contain sequencing errors. These _k_-mers will create diverging paths in the de Bruijn graph, further complicating the assembly. The algorithm may then take an erroneous path through the graph, resulting in an inaccurate concensus sequence. In reality, however, a perfect eulerian path is not possible, as sequencing errors and repeats obscure the graph [@Pevzner2001].
 
 
-#### Identification of AMR genes and variants
+#### Identification of genes and mutations
 Both alignment-based methods (mapping) and assembly-based methods exist for the identification of resistance genes and variants. However, using alignment-based approaches for the detection of AMR genes have been shown to be superior to using assembled sequences [@Clausen2016], as the complicated process of _de novo_ genome assembly may lead to the AMR determinants being missed [@Hunt2017].
 In this thesis, the resistance genes and variants were identified directly from the sequencing reads by using the Antimicrobial Resistance Identification By Assembly (ARIBA) tool [@Hunt2017]. Resistance towards quinolones in _E. coli_ is usually related to mutations in intrinsic genes, i.e. genes that are naturally present in _E. coli_ and doesn't confer resistance in its wild-type form. In addition, some PMQR genes are also related to quinolone resistance. Therefore, we needed a tool that could identify both mutations in intrinsic genes and plasmid-mediated genes at high accuracy and with the possibility of specifying which databases to use. ARIBA is a tool that fulfills these criteria.
 
 When working with databases, one should be aware of the limitations they infer on the resulting data. In the case of acquired resistance, one can only identify the genes which are included in the database. Potential novel acquired genes is therefore missed. In the case of mutations in intrinsic genes, all genes of interest in this study was included in the database used. However, some mutations may have been misclassified as not present due to the handling of the flags reported by ARIBA. ARIBA provides bitwise flags to assess the quality of the identified gene or mutation. In the present study, flags that did not represent the inclusion criteria were excluded from the final results. Thus, some isolates may have been categorized as negative for the given variant or gene, when they in reality were not. However, ensuring that the respective variant or gene was adequately assembled is important. For example, some isolates had the same mutation identified in two different references. This may be due to slight variations in the population from which the DNA was extracted from, resulting in the identification of two different closest references. These variants were filtered from the results due to a non-acceptable flag based on the lack of sequence coverage.
 
-
-<!-- ARIBA utilizes multiple tools to identify both acquired resistance genes and resistance-related mutations in intrinsic genes. First, the reference sequences in the specified database is clustered by similarity with CD-HIT [@Huang2010]. Then, the raw reads are mapped to the reference sequences by using minimap [@Li2016]. This produces a set of reads for each reference cluster (Figure \@ref(fig:mapping)). Each set of reads are then assembled independently by using fermi-lite (https://github.com/lh3/fermi-lite), and the closest reference sequence in the cluster is identified for each assembled contig with nucmer [@Kurtz2004]. Then, the assembly is compared to this reference sequence to identify completeness and variants by using nucmer and show-snps [@Kurtz2004]. This information is used to generate a bitwise flag which is used to assess the success of the assembly [@Hunt2017]. The raw reads are then mapped to the respective assemblies with Bowtie2 [@Langmead2012] and possible variants are identified with SAMtools [@Li2009a]. Finally, a report is created with all the resulting data [@Hunt2017]. -->
-
 #### Phylogeny
 For example, in an outbreak situation, one would assume that the isolates involved have a recent common ancestor - this may not be the case when working with isolates without a clear epidemiological link. The workflow in an outbreak setting can therefore be described as a "top-to-bottom" approach, where clonality of the isolates is already assumed, and typing-based methods like MLST or core genome MLST (cgMLST) may be sufficient. In the case of a non-outbreak setting, clonality is not assumed, and a "bottom-to-top" approach is used. Here, more detailed methods are needed to define isolates as clones, as allele-based methods do not take into account the amount of difference between alleles [@Feil2010].
+
+
+
+## Main results discussion
+
+### Identification of occurrence of quinolone resistance in various production compartments and the environment
+
+### Characterization of genomic factors
+
+### Identification of possible associations between isolates from various origins
+
+### Investigate possible risk factors
+
+
+
+
