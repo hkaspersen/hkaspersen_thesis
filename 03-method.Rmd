@@ -18,7 +18,7 @@ The Nextera XT/Flex (Illumina) library preparation kits were used for preparing 
 ### Quality control, genome assembly and annotation
 All raw reads in this study were quality controlled with FastQC (https://www.bioinformatics.babraham.ac.uk/projects/fastqc/). Possible contaminant reads were identified with Mash screen [@Ondov2016]. Residual phiX was removed with bbduk (https://jgi.doe.gov/data-and-tools/bbtools/) by mapping reads to the phiX genome (NC_001422.1). Unmapped sequences were then trimmed with trimmomatic [@Bolger2014]. SPAdes [@Bankevich2012] was used to assemble the genomes, and Pilon [@Walker2014] was subsequently used for error correction. Prokka [@Seemann2014] was used to annotate the pilon-corrected genomes. 
 
-### AMR gene identification and MLST {#aribaflag}
+### AMR gene and variant detection {#aribaflag}
 ARIBA was used to determine the sequence types of the isolates, with the _E. coli_ scheme hosted by Enterobase [@Wirth2006].
 ARIBA was also used to identify acquired resistance genes with the resfinder database [@Zankari2012], and mutations in intrinsic genes with the MEGARes database [@Lakin2017]. All ARIBA flags which fulfilled the following criteria was accepted (see https://github.com/sanger-pathogens/ariba/wiki/Task:-flag for details):
 
@@ -26,13 +26,19 @@ ARIBA was also used to identify acquired resistance genes with the resfinder dat
 
 - No ambiguity in the scaffolding graph
 
+An R script was used to select the genes or variants that fulfilled these criteria (www.github.com/hkaspersen/VAMPIR).
+
+MLST typing was done with ARIBA using the EnteroBase scheme [@Wirth2006].
+
+
+### Mutator gene substitution detection
+Mutations leading to amino acid substitutions in the mutator genes _dam, mutD, mutH, mutL, mutM, mutS, mutT, mutY_, and _uvrD_ was detected by comparing to the _E. coli_ K12 versions of the genes. This was done in R by using the mismatchTable function from the Biostrings package [@R-Biostrings] on each pairwise alignment.
+
 
 ### Phylogenetic analysis
-A core gene alignment was generated with Roary [@Page2015], and constant sites was removed using snp-sites [@Page2016]. IQTree [@Nguyen2015] was used to generate a ML-tree from the resulting alignment, with ultrafast bootstrap approximation and model finder plus with the ascertainment bias correction (ASC).
+A core gene alignment was generated with Roary [@Page2015], and constant sites was removed using snp-sites [@Page2016]. IQTree [@Nguyen2015] was used to generate a ML-tree from the resulting alignment, with ultrafast bootstrap approximation [@Hoang2018] and ModelFinder plus [@Kalyaanamoorthy2017] with the ascertainment bias correction (ASC).
 
-Patristic distances was calculated from the tree using the x function from the R package y [ref].
-
-Deeper phylogenetic analysis was done on selected clades with high similarity. First, the core genome was determined by using ParSNP [@Treangen2014]. Harvesttools [@Treangen2014] was used for file conversion. Then, Gubbins [@Croucher2015] was used to detect and remove recombinant sites. IQTree was subsequently used on the recombinant-filtered alignment to create a ML-tree, using the same settings as above.
+Patristic distances was calculated from the tree using the distTips function from the R package adePhylo [@R-adephylo]. A patristic distance cutoff at 0.003 was used to identify clades with low genetic divergence. This cutoff value resulted in clades that predominantly contained only one ST. Clades were further selected based on the presence of isolates from different animal species, or the same animal species but from different geographical locations. This resulted in six clades that were further analysed. First, core genome SNPs were determined by using ParSNP [@Treangen2014]. Harvesttools [@Treangen2014] was used for file conversion. Then, Gubbins [@Croucher2015] was used to detect and remove recombinant sites. IQTree was subsequently used on the recombinant-filtered alignment to create a ML-tree, using the same settings described above. The resulting tree was visualized with ggtree [@R-ggtree]. 
 
 
 <!-- Chapter 3 -->
@@ -40,6 +46,6 @@ Deeper phylogenetic analysis was done on selected clades with high similarity. F
 Statistical analysis was done in R version 3.4.2 (Article 1) and `r version$version.string` (Article 2 and 3) [@R-base].
 Significant differences between groups was calculated by using $\chi$^2^-test. Confidence intervals were calculated by using the two-sided exact binomial test at 95% confidence level.
 
-Relatedness was determined by calculating pairwise distances between isolates. To test if individuals within animal groups were more closely related than randomly expected, the individuals within animal groups were permuted in 1000 iterations. Percentage of distances below 0.1 and above 0.8 was calculated in each iteration. Non-exact p-values was then calculated on the basis of how many expected values from x iterations were above the observed value. 
+To identify whether isolates from one animal species were more closely related than isolates from other animal species, the median minimum SNP distance to closest isolate from the same animal species was calculated. A randomization test with 1000 iterations was performed to investigate whether isolates from each animal species were more aggregated in the tree than randomly expected. For each iteration the median minimum SNP distance for isolates belonging to the same species was calculated, and non-exact p-values were calculated based on the number of expected values below the observed value for all iterations. 
 
-Non-metric multidimensional scaling (NMDS) was used to cluster isolates based on presence/absence of quinolone resistance conferring substitutions and genes, with the vegan package [@R-vegan], with 200 random starts. A stressplot was used to determine goodness of fit.
+Non-metric multidimensional scaling (NMDS) was used to cluster isolates based on presence/absence of quinolone resistance conferring substitutions and genes by using the vegan package [@R-vegan]. A stressplot was used to determine goodness of fit.
