@@ -6,19 +6,19 @@ Here follows a summary of methods used - for details, see enclosed articles.
 ## Laboratory methods
 
 ### Isolate information
-All _E. coli_ isolates included in this study were isolated through the NORM-VET programme, and the methods used for isolating _E. coli_ and susceptibility testing is described in Section \@ref(norwmonitor). An _E. coli_ was categorized as quinolone resistant if the MIC value for ciprofloxacin was above 0.06.
+All _E. coli_ isolates included in this study were isolated through the NORM-VET programme, and the methods used for isolating _E. coli_ and susceptibility testing is described in Section \@ref(norwmonitor). An _E. coli_ was categorized as quinolone resistant if the MIC value for ciprofloxacin was above 0.06 mg/L.
 
 ### DNA isolation and sequencing
 QREC isolates were plated onto MacConkey agar with 0.06 mg/L ciprofloxacin to confirm resistance. DNA was isolated from pure bacterial cultures using the QIAmp DNA mini kit (Qiagen). DNA quality was measured on a NanoDrop^TM^ One spectrophotometer (Thermo Scientific), and DNA concentration was measured with a broad-range DNA Qubit assay (Qiagen). DNA integrity was assessed by gel electrophoresis and/or on a Fragment Analyser^TM^ Automated CE System Instrument (FSV2-DE2-100, Advanced Analytical).
 
-The Nextera XT/Flex (Illumina) library preparation kits were used for preparing the libraries for sequencing. Sequencing was done on Illumina HiSeq platforms, either Hiseq 2000, Hiseq 2500 rapid run, Hiseq 3/4000, or Hiseq X. The sequencing and library preparation service was provided by the Norwegian Sequencing Centre (NSC, www.sequencing.uio.no), a national technology platform hosted by the University of Oslo and supported by the "Functional Genomics" and "Infrastructure" programs of the Research Council of Norway and the Southeastern Regional Health Authorities. Both library preparation and sequencing was performed by NSC.
+The Nextera XT/Flex (Illumina) library preparation kits were used for preparing the libraries for sequencing. Sequencing was done on Illumina HiSeq platforms, either Hiseq 2000, Hiseq 2500 rapid run, Hiseq 3/4000, or Hiseq X. The sequencing and library preparation service was provided by the Norwegian Sequencing Centre (NSC, www.sequencing.uio.no), a national technology platform hosted by the University of Oslo and supported by the "Functional Genomics" and "Infrastructure" programs of the Research Council of Norway and the Southeastern Regional Health Authorities.
 
 <!-- Chapter 2  -->
 ## Genomic analysis methods
-### Quality control, genome assembly and annotation
-All raw reads in this study were quality controlled with FastQC (https://www.bioinformatics.babraham.ac.uk/projects/fastqc/). Possible contaminant reads were identified with Mash screen [@Ondov2016]. Residual phiX was removed with bbduk (https://jgi.doe.gov/data-and-tools/bbtools/) by mapping reads to the phiX genome (NC_001422.1). Unmapped sequences were then trimmed with trimmomatic [@Bolger2014]. SPAdes [@Bankevich2012] was used to assemble the genomes, and Pilon [@Walker2014] was subsequently used for error correction. Prokka [@Seemann2014] was used to annotate the pilon-corrected genomes. 
+### Quality control
+All raw reads in this study were quality controlled with FastQC (https://www.bioinformatics.babraham.ac.uk/projects/fastqc/). Possible contaminant reads were identified with Mash screen [@Ondov2016]. Residual phiX was removed with bbduk (https://jgi.doe.gov/data-and-tools/bbtools/) by mapping reads to the phiX genome (NC_001422.1). Unmapped sequences were then trimmed with trimmomatic [@Bolger2014].
 
-### AMR gene and variant detection {#aribaflag}
+### Gene and variant detection {#aribaflag}
 ARIBA was used to determine the sequence types of the isolates, with the _E. coli_ scheme hosted by Enterobase [@Wirth2006].
 ARIBA was also used to identify acquired resistance genes with the resfinder database [@Zankari2012], and mutations in intrinsic genes with the MEGARes database [@Lakin2017]. All ARIBA flags which fulfilled the following criteria was accepted (see https://github.com/sanger-pathogens/ariba/wiki/Task:-flag for details):
 
@@ -28,18 +28,19 @@ ARIBA was also used to identify acquired resistance genes with the resfinder dat
 
 An R script was used to select the genes or variants that fulfilled these criteria (www.github.com/hkaspersen/VAMPIR).
 
-MLST typing was done with ARIBA using the EnteroBase scheme [@Wirth2006].
+The mutator genes _dam, mutD, mutH, mutL, mutM, mutS, mutT, mutY_, and _uvrD_ were investigated in regards to mutations that lead to amino acid changes in the respective proteins. The sequences were retrieved from each isolate using BLAST [@Altschul1990]. Mutations were detected by comparing to the _E. coli_ K12 versions of the genes. This was done in R by using the mismatchTable function from the Biostrings package [@R-Biostrings] on each pairwise alignment.
 
-
-### Mutator gene substitution detection
-Mutations leading to amino acid substitutions in the mutator genes _dam, mutD, mutH, mutL, mutM, mutS, mutT, mutY_, and _uvrD_ was detected by comparing to the _E. coli_ K12 versions of the genes. This was done in R by using the mismatchTable function from the Biostrings package [@R-Biostrings] on each pairwise alignment.
-
+### Assembly, annotation and pan-genome analysis
+SPAdes [@Bankevich2012] was used to assemble the genomes from the trimmed reads, filtering out contigs smaller than 500 bp. Pilon [@Walker2014] was used to correct potential errors that arose in the assembly process. Prokka [@Seemann2014] was used to annotate the pilon-corrected genomes. Quast [@Gurevich2013] was used to assess the error-corrected assemblies. A pan-genome analysis was done using Roary [@Page2015], which was also used to create a core gene alignment. 
 
 ### Phylogenetic analysis
-A core gene alignment was generated with Roary [@Page2015], and constant sites was removed using snp-sites [@Page2016]. IQTree [@Nguyen2015] was used to generate a ML-tree from the resulting alignment, with ultrafast bootstrap approximation [@Hoang2018] and ModelFinder plus [@Kalyaanamoorthy2017] with the ascertainment bias correction (ASC).
+Phylogenetic analysis methods are summarized in Figure \@ref(fig:flowchart). Constant sites was removed from the core-gene alignment from Roary with snp-sites [@Page2016]. Snp-dists (https://github.com/tseemann/snp-dists) was used to calculate the pairwise SNP distance between each isolate in the alignment. IQTree [@Nguyen2015] was used to generate a ML-tree from the alignment, with ultrafast bootstrap approximation [@Hoang2018] and ModelFinder plus [@Kalyaanamoorthy2017] with the ascertainment bias correction (ASC).
 
-Patristic distances were calculated from the tree using the distTips function from the R package adePhylo [@R-adephylo]. A patristic distance cutoff at 0.003 was used to identify clades with low genetic divergence. This cutoff value resulted in clades that predominantly contained only one ST. Clades were further selected based on the presence of isolates from different animal species, or the same animal species but from different geographical locations. This resulted in six clades that were further analysed. First, core genome SNPs were determined by using ParSNP [@Treangen2014]. Harvesttools [@Treangen2014] was used for file conversion. Then, Gubbins [@Croucher2015] was used to detect and remove recombinant sites. IQTree was subsequently used on the recombinant-filtered alignment to create a ML-tree, using the same settings described above. The resulting tree was visualized with ggtree [@R-ggtree]. 
+To identify separate clades of interest to analyse further with more detailed phylogenetic methods, patristic distances were calculated from the tree using the distTips function from the R package adePhylo [@R-adephylo]. A patristic distance cutoff at 0.003 was used to identify clades with low genetic divergence. This cutoff value resulted in clades that predominantly contained only one ST. Clades were further selected based on the presence of isolates from different animal species, or the same animal species but from different geographical locations. This resulted in six clades that were further analysed. First, core genome SNPs were determined by using ParSNP [@Treangen2014]. Harvesttools [@Treangen2014] was used for file conversion. Then, Gubbins [@Croucher2015] was used to detect and remove recombinant sites. Snp-dists was used to calculate the SNP distances between each isolate for each alignment. IQTree was subsequently used on the recombinant-filtered alignment to create a ML-tree, using the same settings described above.
 
+All phylogenetic trees were visualized in R with ggtree [@R-ggtree]. 
+
+![Flowchart of phylogenetic methods. Left: Phylogenetic analysis for all isolates. Right: Phylogenetic analysis for selected clades. Purple folders represent input data. Beige boxes represent bioinformatic tools used in Linux. Turquise circles represent analyses in R. Yellow folders represent output data. Illustration: H. Kaspersen \label{fig:flowchart}](images/flowchart.png)
 
 <!-- Chapter 3 -->
 ## Statistical methods
