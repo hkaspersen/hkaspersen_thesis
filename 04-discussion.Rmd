@@ -7,6 +7,7 @@ All isolates included in this study were collected through the NORM-VET programm
 
 
 ### Genomic analyses methods
+The various software used in the genomic analysis was selected because they are known and reliable, and most of them are implemented in the in-house pipeline Bifrost (https://github.com/NorwegianVeterinaryInstitute/Bifrost).
 
 #### Identification of genes and mutations
 Both alignment-based methods (mapping) and assembly-based methods exist for the identification of resistance genes and variants. However, using alignment-based approaches for the detection of AMR genes have been shown to be superior to using assembled sequences [@Clausen2016], as the complicated process of _de novo_ genome assembly may lead to the AMR determinants being missed [@Hunt2017].
@@ -21,8 +22,7 @@ Phylogenetic methods were used to identify the evolutionary relationship between
 
 Genomes were assembled with SPAdes prior to phylogenetic analysis. When dividing each read into _k_-mers, the difficulty of putting them back together is increased by the _k_-mers that contain sequencing errors. These _k_-mers will create diverging paths in the de Bruijn graph, further complicating the assembly. The algorithm may then take an erroneous path through the graph, resulting in an inaccurate concensus sequence. A perfect eulerian path is not possible, as sequencing errors and repeats obscure the graph [@Pevzner2001]. These errors may introduce or mask SNPs or indels in the assembly, which may have influenced the phylogenetic analysis. Pilon was used to correct errors by mapping the reads back to the assembly. However, even with this correction step, errors may persist and influence the topology or branch lengths in the final trees. 
 
-An evolutionary model was selected by using ModelFinder plus [@Kalyaanamoorthy2017] implemented in IQTree [@Nguyen2015] for each phylogenetic analysis. ModelFinder finds the optimal evolutionary model for the data, based on criteria that control for overparameterization [@Kalyaanamoorthy2017]. This way, the data itself choose which model is appropriate, rather than the user.  
-
+An evolutionary model was selected by using ModelFinder plus [@Kalyaanamoorthy2017] implemented in IQTree [@Nguyen2015] for each phylogenetic analysis. ModelFinder finds the optimal evolutionary model for the data, based on criteria that control for overparameterization [@Kalyaanamoorthy2017]. This way, the data itself choose which model is appropriate, rather than the user. However, using more than one model may be necessary when working with many isolates from potentially different lineages, as some lineages may evolve differently than others. The selected models used in this study may therefore not be optimal in describing the evolutionary rate of all the isolates at once.
 
 
 
