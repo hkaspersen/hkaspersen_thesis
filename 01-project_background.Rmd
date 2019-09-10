@@ -1,13 +1,12 @@
 # Project Background and aims
 
-## Background
-The use of antimicrobial agents in Norwegian livestock is among the lowest in the world [@NORM/NORM-VET2017], and the prevalence of antimicrobial resistant bacteria is generally low. However, antimicrobial resistance have been found to develop through other mechanisms than antimicrobial exposure [@Knoppel2017;@ElMeouche2018;@Wiegand2008]. In Norwegian livestock, the use of quinolones is nearly negligible [@NORM/NORM-VET2017], and resistance towards quinolones has been a rare finding. Nonetheless, after introducing a selective method in the Norwegian monitoring programme for antimicrobial resistance in feed, food and animals (NORM-VET), QREC was detected in a high proportion of the samples. The source of emergence of QREC in these animal species is unknown, since no selective pressure is expected in these populations. Furthermore, quinolones are synthetic antimicrobials not found in nature, and intrinsic resistance mechanisms toward these compounds was not expected to exist in nature. Since livestock is ultimately consumed by humans, contamination with resistant bacteria in these animals is of great concern. Therefore, investigating possible causes for the development and occurrence of QREC in these animals is important to prevent dissemination and/or persistence in these animal species.
+Quinolone resistance among indicator _E. coli_ from Norwegian food-producing animals is generally low [@NORM/NORM-VET2017]. This may be a consequence of good animal health and the low usage of quinolones [@NORM/NORM-VET2017]. After the introduction of a selective method, QREC was detected in a high proportion of the samples. Because of the low quinolone usage in these animal populations, this occurrence was unexpected, and warranted further investigation into their resistance mechanisms and population dynamics. Insights into the genetic mechanisms is important to understand the underlying cause of resistance, and examining the population dynamics and relationship between isolates may reveal information on their origin or possible dissemination. This information may help prevent further dissemination of QREC within livestock populations and other animal species, and thus help to maintain the favorable situation in Norway. Furthermore, molecular characterization of QREC isolates from a low antimicrobial usage country provides a unique platform where other underlying causes for resistance development than quinolone usage may be investigated.
 
-## Aims
-- Identify occurrence of quinolone resistance in various production compartments and the environment
+The aims of this study was to:
+- Compare occurrences of QREC in multiple animal species
 
-- Characterize genomic factors that may explain the observed quinolone resistance
+- Characterize genetic mechanisms that may explain the observed quinolone resistance
 
-- Identify possible associations between isolates from various origins, and/or environmental factors
+- Uncover potential dissemination of QREC isolates and the relationship between them
 
-- Investigate possible underlying risk factors for the occurrence of quinolone resistance
+- Investigate the possibility of spontaneous development of QREC in the gut microbiota
