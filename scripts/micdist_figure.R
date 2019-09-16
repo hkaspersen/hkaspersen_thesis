@@ -18,15 +18,10 @@ micdist <- read.table("data/micdist.txt",
                                    "Intermediate",
                                    "Resistant"))) # group variables
 
-# Set color palette
-palette <- c("Sensitive" = "#67a9cf",
-             "Intermediate" = "#f7f7f7",
-             "Resistant" = "#ef8a62")
-
 
 # Plot data
 p <- ggplot(micdist,
-            aes(factor(MIC), percent, fill = group)) +
+            aes(factor(MIC), percent)) +
   geom_col(color = "black") + 
   geom_segment(aes(xend = 6.5, y = 7, x = 6.5, yend = 4),
                arrow = arrow(length = unit(0.3, "cm"),
@@ -45,7 +40,6 @@ p <- ggplot(micdist,
   labs(x = "MIC (mg/L)",
        y = "Percent (%) microorganisms",
        fill = NULL) +
-  scale_fill_manual(values = palette) +
   theme_classic() +
   theme(axis.text = element_text(size = 10),
         legend.text = element_text(size = 10),
