@@ -15,6 +15,8 @@ The Nextera XT/Flex (Illumina) library preparation kits were used for preparing 
 
 <!-- Chapter 2  -->
 ## Genomic analysis methods
+Parts of the genomic analysis was performed on the Abel Cluster, owned by the University of Oslo and Uninett/Sigma2, and operated by the Department for Research Computing at USIT, the University of Oslo IT-department (http://www.hpc.uio.no/).
+
 ### Quality control
 All raw reads in this study were quality controlled with FastQC (https://www.bioinformatics.babraham.ac.uk/projects/fastqc/). Possible contaminant reads were identified with Mash screen [@Ondov2016]. Residual phiX was removed with bbduk (https://jgi.doe.gov/data-and-tools/bbtools/) by mapping reads to the phiX genome (NC_001422.1). Unmapped sequences were then trimmed with trimmomatic [@Bolger2014].
 
@@ -40,7 +42,7 @@ To identify separate clades of interest to analyse further with more detailed ph
 
 All phylogenetic trees were visualized in R with ggtree [@R-ggtree]. 
 
-![Flowchart of phylogenetic methods. Left: Phylogenetic analysis for all isolates. Right: Phylogenetic analysis for selected clades. Purple folders represent input data. Beige boxes represent bioinformatic tools used in Linux. Turquise circles represent analyses in R. Yellow folders represent output data. Illustration: H. Kaspersen \label{fig:flowchart}](images/flowchart.png)
+![Flowchart of phylogenetic methods. Left: Phylogenetic analysis for all isolates. Right: Phylogenetic analysis for selected clades. Purple folders represent input data. Beige boxes represent bioinformatic tools used in Linux. Turquoise circles represent analyses in R. Yellow folders represent output data. Illustration: H. Kaspersen \label{fig:flowchart}](images/flowchart.png)
 
 <!-- Chapter 3 -->
 ## Statistical methods
