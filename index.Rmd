@@ -17,8 +17,8 @@ output:
 fontsize: 11pt
 linestretch: 1.2
 documentclass: book
-bibliography: [packages.bib, libraryzotero.bib]
-biblio-style: [plainnatnew.bst]
+bibliography: [packages.bib, library.bib]
+biblio-style: [plainnat.bst]
 link-citations: yes
 ---
 \pagestyle{empty}
@@ -59,7 +59,9 @@ packages <- c("bookdown",
               "vegan",
               "adephylo",
               "ggtree",
-              "Biostrings")
+              "Biostrings",
+              "kableExtra",
+              "kable")
 
 knitr::write_bib(c(.packages(), packages), 'packages.bib')
 ```
