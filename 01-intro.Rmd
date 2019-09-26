@@ -67,8 +67,8 @@ Bacteria may evolve either by vertical inheritance, i.e. clonally, or by horizon
 \newpage
 
 <!-- Chapter 4 -->
-## Norwegian husbandry
-Norwegian husbandry is characterized by low animal density, a healthy animal population, and an overall good welfare situation [@Alvseike2018]. Animal density is regulated by specific consession limits that are stricter than EU regulations [@Lovdata2004a]. Furthermore, the overall good health of the animal population reduces the need for antimicrobial use. Prophylactic use of antimicrobial compounds in Norwegian livestock is prohibited, and antimicrobials are only used to treat diseased animals. The use of quinolones to treat livestock in Norway is low [@NORM/NORM-VET2017;@ESVAC2018], see Figure \@ref(fig:quinUsage), and negligible amounts of quinolones have been sold in Norway from 2010 to 2016 [@ESVAC2018]. In this section, the broiler and pig production chains are briefly described.
+## Norwegian animal husbandry
+Norwegian animal husbandry is characterized by low animal density, a healthy animal population, and an overall good welfare situation [@Alvseike2018]. Animal density is regulated by specific consession limits that are stricter than EU regulations [@Lovdata2004a]. Furthermore, the overall good health of the animal population reduces the need for antimicrobial use. Prophylactic use of antimicrobial compounds in Norwegian livestock is prohibited, and antimicrobials are only used to treat diseased animals. The use of quinolones to treat livestock in Norway is low [@NORM/NORM-VET2017;@ESVAC2018], see Figure \@ref(fig:quinUsage), and negligible amounts of quinolones have been sold in Norway from 2010 to 2016 [@ESVAC2018]. In this section, the broiler and pig production chains are briefly described.
 
 ![Overall sales, in kg active substance, of quinolones and macrolides for therapeutic use in terrestrial livestock animals in Norway in 1993 - 2017, reprinted from NORM/NORM-VET 2017 [@NORM/NORM-VET2017]. \label{fig:quinUsage}](images/quin_usage.png)
 
@@ -119,9 +119,7 @@ The process of Illumina HTS builds upon that of Sanger sequencing. First, genomi
 
 
 ### Computational identification of genes
-Computational identification of genes may be done in two ways, either with assemblies or with raw reads. In both cases, a database containing the genes of interest is used. In assembly based methods, e.g. Basic Local Alignment Search Tool (BLAST) [@Altschul1990], the assembly is compared to the references by alignment. In read based methods, e.g. Antimicrobial Resistance Identification By Assembly (ARIBA) [@Hunt2017], the raw reads are mapped to the references. Figure \@ref(fig:mapping) presents the read-based method using the software ARIBA [@Hunt2017].
-
-![Overview of the ARIBA mapping and targeted assembly pipeline, reprinted from Microbiology Society [@Hunt2017]. \label{fig:mapping}](images/mapping.png)
+Computational identification of genes may be done in two ways, either with assemblies or with raw reads [@Boolchandani2019]. In both cases, a database containing the genes of interest is needed. In assembly based methods, e.g. Basic Local Alignment Search Tool (BLAST) [@Altschul1990], the assembly is compared to the references by alignment. A specific threshold of similarity is used when comparing the sequences. In read based methods, the raw reads are mapped to the references, either directly as whole reads or broken down as k-mers of length _k_. Here, the mapped reads or k-mers are locally assembled and compared to the reference. Identifying genes and mutations by using whole assemblies is computationally demanding while read-based methods using k-mers are faster [@Boolchandani2019]. 
 
 
 ### From reads to assembly
