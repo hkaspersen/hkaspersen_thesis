@@ -4,8 +4,8 @@ Quinolone resistance among indicator _E. coli_ from Norwegian food-producing ani
 
 The aims of this study was to:
 
-- Summarise and describe existing data on occurrence of quinolone resistance
+- Summarise and describe existing data on occurrence of quinolone resistance in animal populations
 
 - Characterize genetic mechanisms that may explain the observed quinolone resistance
 
-- Uncover potential dissemination of QREC isolates and the relationship between them
+- Explore potential emergence and dissemination of quinolone resistance in _E. coli_ in livestock populations
