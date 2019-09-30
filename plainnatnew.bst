@@ -219,9 +219,18 @@ FUNCTION {format.names}
   s num.names$ 'numnames :=
   numnames 'namesleft :=
     { namesleft #0 > }
-    { s nameptr "{ff~}{vv~}{ll}{, jj}" format.name$ 't :=
+    { s nameptr "{f.~}{vv~}{ll}{, jj}" format.name$ 't :=
       nameptr #1 >
-        { namesleft #1 >
+        {
+          nameptr #3
+          #1 + =
+          numnames #5
+          > and
+            { "others" 't :=
+              #1 'namesleft := }
+            'skip$
+          if$
+          namesleft #1 >
             { ", " * t * }
             { numnames #2 >
                 { "," * }
@@ -419,12 +428,6 @@ FUNCTION {format.date}
     { "empty year in " cite$ * warning$
        pop$ "" }
     'skip$
-  if$
-  month empty$
-    'skip$
-    { month
-      " " * swap$ *
-    }
   if$
   extra.label *
 }
@@ -924,17 +927,21 @@ FUNCTION {misc}
 { output.bibitem
   format.authors output
   author format.key output
-  title howpublished new.block.checkb
   format.title output
-  howpublished new.block.checka
-  howpublished output
   format.date output
   format.issn output
   format.url output
   new.block
-  note output
   fin.entry
   empty.misc.check
+}
+
+FUNCTION {online}
+{ output.bibitem
+  format.authors output
+  format.title output
+  format.url output
+  fin.entry
 }
 
 FUNCTION {phdthesis}
@@ -982,13 +989,24 @@ FUNCTION {techreport}
   new.block
   format.title "title" output.check
   new.block
-  format.tr.number output.nonnull
   institution "institution" output.check
   address output
   format.date "year" output.check
   format.url output
   new.block
   note output
+  fin.entry
+}
+
+FUNCTION {report}
+{ output.bibitem
+  format.authors "author" output.check
+  author format.key output
+  new.block
+  format.title "title" output.check
+  new.block
+  institution "institution" output.check
+  format.url output
   fin.entry
 }
 
