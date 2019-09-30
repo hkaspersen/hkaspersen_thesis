@@ -18,7 +18,7 @@ fontsize: 11pt
 linestretch: 1.2
 documentclass: book
 bibliography: [packages.bib, library.bib]
-biblio-style: [plainnat.bst]
+biblio-style: [plainnatnew.bst]
 link-citations: yes
 ---
 \pagestyle{empty}
