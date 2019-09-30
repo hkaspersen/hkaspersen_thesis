@@ -15,16 +15,41 @@ The occurrence of QREC have previously been linked to consumption of quinolones 
 
 This chapter encompasses the results from article II and III.
 
-Quinolone resistance mechanisms were characterized in article II and III by using ARIBA and by comparing to _E. coli_ K12 versions of mutator genes. Overall, the identified quinolone resistance mechanisms are in concordance with known major mechanisms that cause quinolone resistance in _E. coli_ [@Hooper2015]. The main mechanism by which _E. coli_ gain quinolone resistance is missense mutations in the QRDR of _gyrA_, especially mutations leading to the amino acid substitution S83L. Furthermore, missense mutations in _parC_ and/or _parE_ have often been implicated in conjunction with missense mutations in _gyrA_ [@Lascols2007;@Slettemeas2019;@KompLindgren2003;@Vanni2014;@Zurfluh2014], but rarely on their own. In article II, only two isolates had amino acid substitutions in the QRDR of _ParC_ alone. However, these two isolates harbored the same _qnr_-gene instead. In the article II data, the presence/absence of _qnr_ genes had a strong negative correlation with the presence/absence of amino acid substitutions in the QRDR of GyrA _r_(278) = -0.91, _p_ < 0.05. This suggests either that _qnr_ genes are not often acquired in isolates already harboring missense mutations in _gyrA_, or that mutations in _gyrA_ do not arise so easily in isolates that already harbor _qnr_-genes. A previous study suggested that if _qnr_-genes were present in isolates with missense mutations in the QRDR of _gyrA_, then most likely the mutation preceeded the _qnr_ gene [@Cesaro2008]. This is likely, because the Qnr proteins protect the topoisomerases from quinolone action, and reduces the amount of lethal quinolone-DNA-topoisomerase cleavage complexes in the cell [@Robicsek2006a]. These findings may therefore suggest that the presence of _qnr_-genes prevents mutations from arising in _gyrA_. However, whether the _qnr_-genes were present before or after the mutation in _gyrA_ arose is not possible to ascertain without further studies.
+Quinolone resistance mechanisms were characterized in article II and III by using ARIBA and by comparing to _E. coli_ K12 versions of mutator genes. Overall, the identified quinolone resistance mechanisms are in concordance with known major mechanisms that cause quinolone resistance in _E. coli_ [@Hooper2015]. The main mechanism by which _E. coli_ gain quinolone resistance is missense mutations in the QRDR of _gyrA_, especially mutations leading to the amino acid substitution S83L. Furthermore, missense mutations in _parC_ and/or _parE_ have often been implicated in conjunction with missense mutations in _gyrA_ [@Lascols2007;@Slettemeas2019;@KompLindgren2003;@Vanni2014;@Zurfluh2014], but rarely on their own. In article II, only two isolates had amino acid substitutions in the QRDR of _ParC_ alone. However, these two isolates harbored the same _qnr_-gene instead. In the article II data, the presence/absence of _qnr_ genes had a strong negative correlation with the presence/absence of amino acid substitutions in the QRDR of GyrA _r_(278) = -0.91, _p_ < 0.05. This suggests either that _qnr_ genes are not often acquired in isolates already harboring missense mutations in _gyrA_, or that mutations in _gyrA_ do not arise so easily in isolates that already harbor _qnr_-genes. A previous study suggested that if _qnr_-genes were present in isolates with missense mutations in the QRDR of _gyrA_, then most likely the mutation preceeded the _qnr_ gene [@Cesaro2008]. This is likely, because the Qnr proteins protect the topoisomerases from quinolone action, and reduces the amount of lethal quinolone-DNA-topoisomerase cleavage complexes in the cell [@Robicsek2006a]. These findings may therefore suggest that the presence of _qnr_-genes prevents mutations from arising in _gyrA_. However, whether the _qnr_-genes were present before or after the mutation in _gyrA_ arose is unknown and need further investigation.
 
 PMQR was detected in only 21% of the QREC isolates in article II and none of the isolates in article III. This is in concordance with other studies in Europe [@Veldman2011;@Borjesson2015;@deJong2018;@Wasyl2018]. _qnr_-genes have regularly been found on plasmids bearing additional resistance genes, such as extended spectrum $\beta$-lactamases (ESBL) [@Martinez-Martinez1998;@Wang2003;@Robicsek2006a;@Strahilevitz2009;@Jacoby2006a;@Zurfluh2015d]. The isolates in the present study had a low occurrence of ESBL and other resistance genes conferring resistance to antimicrobial types other than quinolones. These results may indicate that quinolone resistance gene-bearing plasmids are rare in these animal populations in Norway, and only play a small role in the occurence of quinolone resistance in these animals environments.
 
 Amino acid substitutions in mutator proteins were detected by comparing to the K12 version of each respective protein. Multiple substitutions were detected, and a positive correlation was found between altered proteins and phenotype. Furthermore, the odds for an isolate being resistant increased with increasing number of altered mutator proteins (see article III). These results may indicate that alterations in mutator proteins may have en effect on the development of quinolone resistance in _E. coli_, as the mutation rate may increase with defects in the various DNA repair systems such as MMR. However, further studies are needed to ascertain whether the identified amino acid substitutions in these proteins have an effect on the mutation rate. 
 
 
-
-
 ### Possible associations between isolates from various origins
+
+The initial hypothesis on the source of the observed QREC occurrence in broilers was dissemination of existing QREC isolates from imported breeding animals. This was previously hypothesized in studies from Sweden, Norway and Iceland [@Myrenaas2018;@Borjesson2015]. In the present study, possible associations between isolates were determined by comparing sequence types, associating epidemiological data, and phylogenetic analysis. In short, the results suggests the dissemination of major STs through the broiler production chain, and little development of quinolone resistance among wild type _E. coli_. Furthermore, phylogenetically related isolates were detected among broilers and red foxes, from geograhically distant locations and from different years.
+
+The major STs identified among QREC isolates from broilers were ST10, ST349 and ST355. These STs have previously been identified as major STs of QREC isolates in samples from broilers in Norway, Sweden and Iceland [@Myrenaas2018]. The broiler production environment is a highly stable environment with little temperature changes, closed to the outside, and is populated by a single animal species. It is therefore plausible to think that isolates within this environment have little reason to change, due to its stable nature. These major STs may therefore represent isolates that are highly adapted to the broiler production environment, and is likely to persist if introduced through imported animals. However, parent animals are imported to Norway from Sweden, which is a country much like Norway in regards to quinolone usage. The overall sale of quinolones for animal use in Sweden have dropped 82% since 2009, and only 29 kg of active substance was sold in 2018 [@SWEDRES2019]. Additionally, a Swedish study have implicated imported breeding birds as the plausible source of QREC in their broiler production chain [@Borjesson2015]. This indicate that QREC isolates may originate from the top of the pyramid. Grandparent animals are imported from Scotland to Sweden, but no data on QREC occurrence or quinolone usage is available from this section of the production pyramid.
+
+
+Phylogenetically related isolates from pigs were identified in Article II. These were isolates from geographically distant location, but within the same year.
+
+
+
+The identification of phylogenetically related QREC from broilers and red foxes in Article II was a surprising finding, and indicated persistence in the broiler production chain. 
+
+
+
+
+
+
+
+
+
+Since these isolates were isolated from healthy broilers, it is likely that they do not cause disease and may be part of the normal flora of these broilers. 
+
+
+
+
+
+
 
 Emergence of QREC is attributed to either dissemination of exogenous strains, or spontaneous development in the gut microbiota [@HUANG2014]. The results from article 2 indicates that the emergence of QREC in the broiler and pig production chain may be linked to dissemination rather than spontaneous development. This is not unexpected, as negligible amounts of quinolones are used in these production compartments. However, quinolones themselves are mutagenic [@Ysern1990], and a single treatment with this class of antimicrobials have shown to increase the occurrence of QREC in the animal gut <!-- ref -->. 
 
@@ -62,16 +87,12 @@ Removing recombinant sites is an important step when analysing vertical inherita
 
 IQTree was selected as the ML algorithm to find the optimal phylogenetic tree. Comparative analyses have shown that the search strategy implemented in IQTree achieves higher likelihoods than similar algorithms [@Nguyen2015], such as RAxML [@Stamatakis2014] and PhyML [@Guindon2010], and IQTree seem to find optimal trees faster. Additionally, IQTree is easier to use for non-evolutionary biologists compared to RAxML, which was the main incentive in selecting IQTree. However, IQTree was not always the best algorithm in the comparative analysis between RAxML, PhyML and IQTree, and the authors recommended using all three programs [@Nguyen2015]. In this study, only IQTree was used, which means that potential trees with higher likelihoods may have been missed. 
 
-An evolutionary model was selected by using ModelFinder plus [@Kalyaanamoorthy2017] implemented in IQTree for each phylogenetic analysis. ModelFinder finds the optimal evolutionary model for the data, based on criteria that control for overparameterization [@Kalyaanamoorthy2017]. This way, the data itself choose which model is appropriate, rather than the user. However, using more than one model may be necessary when working with many isolates from potentially different lineages, as some lineages may evolve differently than others. The selected models used in this study may therefore not be optimal in describing the evolutionary rate of all the isolates at once.
+An evolutionary model was selected by using ModelFinder plus [@Kalyaanamoorthy2017] implemented in IQTree for each phylogenetic analysis. ModelFinder finds the optimal evolutionary model for the data, based on criteria that control for overparameterization [@Kalyaanamoorthy2017]. This way, the data itself choose which model is appropriate, rather than the user. However, using more than one model may be necessary when working with many isolates from potentially different lineages, as some lineages may evolve differently than others. The selected models used in this study may therefore not be optimal in describing the evolutionary rate of all the isolates in one analysis.
 
 
+### Statistical considerations
+
+A non-parametric iteration test was used to assess the aggregation of samples in phylogenetic trees based on SNP-distances. A non-parametric test was selected because the underlying distribution of SNP-distances did not follow a theoretical distribution, such as a normal distribution. Therefore, a test that does not rely on distribution assumptions was needed. 
 
 
-
-
-
-
-
-
-
-
+Non-metric multidimensional scaling (NMDS) was used to cluster isolates based on presence/absence of resistance genes and mutations (Article II). NMDS is an ordination technique that differs from other ordination methods, such as principal component analysis (PCA), as NMDS does not assume a relationship between the samples [@Holland2008]. Therefore, any distance measure is allowed in NMDS, which makes this method well suited for a wide variety of data. NMDS is an iterative method that finds a solution after _n_ number of iterations or after an acceptable solution has been found. This means that running a separate NMDS analysis on the same data may yield a slightly different result. This is done to reduce the computational power needed in the analysis. However, this also means that the "best" solution may not be found, as the analysis may be stuck in local minima and only identifies the best solution of all nearby solutions [@Holland2008]. Therefore, the solution found in Article II may thus represent an adequate solution rather than the "best" one. A stress value is calculated for each iteration and represents how good the data is summarized by the ordination. In the present study, this stress value was low (< 0.05), which is regarded as a good representation [@Buttigieg2014a;@Buttigieg2014]. When running an NMDS analysis, it is important to select the amount of axes used in the calculation, as this may affect the results. In the present study, two axes were used (the default value), as no decrease in stress was observed by including more axes in the analysis. 
