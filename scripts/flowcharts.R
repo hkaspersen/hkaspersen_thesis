@@ -5,18 +5,18 @@ library(rsvg)
 grViz("digraph {
       graph [layout = dot]
       
-      node [shape = rectangle, style = filled, fillcolor = LemonChiffon]
+      node [shape = rectangle, style = filled, fillcolor = '#F6E2BC']
       
-      assembly [label = 'Annotated \nassembly', shape = diamond, fillcolor = Salmon]
+      assembly [label = 'Annotated \nassembly', shape = diamond, fillcolor = '#75BDE0']
       roary [label = 'Roary']
       snpsites [label = 'Snp-sites']
       iqtree [label = 'IQTree']
-      ggtree [label = 'Ggtree', fillcolor = DarkTurquoise, shape = ellipse]
+      ggtree [label = 'Ggtree', fillcolor = '#3B7097', shape = ellipse]
       snpdists [label = 'Snp-dists']
-      disttips [label = 'distTips', fillcolor = DarkTurquoise, shape = ellipse]
-      distmatrix [label = 'SNP distance \nmatrix', shape = folder, fillcolor = MediumSeaGreen]
-      patdist [label = 'Patristic \ndistances', shape = folder, fillcolor = MediumSeaGreen]
-      tree [label = 'Phylogenetic \ntree', shape = folder, fillcolor = MediumSeaGreen]
+      disttips [label = 'distTips', fillcolor = '#3B7097', shape = ellipse]
+      distmatrix [label = 'SNP distance \nmatrix', shape = folder, fillcolor = '#A9D09E']
+      patdist [label = 'Patristic \ndistances', shape = folder, fillcolor = '#A9D09E']
+      tree [label = 'Phylogenetic \ntree', shape = folder, fillcolor = '#A9D09E']
       
       assembly -> roary -> snpsites -> iqtree -> ggtree -> tree
       iqtree -> disttips -> patdist
@@ -29,14 +29,14 @@ grViz("digraph {
 grViz("digraph {
       graph [layout = dot]
       
-      node [shape = rectangle, style = filled, fillcolor = LemonChiffon]
+      node [shape = rectangle, style = filled, fillcolor = '#F6E2BC']
       
-      assembly [label = 'Annotated \nassembly', shape = diamond, fillcolor = Salmon]
+      assembly [label = 'Annotated \nassembly', shape = diamond, fillcolor = '#75BDE0']
       iqtree [label = 'IQTree']
-      ggtree [label = 'Ggtree', fillcolor = DarkTurquoise, shape = ellipse]
+      ggtree [label = 'Ggtree', fillcolor = '#3B7097', shape = ellipse]
       snpdists [label = 'Snp-dists']
-      distmatrix [label = 'SNP distance \nmatrix', shape = folder, fillcolor = MediumSeaGreen]
-      tree [label = 'Phylogenetic \ntree', shape = folder, fillcolor = MediumSeaGreen]
+      distmatrix [label = 'SNP distance \nmatrix', shape = folder, fillcolor = '#A9D09E']
+      tree [label = 'Phylogenetic \ntree', shape = folder, fillcolor = '#A9D09E']
       gubbins [label = 'Gubbins']
       parsnp [label = 'ParSNP']
       harvest [label = 'Harvesttools']
@@ -55,9 +55,9 @@ grViz("digraph {
       graph [layout = dot,
       ratio = fill]
       
-      node [shape = rectangle, style = filled, fillcolor = LemonChiffon, margin = 0.25, penwidth = 0.8]
+      node [shape = rectangle, style = filled, fillcolor = '#F6E2BC', margin = 0.25, penwidth = 0.8]
       
-      reads [label = 'Raw reads', shape = diamond, fillcolor = Salmon, fontsize = 22]
+      reads [label = 'Raw reads', shape = diamond, fillcolor = '#75BDE0', fontsize = 22]
       mash [label = 'Mash screen']
       bbduk [label = <bbduk<BR /><FONT POINT-SIZE='8'>k = 31</FONT>>]
       trim [label = <Trimmomatic<BR /><FONT POINT-SIZE='8'>LEADING: 3 TRAILING: 3<BR />SLIDINGWINDOW: 4:15<BR />minlen: 36</FONT>>]
@@ -67,11 +67,11 @@ grViz("digraph {
       bwamem [label = 'BWA mem']
       pilon [label = 'Pilon']
       prokka [label = <Prokka<BR /><FONT POINT-SIZE='8'>genus=Escherichia<BR />species=coli<BR />kingdom=Bacteria<BR />compliant<BR />usegenus<BR />proteins</FONT>>]
-      assemblyqual [label = 'Assembly \nquality', shape = folder, fillcolor = MediumSeaGreen]
-      annotgenome [label = 'Annotated \nassemblies', shape = folder, fillcolor = MediumSeaGreen]
-      contreport [label = 'Contamination \nreport', shape = folder, fillcolor = MediumSeaGreen]
-      rscript1 [label = 'R Script', fillcolor = DarkTurquoise, shape = ellipse]
-      rscript2 [label = 'R Script', fillcolor = DarkTurquoise, shape = ellipse]
+      assemblyqual [label = 'Assembly \nquality', shape = folder, fillcolor = '#A9D09E']
+      annotgenome [label = 'Annotated \nassemblies', shape = folder, fillcolor = '#A9D09E']
+      contreport [label = 'Contamination \nreport', shape = folder, fillcolor = '#A9D09E']
+      rscript1 [label = 'R Script', fillcolor = '#3B7097', shape = ellipse]
+      rscript2 [label = 'R Script', fillcolor = '#3B7097', shape = ellipse]
       
       reads -> mash -> rscript1 -> contreport
       trim -> bwamem
