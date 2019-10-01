@@ -4,59 +4,51 @@ Here, the main results from article I - III is discussed in context of the main 
 
 ### Summarise and describe existing data on occurrence of quinolone resistance
 
-This chapter encompasses results from article I.
 
-Surveillance of quinolone resistance among indicator _E. coli_ has been done in NORM-VET since 2000. These occurrence data were therefore readily available for collation and comparison between screened animal species. The results showed a highest occurrence in broilers and wild birds, followed by red foxes, turkeys and dogs. Furthermore, no association between occurrence of QREC and human population density was found. 
+<!-- Emergence of QREC in multiple animal species in Europe and other countries, even with no quinolone usage -->
+<!-- Petersen et al. 2006 -->
 
-The occurrence of QREC have previously been linked to consumption of quinolones in broiler flocks [@Literak2013a]. 
+Multiple studies have described an increase in QREC occurrence despite low or decreasing use of quinolones [@Petersen2006; @Kijima-Tanaka2003]. Additionally, a significantly increasing trend in ciprofloxacin resistance from 2011 to 2014 was observed in Belgium [@Hanon2015].
+
+
+
+
+
+
+
+
+Surveillance of quinolone resistance among indicator _E. coli_ has been done in NORM-VET since 2000. Occurrence data were therefore readily available for collation and comparison between screened animal species. The results showed a highest occurrence in broilers and wild birds, followed by red foxes, turkeys and dogs. Furthermore, no association between occurrence of QREC and human population density was found. 
+
+
+
+
+
+
+
+The occurrence of QREC have previously been linked to consumption of quinolones in broiler flocks [@Literak2013a;@Garau1999]. However, use of other antimicrobials may also select for QREC, such as amoxicillin [@Jimenez-Belenguer2016]. 
+
+
 
 
 ### Genetic mechanisms that may explain the observed quinolone resistance
 
-This chapter encompasses the results from article II and III.
+Quinolone resistance mechanisms were characterized in article II and III by using ARIBA and by comparing to _E. coli_ K12 versions of mutator genes. Overall, the identified quinolone resistance mechanisms are in concordance with known major mechanisms that cause quinolone resistance in _E. coli_ [@Hooper2015]. The main mechanism by which _E. coli_ gain quinolone resistance is missense mutations in the QRDR of _gyrA_, especially mutations leading to the amino acid substitution S83L. Furthermore, missense mutations in _parC_ and/or _parE_ have often been implicated in conjunction with missense mutations in _gyrA_ [@Lascols2007; @Slettemeas2019; @KompLindgren2003; @Vanni2014; @Zurfluh2014], but rarely on their own. In article II, only two isolates had amino acid substitutions in the QRDR of _ParC_ alone. However, these two isolates harbored the same _qnr_-gene instead. In the article II data, the presence/absence of _qnr_ genes had a strong negative correlation with the presence/absence of amino acid substitutions in the QRDR of GyrA _r_(278) = -0.91, _p_ < 0.05. This suggests either that _qnr_ genes are not often acquired in isolates already harboring missense mutations in _gyrA_, or that mutations in _gyrA_ do not arise so easily in isolates that already harbor _qnr_-genes. A previous study suggested that if _qnr_-genes were present in isolates with missense mutations in the QRDR of _gyrA_, then most likely the mutation preceeded the _qnr_ gene [@Cesaro2008]. This is likely, because the Qnr proteins protect the topoisomerases from quinolone action, and reduces the amount of lethal quinolone-DNA-topoisomerase cleavage complexes in the cell [@Robicsek2006a]. These findings may therefore suggest that the presence of _qnr_-genes prevents mutations from arising in _gyrA_. However, whether the _qnr_-genes were present before or after the mutation in _gyrA_ arose is unknown and need further investigation.
 
-Quinolone resistance mechanisms were characterized in article II and III by using ARIBA and by comparing to _E. coli_ K12 versions of mutator genes. Overall, the identified quinolone resistance mechanisms are in concordance with known major mechanisms that cause quinolone resistance in _E. coli_ [@Hooper2015]. The main mechanism by which _E. coli_ gain quinolone resistance is missense mutations in the QRDR of _gyrA_, especially mutations leading to the amino acid substitution S83L. Furthermore, missense mutations in _parC_ and/or _parE_ have often been implicated in conjunction with missense mutations in _gyrA_ [@Lascols2007;@Slettemeas2019;@KompLindgren2003;@Vanni2014;@Zurfluh2014], but rarely on their own. In article II, only two isolates had amino acid substitutions in the QRDR of _ParC_ alone. However, these two isolates harbored the same _qnr_-gene instead. In the article II data, the presence/absence of _qnr_ genes had a strong negative correlation with the presence/absence of amino acid substitutions in the QRDR of GyrA _r_(278) = -0.91, _p_ < 0.05. This suggests either that _qnr_ genes are not often acquired in isolates already harboring missense mutations in _gyrA_, or that mutations in _gyrA_ do not arise so easily in isolates that already harbor _qnr_-genes. A previous study suggested that if _qnr_-genes were present in isolates with missense mutations in the QRDR of _gyrA_, then most likely the mutation preceeded the _qnr_ gene [@Cesaro2008]. This is likely, because the Qnr proteins protect the topoisomerases from quinolone action, and reduces the amount of lethal quinolone-DNA-topoisomerase cleavage complexes in the cell [@Robicsek2006a]. These findings may therefore suggest that the presence of _qnr_-genes prevents mutations from arising in _gyrA_. However, whether the _qnr_-genes were present before or after the mutation in _gyrA_ arose is unknown and need further investigation.
-
-PMQR was detected in only 21% of the QREC isolates in article II and none of the isolates in article III. This is in concordance with other studies in Europe [@Veldman2011;@Borjesson2015;@deJong2018;@Wasyl2018]. _qnr_-genes have regularly been found on plasmids bearing additional resistance genes, such as extended spectrum $\beta$-lactamases (ESBL) [@Martinez-Martinez1998;@Wang2003;@Robicsek2006a;@Strahilevitz2009;@Jacoby2006a;@Zurfluh2015d]. The isolates in the present study had a low occurrence of ESBL and other resistance genes conferring resistance to antimicrobial types other than quinolones. These results may indicate that quinolone resistance gene-bearing plasmids are rare in these animal populations in Norway, and only play a small role in the occurence of quinolone resistance in these animals environments.
+PMQR was detected in only 21% of the QREC isolates in article II and none of the isolates in article III. This is in concordance with other studies in Europe [@Veldman2011;@Borjesson2015;@deJong2018;@Wasyl2018]. _qnr_-genes have regularly been found on plasmids bearing additional resistance genes, such as extended spectrum $\beta$-lactamases (ESBL) [@Martinez-Martinez1998; @Wang2003; @Robicsek2006a; @Strahilevitz2009; @Jacoby2006a; @Zurfluh2015d]. PMQR could be an explanation for the presence of quinolone resistance without selective pressure, as these genes may be horizontally transmitted between bacteria, unlike chromosomal mutations. Additionally, PMQR usually confer low quinolone resistance on its own compared to chromosomal mutations. Therefore, PMQR could be a plausible explanation of the presence of QREC in Norwegian livestock, as most of the MIC values of the isolates were within 0.12 to 1 mg/L ciprofloxacin. However, the isolates in the present study had a low occurrence of PMQR genes, as well as ESBL and other resistance genes. These results may indicate that quinolone resistance gene-bearing plasmids are rare in these animal populations in Norway, and only play a small role in the occurence of quinolone resistance in these animals environments.
 
 Amino acid substitutions in mutator proteins were detected by comparing to the K12 version of each respective protein. Multiple substitutions were detected, and a positive correlation was found between altered proteins and phenotype. Furthermore, the odds for an isolate being resistant increased with increasing number of altered mutator proteins (see article III). These results may indicate that alterations in mutator proteins may have en effect on the development of quinolone resistance in _E. coli_, as the mutation rate may increase with defects in the various DNA repair systems such as MMR. However, further studies are needed to ascertain whether the identified amino acid substitutions in these proteins have an effect on the mutation rate. 
 
 
 ### Possible associations between isolates from various origins
 
-The initial hypothesis on the source of the observed QREC occurrence in broilers was dissemination of existing QREC isolates from imported breeding animals. This was previously hypothesized in studies from Sweden, Norway and Iceland [@Myrenaas2018;@Borjesson2015]. In the present study, possible associations between isolates were determined by comparing sequence types, associating epidemiological data, and phylogenetic analysis. In short, the results suggests the dissemination of major STs through the broiler production chain, and little development of quinolone resistance among wild type _E. coli_. Furthermore, phylogenetically related isolates were detected among broilers and red foxes, from geograhically distant locations and from different years.
+In Article II and III, the association between the included isolates were investigated by phylogenetic analysis. The aim this analysis was to identify possible dissemination of QREC strains, and to detect possible development of quinolone resistance in wild type _E. coli_ in the broiler production chain. In short, the results suggests dissemination of major STs through the broiler production chain, and little development of quinolone resistance among wild type _E. coli_. Furthermore, phylogenetically related isolates were detected among broilers and red foxes, from geograhically distant locations and from different years.
 
-The major STs identified among QREC isolates from broilers were ST10, ST349 and ST355. These STs have previously been identified as major STs of QREC isolates in samples from broilers in Norway, Sweden and Iceland [@Myrenaas2018]. The broiler production environment is a highly stable environment with little temperature changes, closed to the outside, and is populated by a single animal species. It is therefore plausible to think that isolates within this environment have little reason to change, due to its stable nature. These major STs may therefore represent isolates that are highly adapted to the broiler production environment, and is likely to persist if introduced through imported animals. However, parent animals are imported to Norway from Sweden, which is a country much like Norway in regards to quinolone usage. The overall sale of quinolones for animal use in Sweden have dropped 82% since 2009, and only 29 kg of active substance was sold in 2018 [@SWEDRES2019]. Additionally, a Swedish study have implicated imported breeding birds as the plausible source of QREC in their broiler production chain [@Borjesson2015]. This indicate that QREC isolates may originate from the top of the pyramid. Grandparent animals are imported from Scotland to Sweden, but no data on QREC occurrence or quinolone usage is available from this section of the production pyramid.
+The major STs identified among QREC isolates from broilers were ST10, ST349 and ST355. These STs have previously been identified as major STs of QREC isolates in samples from broilers in Norway, Sweden and Iceland [@Myrenaas2018]. The broiler production environment is a highly stable environment with little temperature changes, closed to the outside, and is populated by a single animal species. It is therefore plausible to think that isolates within this environment have little reason to change, due to its stable nature. These major STs may therefore represent isolates that are highly adapted to the broiler production environment, and is likely to persist if introduced through imported animals. Parent animals are imported to Norway from Sweden, which is a country much like Norway in regards to quinolone usage. The overall sale of quinolones for animal use in Sweden have dropped 82% since 2009, and only 29 kg of active substance was sold in 2018 [@SWEDRES2019]. Additionally, a Swedish study have implicated imported breeding birds as the plausible source of QREC in their broiler production chain [@Borjesson2015]. This indicates that QREC isolates may originate from the top of the pyramid. Grandparent animals are imported from Scotland to Sweden, but no data on QREC occurrence or quinolone usage is available from this section of the production pyramid. Furthermore, phylogenetically related QREC from broilers and red foxes isolated in different years and geographic locations were identified, which may indicate persistence of some QREC strains in the broiler production. 
 
-
-Phylogenetically related isolates from pigs were identified in Article II. These were isolates from geographically distant location, but within the same year.
-
+Phylogenetically related isolates from pigs were identified in Article II. These were isolates from geographically distant location, but within the same year. Since import of live animals to the pig production is negligible, the origin of these QREC isolates is likely within the Norwegian pig production. The presence of these isolates may indicate dissemination within the pig production chain as well, likely through either a shared piglet distributor or through satelite units of the sow pool system. 
 
 
-The identification of phylogenetically related QREC from broilers and red foxes in Article II was a surprising finding, and indicated persistence in the broiler production chain. 
-
-
-
-
-
-
-
-
-
-Since these isolates were isolated from healthy broilers, it is likely that they do not cause disease and may be part of the normal flora of these broilers. 
-
-
-
-
-
-
-
-Emergence of QREC is attributed to either dissemination of exogenous strains, or spontaneous development in the gut microbiota [@HUANG2014]. The results from article 2 indicates that the emergence of QREC in the broiler and pig production chain may be linked to dissemination rather than spontaneous development. This is not unexpected, as negligible amounts of quinolones are used in these production compartments. However, quinolones themselves are mutagenic [@Ysern1990], and a single treatment with this class of antimicrobials have shown to increase the occurrence of QREC in the animal gut <!-- ref -->. 
-
-
-
-
-
+Feed may be source of QREC [@Thorsteinsdottir2010]. A high diversity may indicate introduction of multiple strains into the production chain [@Bortolaia2010a].
 
 
 ## Methodological considerations
