@@ -23,7 +23,7 @@ Antimicrobial Resistance gene Identification by Assembly (ARIBA) [@Hunt2017] was
 ![Overview of the ARIBA mapping and targeted assembly pipeline, reprinted from Microbiology Society [@Hunt2017]. \label{fig:mapping}](images/mapping.png)
 
 
-ARIBA is a read-based algorithm that works by first clustering the reference sequences from the selected database (Figure \@ref(fig:mapping)). Then, read pairs are mapped to the clusters and locally assembled. Then, the closest reference to the assembled sequence is identified, and various quality metrics are calculated, such as gene completeness and overall success of the local assembly [@Hunt2017]. These metrics are encoded into flags, which represent the overall quality of the identified gene or mutation. Each flag has a specific interpretation, as exemplified for flag 27 in Table \@ref(tab:flag). In the present study, flags that represented the following were accepted:
+ARIBA is a read-based algorithm that works by clustering the reference sequences from the selected database (Figure \@ref(fig:mapping)). Then, read pairs are mapped to the clusters and locally assembled. Then, the closest reference to the assembled sequence is identified, and various quality metrics are calculated, such as gene completeness and overall success of the local assembly [@Hunt2017]. These metrics are encoded into flags, which represent the overall quality of the identified gene or mutation. Each flag has a specific interpretation, as exemplified for flag 27 in Table \@ref(tab:flag). In the present study, flags that represented the following were accepted:
 
 - The gene is adequately assembled
 
@@ -74,7 +74,7 @@ The mutator genes _dam, mutD, mutH, mutL, mutM, mutS, mutT, mutY_, and _uvrD_ we
 ### Assembly, annotation and pan-genome analysis
 The process of assembly and annotation is visualized in Figure \@ref(fig:assembly).
 
-![Flowchart of assembly and annotation pipeline. Yellow rectangle: Analysis on the Abel cluster, with important program settings listed. Turquoise ellipses: Analyses in R. Green folders: Output data. Illustration: H. Kaspersen. \label{fig:assembly}](images/assembly_pipeline.png)
+![Flowchart of assembly and annotation pipeline. Yellow rectangle: Analysis on the Abel cluster, with important program settings listed. Turquoise ellipses: Analyses in R. Green folders: Output data. Illustration: H. Kaspersen. \label{fig:assembly}](images/assembly_pipeline.png){width=40%}
 
 SPAdes [@Bankevich2012] was used to assemble the genomes from the trimmed reads, filtering out contigs smaller than 500 bp. Pilon [@Walker2014] was used to correct potential errors that arose in the assembly process. Prokka [@Seemann2014] was used to annotate the pilon-corrected genomes. Five well-annotated, curated and complete genomes of _E. coli_ was used as a reference to ensure high quality of the annotations. Quast [@Gurevich2013] was used to assess the error-corrected assemblies. A pan-genome analysis was done using Roary [@Page2015], which was also used to create a core gene alignment. 
 
