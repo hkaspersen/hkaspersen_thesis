@@ -69,8 +69,6 @@ data.frame("Status" = c("TRUE",
 ```
 
 
-The mutator genes _dam, mutD, mutH, mutL, mutM, mutS, mutT, mutY_, and _uvrD_ were investigated in regards to mutations that lead to amino acid changes in the encoded proteins. The sequences were retrieved from each isolate using BLAST [@Altschul1990]. Mutations were detected by comparing to the _E. coli_ K12 versions of the genes.
-
 ### Assembly, annotation and pan-genome analysis
 The process of assembly and annotation is visualized in Figure \@ref(fig:assembly).
 
