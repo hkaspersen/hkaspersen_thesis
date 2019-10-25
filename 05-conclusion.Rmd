@@ -1,7 +1,6 @@
 # Conclusions
 
-- The main quinolone resistance mechanisms in QREC from broilers, pigs, red foxes and wilds birds in Norway was mutations in the QRDR of the _gyrA_ and _parC_ genes. PMQR seemed to play a small role in the occurrence of quinolone resistance. Amino acid substitutions in mutator genes may have an influence on the development of quinolone resistance in _E. coli_.
-
+- The main quinolone resistance mechanisms in QREC from broilers, pigs, red foxes and wilds birds in Norway was mutations in the QRDR of the _gyrA_ and _parC_ genes. PMQR seemed to play a small role in the occurrence of quinolone resistance.
 
 - Low occurrence of QREC in various animal species in Norway
 
