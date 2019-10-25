@@ -1,11 +1,10 @@
 # Discussion
 ## Main results and discussion
-Here, the main results from article I - III is discussed in context of the main aims of the project.
+Here, the main results from paper I - III is discussed in context of the main aims of the project.
 
 ### Summarise and describe existing data on occurrence of quinolone resistance
 
-
-
+Use of quinolones in Norwegian livestock is generally low, which is reflected in the overall low occurrence of QREC in multiple animal species compared to other countries in Europe [@EFSA2019]. The selective method introduced in the surveillance program in 2014 revealed a high proportion of QREC-positive samples. However, no quantification of the presence of QREC have yet been done in these samples. 
 
 
 
@@ -49,6 +48,19 @@ The results indicate that the major mechanisms that explain the observed quinolo
 
 ### Possible associations between isolates from various origins
 
+The presence of QREC in various production animal species with very low quinolone usage was unexpected and of concern. We hypothesized that by investigating the relationship between the QREC isolates would enable us to gain insights into potential dissemination and/or persistence, and thus be able to identify major contributors to the presence of quinolone resistance in their respective environments. In paper II, a high ST diversity was observed among the included animal species. Despite this diversity, we identified phylogenetically related QREC isolates from pigs sampled from different production sites. Similarly, we also identifed phylogenetically related isolates from broilers, and between broilers and a red fox. Major QREC lineages in the broiler and pig production chain were identified, namely ST349 and ST355, and ST117, respectively.
+
+Dissemination of QREC in the broiler production chain have previously been investigated in other nordic countries [@Bortolaia2010a; @Myrenaas2018; @Petersen2006], and the presence of similar QREC throughout the Swedish broiler production was attributed to imported breeding animals [@Borjesson2015]. In our study we found the same STs as reported in other countries with the same distributor of breeding animals as Norway. The isolates represented in these STs were highly similar, some of which were thought to have a recent common ancestor. Most of these isolates were from different production sites, indicating dissemination from breeding flocks.
+
+
+
+
+
+
+
+
+
+
 In Article II and III, the association between the included isolates were investigated by phylogenetic analysis. The aim this analysis was to identify possible dissemination of QREC strains, and to detect possible development of quinolone resistance in wild type _E. coli_ in the broiler production chain. In short, the results suggests dissemination of major STs through the broiler production chain, and little development of quinolone resistance among wild type _E. coli_. Furthermore, phylogenetically related isolates were detected among broilers and red foxes, from geograhically distant locations and from different years.
 
 The major STs identified among QREC isolates from broilers were ST10, ST349 and ST355. These STs have previously been identified as major STs of QREC isolates in samples from broilers in Norway, Sweden and Iceland [@Myrenaas2018]. The broiler production environment is a highly stable environment with little temperature changes, closed to the outside, and is populated by a single animal species. It is therefore plausible to think that isolates within this environment have little reason to change, due to its stable nature. These major STs may therefore represent isolates that are highly adapted to the broiler production environment, and is likely to persist if introduced through imported animals. Parent animals are imported to Norway from Sweden, which is a country much like Norway in regards to quinolone usage. The overall sale of quinolones for animal use in Sweden have dropped 82% since 2009, and only 29 kg of active substance was sold in 2018 [@SWEDRES2019]. Additionally, a Swedish study have implicated imported breeding birds as the plausible source of QREC in their broiler production chain [@Borjesson2015]. This indicates that QREC isolates may originate from the top of the pyramid. Grandparent animals are imported from Scotland to Sweden, but no data on QREC occurrence or quinolone usage is available from this section of the production pyramid. Furthermore, phylogenetically related QREC from broilers and red foxes isolated in different years and geographic locations were identified, which may indicate persistence of some QREC strains in the broiler production. 
@@ -61,7 +73,7 @@ Feed may be source of QREC [@Thorsteinsdottir2010]. A high diversity may indicat
 
 ## Methodological considerations
 
-### Isolate selection
+### Selection bias
 All isolates included in this study were collected through the NORM-VET programme, isolated with either the non-selective or selective method (see Section \@ref(norwmonitor)). The NORM-VET sampling regime ensures a representative selection of the actual _E. coli_ population in the broiler- and pig production chains, as well as wild animals, due to pre-defined sampling schemes. In the epidemiological study, all isolates of _E. coli_ and QREC from the NORM-VET programme between and including 2006 to 2016 was selected. Therefore, the included samples were deemed representative for the actual _E. coli_ populations in their respective animal species. In the QREC HTS study (article 2), selection was done to ensure phenotypic diversity of the isolates. Isolates were grouped based on phenotypic traits (MIC-values). Therefore, the observed diversity may not represent the actual genomic diversity in the QREC populations within each of the included animal species. In the broiler study, isolates were included if the location of origin was sampled at least three times, and that the location was represented with at least one QREC and one sensitive isolate.
 
 
