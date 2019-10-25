@@ -11,6 +11,8 @@ Library preparation and sequencing service was provided by the Norwegian Sequenc
 
 <!-- Chapter 2  -->
 ## Bioinformatic methods
+Bioinformatic analysis was largely performed on the Abel Cluster, owned by the University of Oslo and Uninett/Sigma2, and operated by the Department for Research Computing at USIT, the University of Oslo IT-department (www.hpc.uio.no/).
+
 ### Identification of resistance mechanisms {#aribaflag}
 
 Antimicrobial Resistance gene Identification by Assembly (ARIBA) [@Hunt2017] was used to identify resistance genes with the Resfinder [@Zankari2012] database and mutations with the MEGARes database [@Lakin2017], as well as determining the sequence types of the isolates, with the _E. coli_ scheme hosted by Enterobase [@Wirth2006]. The process by which ARIBA works is visualized in Figure \@ref(fig:mapping).
@@ -67,14 +69,14 @@ data.frame("Status" = c("TRUE",
 ### Assembly, annotation and pan-genome analysis
 All software used for assembly, annotation and pan-genome analysis is presented in Figure \@ref(fig:assembly). Major software settings are listed in each box.
 
-```{r, fig.cap="\\label{fig:assembly}Flowchart of assembly and annotation pipeline. Yellow rectangle: Analysis on the Abel cluster, with important program settings listed. Turquoise ellipses: Analyses in R. Green folders: Output data. Illustration: H. Kaspersen.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="55%"}
+```{r, fig.cap="\\label{fig:assembly}Flowchart of assembly and annotation pipeline. Yellow rectangle: Analysis on the Abel cluster, with important program settings listed. Dark blue ellipses: Analyses in R. Green folders: Output data. Illustration: H. Kaspersen.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="55%"}
 knitr::include_graphics("images/assembly_pipeline.png")
 ```
 
 ### Phylogenetic analysis
 Phylogenetic analysis methods are summarized in Figure \@ref(fig:flowchart). The left pathway was used to identify the overall relationship between all isolates in each paper. The right pathway was used to further analyse clades of interest with deeper resolution and recombination removal.
 
-```{r, fig.cap="\\label{fig:flowchart}Flowchart of phylogenetic methods. Left: Phylogenetic analysis for all isolates. Right: Phylogenetic analysis for selected clades. Purple folders represent input data. Beige boxes represent bioinformatic tools used in Linux. Turquoise circles represent analyses in R. Yellow folders represent output data. Illustration: H. Kaspersen", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="99%"}
+```{r, fig.cap="\\label{fig:flowchart}Flowchart of phylogenetic methods. Left: Phylogenetic analysis for all isolates. Right: Phylogenetic analysis for selected clades. Analysis on the Abel cluster, with important program settings listed. Dark blue ellipses: Analyses in R. Green folders: Output data. Illustration: H. Kaspersen", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="99%"}
 knitr::include_graphics("images/flowchart.png")
 ```
 
