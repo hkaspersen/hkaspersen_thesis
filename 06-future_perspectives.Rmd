@@ -2,3 +2,4 @@
 
 - Investigate QREC isolates from imported birds
 
+- Cefotaxime resistance without identified genotype
