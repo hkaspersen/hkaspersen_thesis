@@ -2,15 +2,43 @@
 
 <!-- Chapter 1 -->
 ## Antimicrobial resistance
-Antimicrobial resistance (AMR) is a global threat to human and animal health alike, and the World Health Organization (WHO) urged for a "One Health" approach when publishing the Global Action Plan on AMR in 2015 [@WHO2015a]. Multiple definitions on antimicrobial resistance exist based on different criteria and settings. In a clinical setting, antimicrobial resistance is defined as the ability of micro-organisms to to survive antimicrobial treatment that would normally kill them [@WHO2018]. In a laboratory setting, the micro-organism is regarded as resistant if it grows in the presence of antimicrobials at a higher concentration than phylogenetically related strains [@Guardabassi2006]. Quinolone resistance is especially important to tackle because quinolones and fluoroquinolones are on the WHO list of critically important antimicrobials for human medicine [@WHO2019]. This means that quinolones are frequently used to treat human infections, and also in some cases the only antimicrobial that can treat the infection in question [@WHO2019]. Resistance to these compounds would therefore pose a great health risk. Systematic misuse of antimicrobials have been attributed to the increased emergence of AMR [@WHO2015a]. Already in 1945, Alexander Fleming warned about the misuse of antimicrobials, stating that exposing bacteria to sub-lethal concentrations in the lab rendered them resistant, and that this also may happen in the body [@Fleming1945]. However, other factors, such as environmental stress factors, is also linked to the development of AMR in the absence of antimicrobial selective pressure [@McMahon2007;@Poole2012].
 
-> *"It is not difficult to make microbes resistant to penicillin in the laboratory by exposing them to concentrations not sufficient to kill them, and the same thing occasionally happened in the body"*
->
-> `r tufte::quote_footer("--- Sir Alexander Fleming, Nobel lecture, 1945")`
+### Antimicrobial resistance and usage in animal husbandry
+Antimicrobial resistance (AMR) is a global threat to human and animal health alike. Antimicrobial resistance is defined as the ability of microorganisms to grow in the presence of antimicrobials at a higher concentration than related strains [@Guardabassi2006]. The use of antimicrobials have been linked to increased occurrence of resistant bacteria, both in human and animal settings [@WHO2018b], and quinolone resistance is especially important to tackle because quinolones and fluoroquinolones are on the WHO list of critically important antimicrobials [@WHO2019]. In Norway, prophylactic use of antimicrobials is prohibited in livestock, and quinolones are barely used [@NORM/NORM-VET2017; @ESVAC2018], see Figure \@ref(fig:quinUsage). This is reflected in the overall good animal welfare situation [@Alvseike2018], as good health reduces the need for antimicrobial use.
+
+```{r, fig.cap="\\label{fig:quinUsage}Overall sales, in kg active substance, of quinolones and macrolides for therapeutic use in terrestrial livestock animals in Norway in 1993 - 2017, reprinted from NORM/NORM-VET 2017 \\citep{NORM/NORM-VET2017}", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="100%"}
+knitr::include_graphics("images/quin_usage.png")
+```
+
+#### Broiler production
+The Norwegian broiler production is a pyramidal structure with pure-bred animals at the top, breeding animals in the middle, and broilers at the bottom [@Mo2016a]. Eggs are imported from grandparent animals in Sweden which originate mostly from Scotland or Germany. The eggs are hatched in Norwegian hatcheries, and become parent animals. These are reared for around 18 weeks, and are subsequently used for breeding of broiler chickens until around 60 weeks old. The broiler chickens are hatched in hatcheries, and distributed to broiler farms all over the country. Only a few hatcheries exist in Norway. Most of the broiler chickens are reared for 28 - 32 days, depending on weight, then slaughtered [@Nortura2015]. The broiler farms have high biosecurity, i.e. measures are taken to prevent exposure to harmful agents.
+
+#### Swine production
+Swine production in Norway also has a pyramidal structure with unidirectional flow of animals, similar to the broiler production [@Kristoffersen2016]. However, the import of live pigs from other countries to the commercial pig population is negligible [@Animalia2018]. The genetic nucleus herds, where the pure-bred grand parent animals are produced, are at the top of the pyramid. Hybrid parent animals are produced in multiplier herds, either by recruiting pure-bred animals from nucleus herds or having a self-recruitment strategy. Gilts from the multiplier herds are distributed to piglet producing herds (either farrow to finish or farrow to grower herds). Additionally, sow pool systems exists in Norway. In the central units of the sow pools, sows are inseminated and kept for the majority of the gestation period up until approx. three weeks before farrowing. At this time, the sows are moved to satellite units of the sow pool system where they are kept before being moved back to the central unit after the piglets have been weaned. The piglet producing herds have a mean weaning age of 33 days, followed by a growing stage until the grower pig is approx. 30 kg and 10-11 weeks of age. The grower pig is then transferred to a specialized fattening pig farm or fattening unit at the same farm.
+
+### Monitoring AMR and QREC epidemiology
+#### The situation in Europe
+
+Harmonized monitoring of AMR in commensal _E. coli_ from food and food-producing animals has since 2014 been obligatory for all EU/EEA member states, as implemented by the European Commission (SANCO/11591/2012). The commission describes the sampling frame and analysis of isolates. Commensal _E. coli_ is usually isolated from caecal samples, and antimicrobial susceptibility testing (AST) is carried out using broth microdilution. With this method, the minimum inhibitory concentration (MIC) value is determined for multiple antimicrobials. A MIC value is defined as the lowest concentration of the antimicrobial needed to inhibit growth of a micro-organism [@Andrews2001]. Based on the MIC value, an isolate may be categorized as either sensitive or resistant, based on breakpoints defined by the European Comittee on Antimicrobial Susceptibility Testing (EUCAST). In a clinical setting, the clinical breakpoint is used to determine if the treatment will be successful [@Aarestrup2007a]. However, for monitoring purposes, the epidemiological breakpoint (ECOFF) is frequently used. The ECOFF is the highest MIC value for the susceptible (wild type) population [@Aarestrup2007a;@EFSA2008], see Figure \@ref(fig:ecoff). It is important to distinguish between these two breakpoints, as isolates categorized as resistant with the ECOFF value may still respond to treatment in a clinical setting. Using the ECOFF enables detection of resistant isolates before the potential development of clinical resistance, and therefore works as a precautionary measure.
+
+```{r, fig.cap="\\label{fig:ecoff}Distribution of MIC-values for ciprofloxacin in E. coli. Data: www.eucast.org. Illustration: H. Kaspersen.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center"}
+knitr::include_graphics("images/micdist.png")
+```
+
+Guidelines from EFSA and ECDC specify the nomenclature of the occurrence of AMR in a population [@EFSA2016], which is often reported as a percentage. These percentages are usually converted to relative terms like "low" and "high". The percentage values that correspond to these relative terms are "rare" (< 0.1%), "very low" (0.1 - 1%), "low" (> 1 - 10%), "moderate" (> 10 - 20%), "high" (> 20 - 50%), "very high" (> 50 - 70%), and "extremely high" (> 70%).
+
+The occurrence of quinolone resistance among commensal _E. coli_ in Europe seem to follow a north - south gradient, where the northern countries generally have a low occurrence while the southern countries generally have a higher occurrence (Figure \@ref(fig:ecdcData)). The overall occurrence of QREC from production animals including pigs, cattle, calves less than one year old, and various poultry animals among EU countries was 26,1% from 2006 to 2017. More specifically, the EU countries had a mean QREC occurrence of 49,67% in poultry from 2006 to 2016 [@EFSA200407; @EFSA2008; @EFSA2009; @EFSA2010; @EFSA2011; @EFSA2012; @EFSA2013; @EFSA2014; @EFSA2016], corresponding to a high occurrence. A mean occurrence of 8,73% was observed in pigs within the same time frame [@EFSA200407; @EFSA2008; @EFSA2009; @EFSA2010; @EFSA2011; @EFSA2013; @EFSA2015], corresponding to a low occurrence. No systematic monitoring of wild animals have been done.
+
+```{r, fig.cap="\\label{fig:ecdcData}Mean occurrence of quinolone resistance in indicator E. coli from 2011 - 2017. Mean values from broilers was based on data from 2011, 2012, 2013, 2014, and 2016, for pigs from 2011, 2012, 2013, 2015 and 2017, for calves from 2015 and 2017, and for turkeys from 2014 and 2016. Grey areas represent missing data. Data taken from European Union summary reports on antimicrobial resistance in zoonotic and indicator bacteria from humans, animals and food 2011 - 2017 \\citep{EFSA2013,EFSA2011,EFSA2012,EFSA2013,EFSA2014,EFSA2015,EFSA2016,EFSA2017}. Illustration: H. Kaspersen.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center"}
+knitr::include_graphics("images/ecdcdata2.png")
+```
+
+#### The situation in Norway {#norwmonitor}
+As part of the Norwegian government's strategy plan against antimicrobial resistance, the Norwegian monitoring programme for antimicrobial resistance in feed, food and animals (NORM-VET) was implemented in 2000. The programme has since 2014 followed the recommendations for surveillance as given by the EU (2013/652/EU) in parallel with national surveillance needs. A variety of animal species have been sampled in NORM-VET, but all animals are not sampled each year due to the sampling regime. The sample material is commonly faecal or caecal matter, but meat and boot swab samples are also included some years. In broiler and turkey flocks, 10 samples are collected from each flock and pooled before culturing. For pigs and cattle, one individual is sampled per herd. Wild animals are sampled individually. Standardized culturing and isolation methods are used to identify _E. coli_ from the samples collected. These isolates are used as an indicator for the presence of resistance in the given animal population on a national level. Quinolone resistance in commensal _E. coli_ has been monitored in NORM-VET since 2000. Here, samples are plated onto lactose-bromothymol blue agar (pre-2013) or MacConkey agar (2013 until today). A single colony of presumptive _E. coli_ is randomly selected for susceptibility testing.
+
+Compared to the overall occurrence of quinolone resistance among indicator _E. coli_ in the EU, the overall occurrence in Norway is low. For instance, in broilers, the mean ocurrence of QREC between 2006 and 2018 was 5.22%, and 0.3% for pigs [@NORM/NORM-VET2006; @NORM/NORM-VET2007; @NORM/NORM-VET2009; @NORM/NORM-VET2011; @NORM/NORM-VET2012; @NORM/NORM-VET2014; @NORM/NORM-VET2015; @NORM/NORM-VET2016; @NORM/NORM-VET2017; @NORM/NORM-VET2018], corresponding to a low and very low occurrence, respectively. However, a spike in QREC occurrence was detected in 2009 at 8% [@NORM/NORM-VET2009], with no apparent explanation. This triggered the introduction of a selective method in 2014 to further investigate this unexplained occurrence. With the selective method, the samples are plated onto MacConkey agar with 0.06 mg/L ciprofloxacin. Analysis with this method revealed that QREC were present at low levels in 89,5% of included broiler caecal samples in 2014. Corresponding analyses on samples from other animal species, such as pigs, red foxes, wild birds, breeder flocks and horses were performed in 2015, 2016 and 2017. Here, the occurrences ranged from 2.4% in horses, 5.6% in wild birds, 14.8% in red foxes, 54.3% in pigs to 100% in breeder flocks [@NORM/NORM-VET2015; @NORM/NORM-VET2016; @NORM/NORM-VET2017]. In comparison, the occurrence of quinolone resistance among commensal _E. coli_ in the same samples identified with the traditional method was 0% in horses and breeder flocks, 1.2% in red foxes, 2.3% in wild birds, and 0.7% in pigs. This difference in occurrence between the two methods indicate that the QREC are generally present in low levels.
 
 
-<!-- Chapter 2 -->
-## Quinolones and Quinolone resistance mechanisms
 ### Quinolones
 Quinolones were introduced to the market in the late 1960s [@Emmerson2003]. The first quinolone, Nalidixic acid, was discovered as a by-product of chloroquine synthesis [@Lesher1962], and was clinically in use in 1967. A few decades later, the synthesis of novel quinolones increased the effectiveness of nalidixic acid towards gram-positive bacteria, and reduced its toxicity by altering its chemical structure. This structural change involved, among others, the addition of a fluoro-group to the molecule, which also increased its potency towards _Enterobacteriaceae_ [@Emmerson2003]. This also lead to a change in nomenclature for these compounds, as the molecules that harboured this structural change now were called fluoroquinolones.
 
@@ -46,9 +74,7 @@ The efflux pump OqxAB has been shown to increase resistance towards chlorampheni
 The acetyltransferase Aac(6')-_Ib-cr_ infers resistance towards quinolones by altering the quinolone molecule itself. The enzyme acetylates the amino nitrogen on the piperazinyl substituent of ciprofloxacin and norfloxacin [@Robicsek2006a], which reduces the activity of the quinolone [@Robicsek2006a].
 
 
-
-
-<!-- Chapter 3 -->
+<!-- Chapter 2 -->
 ## _Escherichia coli_
 ### General bacteriology and ecology
 _E. coli_ is the most studied micro-organism on earth [@Vila2016], and is often used as a model organism in various microbiology studies and as an indicator organism in surveillance. _E. coli_ is a Gram-negative, rod-shaped, facultative anaerobic bacterium often found in the gastrointestinal tract of warm-blooded animals and humans. There, it may be present as a commensal or as a pathogen.
@@ -60,67 +86,18 @@ Bacteria may evolve either by vertical inheritance, i.e. clonally, or by horizon
 knitr::include_graphics("images/pop_structure_chaudhuri.png")
 ```
 
-
 \newpage
 
 <!-- Chapter 4 -->
-## Norwegian animal husbandry
-Norwegian animal husbandry is characterized by low animal density, a healthy animal population, and an overall good welfare situation [@Alvseike2018]. Animal density is regulated by specific consession limits that are stricter than EU regulations [@Lovdata2004a]. Furthermore, the overall good health of the animal population reduces the need for antimicrobial use. Prophylactic use of antimicrobial compounds in Norwegian livestock is prohibited, and antimicrobials are only used to treat diseased animals. The use of quinolones to treat livestock in Norway is low [@NORM/NORM-VET2017;@ESVAC2018], see Figure \@ref(fig:quinUsage), and negligible amounts of quinolones have been sold in Norway from 2010 to 2016 [@ESVAC2018]. In this section, the broiler and pig production chains are briefly described.
-
-```{r, fig.cap="\\label{fig:quinUsage}Overall sales, in kg active substance, of quinolones and macrolides for therapeutic use in terrestrial livestock animals in Norway in 1993 - 2017, reprinted from NORM/NORM-VET 2017 \\citep{NORM/NORM-VET2017}", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="100%"}
-knitr::include_graphics("images/quin_usage.png")
-```
-
-
-### Broiler production
-The Norwegian broiler production is a pyramidal structure with pure-bred animals at the top, breeding animals in the middle, and broilers at the bottom [@Mo2016a]. Eggs are imported from grandparent animals in Sweden which originate mostly from Scotland or Germany. The eggs are hatched in Norwegian hatcheries, and become parent animals. These are reared for around 18 weeks, and are subsequently used for breeding of broiler chickens until around 60 weeks old. The broiler chickens are hatched in hatcheries, and distributed to broiler farms all over the country. Only a few hatcheries exist in Norway. Most of the broiler chickens are reared for 28 - 32 days, depending on weight, then slaughtered [@Nortura2015]. The broiler farms have high biosecurity, i.e. measures are taken to prevent exposure to harmful agents.
-
-### Swine production
-Swine production in Norway also has a pyramidal structure with unidirectional flow of animals, similar to the broiler production [@Kristoffersen2016]. However, the import of live pigs from other countries to the commercial pig population is negligible [@Animalia2018]. The genetic nucleus herds, where the pure-bred grand parent animals are produced, are at the top of the pyramid. Hybrid parent animals are produced in multiplier herds, either by recruiting pure-bred animals from nucleus herds or having a self-recruitment strategy. Gilts from the multiplier herds are distributed to piglet producing herds (either farrow to finish or farrow to grower herds). Additionally, sow pool systems exists in Norway. In the central units of the sow pools, sows are inseminated and kept for the majority of the gestation period up until approx. three weeks before farrowing. At this time, the sows are moved to satellite units of the sow pool system where they are kept before being moved back to the central unit after the piglets have been weaned. The piglet producing herds have a mean weaning age of 33 days, followed by a growing stage until the grower pig is approx. 30 kg and 10-11 weeks of age. The grower pig is then transferred to a specialized fattening pig farm or fattening unit at the same farm.
-
-
-\newpage
-
-<!-- Chapter 5 -->
-## Monitoring AMR and QREC epidemiology
-### Antimicrobial resistance surveillance
-
-Harmonized monitoring of AMR in commensal _E. coli_ from food and food-producing animals has since 2014 been obligatory for all EU/EEA member states, as implemented by the European Commission (SANCO/11591/2012). The commission describes the sampling frame and analysis of isolates. Commensal _E. coli_ is usually isolated from caecal samples, and antimicrobial susceptibility testing (AST) is carried out using broth microdilution. With this method, the minimum inhibitory concentration (MIC) value is determined for multiple antimicrobials. A MIC value is defined as the lowest concentration of the antimicrobial needed to inhibit growth of a micro-organism [@Andrews2001]. Based on the MIC value, an isolate may be categorized as either sensitive or resistant, based on breakpoints defined by the European Comittee on Antimicrobial Susceptibility Testing (EUCAST). In a clinical setting, the clinical breakpoint is used to determine if the treatment will be successful [@Aarestrup2007a]. However, for monitoring purposes, the epidemiological breakpoint (ECOFF) is frequently used. The ECOFF is the highest MIC value for the susceptible (wild type) population [@Aarestrup2007a;@EFSA2008], see Figure \@ref(fig:ecoff). It is important to distinguish between these two breakpoints, as isolates categorized as resistant with the ECOFF value may still respond to treatment in a clinical setting. Using the ECOFF enables detection of resistant isolates before the potential development of clinical resistance, and therefore works as a precautionary measure.
-
-```{r, fig.cap="\\label{fig:ecoff}Distribution of MIC-values for ciprofloxacin in E. coli. Data: www.eucast.org. Illustration: H. Kaspersen.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center"}
-knitr::include_graphics("images/micdist.png")
-```
-
-
-Guidelines from EFSA and ECDC specify the nomenclature of the occurrence of AMR in a population [@EFSA2016], which is often reported as a percentage. These percentages are usually converted to relative terms like "low" and "high". The percentage values that correspond to these relative terms are "rare" (< 0.1%), "very low" (0.1 - 1%), "low" (> 1 - 10%), "moderate" (> 10 - 20%), "high" (> 20 - 50%), "very high" (> 50 - 70%), and "extremely high" (> 70%).
-
-### The Norwegian monitoring programme {#norwmonitor}
-As part of the Norwegian government's strategy plan against antimicrobial resistance, the Norwegian monitoring programme for antimicrobial resistance in feed, food and animals (NORM-VET) was implemented in 2000. The programme has since 2014 followed the recommendations for surveillance as given by the EU (2013/652/EU) in parallel with national surveillance needs. A variety of animal species have been sampled in NORM-VET, but all animals are not sampled each year due to the sampling regime. The sample material is commonly faecal or caecal matter, but meat and boot swab samples are also included some years. In broiler and turkey flocks, 10 samples are collected from each flock and pooled before culturing. For pigs and cattle, one individual is sampled per herd. Wild animals are sampled individually. 
-
-Standardized culturing and isolation methods are used to identify _E. coli_ from the samples collected. These isolates are used as an indicator for the presence of resistance in the given animal population on a national level. Quinolone resistance in indicator _E. coli_ has been monitored in NORM-VET since 2000. First, samples are plated onto lactose-bromothymol blue agar (pre-2013) or MacConkey agar (2013 until today). In 2014, a selective method was introduced in addition to the indicator _E. coli_. Here, the samples were plated onto MacConkey agar with 0.06 mg/L ciprofloxacin. In both methods, one random colony of _E. coli_ was selected and subjected to susceptibility testing.
-
-### Epidemiology of quinolone resistant _E. coli_
-#### In Europe
-Occurrence of QREC in Europe seem to follow a north - south trend, where the countries in the north have the lowest occurrence, while the southern countries have the highest (Figure \@ref(fig:ecdcData)). However, the occurrence is markedly different between Norway and the rest of mainland Europe, as Norway had a mean occurrence corresponding to a low occurrence (4.1%), when calculating with data based on the traditional method from 2006, 2009, 2011, 2014 and 2016 [@Kaspersen2018]. In comparison, the mean of the whole of Europe was at 59.3% from 2011 to 2016, excluding 2015 [@EFSA2013;@EFSA2014a;@EFSA2015;@EFSA2016;@EFSA2017;@EFSA2018], which corresponds to a very high occurrence.
-
-```{r, fig.cap="\\label{fig:ecdcData}Mean occurrence of quinolone resistance in indicator E. coli from 2011 - 2017. Mean values from broilers was based on data from 2011, 2012, 2013, 2014, and 2016, for pigs from 2011, 2012, 2013, 2015 and 2017, for calves from 2015 and 2017, and for turkeys from 2014 and 2016. Grey areas represent missing data. Data taken from European Union summary reports on antimicrobial resistance in zoonotic and indicator bacteria from humans, animals and food 2011 - 2017 \\citep{EFSA2013,EFSA2014a,EFSA2015,EFSA2016,EFSA2017,EFSA2018,EFSA2019}. Illustration: H. Kaspersen.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center"}
-knitr::include_graphics("images/ecdcdata2.png")
-```
-
-When looking at the results from indicator _E. coli_ in NORM-VET, the level of QREC occurrence in various animal species in Norway is low. Broilers and wild birds seem to have the highest occurrence [@NORM/NORM-VET2016]. A very low occurrence of QREC has been detected in sheep [@NORM/NORM-VET2018], but none has been detected in horses [@NORM/NORM-VET2009;@NORM/NORM-VET2017] or reindeer [@NORM/NORM-VET2012].
-
-
-
-\newpage
-
-<!-- Chapter 6 -->
-## Genomic Analysis
+## Sequencing and bioinformatic analyses
 The process of analysing genomic data can be compared to piecing together shredded paper - the genomic DNA is fragmented, sequenced, then put together again. Bioinformatics can be defined as the use of informatics techniques, such as mathematics, statistics and computer science, to understand biological data on a large scale [@Luscombe2001]. In this chapter, the concept of high throughput sequencing (HTS) and gene identification is presented, followed by the analysis pathway from reads to assembly. Lastly, various subsequent analyses is briefly introduced.
 
 ### High throughput sequencing
 The process of Illumina HTS builds upon that of Sanger sequencing. First, genomic DNA is extracted and purified to adequate quality. The genomic DNA (gDNA) is then fragmented and enriched either by PCR or by hybridization [@Morey2013], through a process called library preparation. Adapters are then placed on each end of each DNA fragment, followed by amplification. Then, the prepared fragments are placed on a flow-cell and the sequencing begins. The fragments are polymerized to a given length, usually between 100 - 300 base pairs [@Illumina2019], by incorporating fluorescence labelled bases, which are registered by the instrument. Following sequencing, the reads can be used in a multitude of analyses, briefly summarised in Figure \@ref(fig:bioinfo).
 
-![Main analysis pathway for culture-based genomic data, modified from Springer Nature [@Boolchandani2019]. \label{fig:bioinfo}](images/bioinfo.jpg)
+```{r, fig.cap="\\label{fig:bioinfo}Main analysis pathway for culture-based genomic data, modified from Springer Nature \\citep{Boolchandani2019}", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="90%"}
+knitr::include_graphics("images/bioinfo.jpg")
+```
 
 
 ### Computational identification of genes
@@ -134,7 +111,10 @@ Quality control of nucleotides in sequencing reads is important to make sure tha
 
 Before delving into the details of genome assembly, it is important to note that genome assemblies are only plausible reconstructions of the original genomes in the cells from which the DNA was extracted, and is therefore only a computed approximation of the "real" genome. Genome assembly is the process where sequence reads are put together into longer, contiguous sequences called contigs, based on overlapping sequences in the reads. Most assemblers in use for Illumina data today are based on de Bruijn graph algorithms [@Simpson2015]. De Bruijn graph algorithms are based on separating the reads into _k_-mers of a specific length, then creating a graph by identifying overlaps. Then, the algorithm "walks" through the graph, and identifies the optimal path where each edge in the graph is visited only once, also known as an Eulerian path [@Pevzner2001], see Figure \@ref(fig:debruijn). This optimal path then becomes the assembly sequence. Each contiguous sequence of assembled reads is called a contig.
 
-![The two de Bruijn graph based assembly methods for genome assembly: Hamiltonian cycles and Eulerian cycles. Reprinted from Nature Biotechnology [@Compeau2011]. \label{fig:debruijn}](images/debruijn.jpg)
+
+```{r, fig.cap="\\label{fig:debruijn}The two de Bruijn graph based assembly methods for genome assembly: Hamiltonian cycles and Eulerian cycles. Reprinted from Nature Biotechnology \\citep{Compeau2011}", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="90%"}
+knitr::include_graphics("images/debruijn.jpg")
+```
 
 
 ### Post-assembly analyses
@@ -144,11 +124,10 @@ Genome annotation is the process where relevant features in the assembled genome
 
 \newpage
 
-<!-- Chapter 7 -->
-## Phylogenetic analysis {#phylo}
+### Phylogenetic analysis {#phylo}
 A frequent problem encountered by bacteriologists is to identify the relationship between isolates. Very closely related isolates are sometimes called clones. A clone does not have a clear definition, but can be loosely defined as isolates that with high probability originated from a recent common ancestor. However, the definition depends on the method used and previous knowledge about the circumstances in which the isolates were involved. Here, the different aspects of a phylogenetic analysis and the underlying assumptions are briefly described.
 
-### Phylogenetics
+#### Phylogenetics
 Phylogeny is defined as the evolutionary history of a species or organism. Phylogenetics is therefore the analysis of genetic material for the purpose of identifying relatedness between isolates [@Biology-Online2019]. Historically, phylogenetic analysis was done on single gene sequences. Today, it is common to use the genetic elements present in all included taxa, i.e. the core genome. The most common way of representing phylogenetic relationships between isolates is a phylogenetic tree, see Figure \@ref(fig:popstructure). In a phylogenetic tree, the tips, or "leaves", of the tree represent each taxa (isolate). Every node in the tree represent a change between the taxa. The most common method of creating these trees is the "character-state" method, where each position in the alignment (the "character") is independently analysed in regard to which nucleotide is present in that location (the "state"). The nodes in the tree then represent different nucleotide changes, usually single nucleotide polymorphisms (SNPs) or indels (insertions or deletions of one or more nucleotide) in the taxa. SNPs can arise in two ways, either by transitions ($A\,\to\,T$, $G\,\to\,C$, and vice versa) or by transversions ($A\,\to\,G$, $A\,\to\,C$, $T\,\to\,G$, $T\,\to\,C$, and vice versa). Transitions seem to be more frequent than transversions, where transversions seem more disruptive to the gene function because of a more radical change in biochemical properties [@Vandamme2009]. The different mutation rates between sites, also called the rate heterogeneity, are important for the underlying rate of evolution, which may be different between isolates. Therefore, assumptions made on the evolutionary relationship between isolates must use a model of evolution to control for the changes that cannot be seen in the data directly. For example, if Adenine (A) is observed in the data, it is unknown whether it was a transition or transversion that led to the A, or if it was multiple steps, compared to the other isolates in the analysis. Therefore, a mathematical model is needed to make predetermined assumptions about the underlying rate of evolution. Many models exists, where the simplest models assume that any nucleotide has the same probability to be replaced by any other nucleotide [@Jukes1969], whereas more complex models assume different heterogeneity rates and occurrences of all four nucleotides [@Tavare1986].
 
 Recombination, as previously mentioned, does not seem to affect tree topology for _E. coli_, but it does have an effect on branch lengths [@Denamur2010a]. Identifying and removing recombinant areas is therefore important, not only to prevent overestimated branch lengths, but also to ensure that only vertically inherited parts of the genome is included in the analysis. This removal also prevents the inclusion of recombinant areas in the genome which may have a different evolutionary history.
