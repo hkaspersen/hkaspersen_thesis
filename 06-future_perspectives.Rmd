@@ -2,4 +2,6 @@
 
 - Investigate QREC isolates from imported birds
 
-- Cefotaxime resistance without identified genotype
+- Investigate the origins of PMQR, especially qnrB19 in the pig production environment
+
+- Studies on the normal flora in production animals are needed
