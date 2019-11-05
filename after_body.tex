@@ -1,8 +1,7 @@
 \backmatter
 {
-\pagestyle{empty}
+\renewcommand*{\thepage}{App. - \arabic{page} -}
 \begin{titlepage}
-\thispagestyle{empty}
    \chapter{Enclosed articles I - III}
 \end{titlepage}
 
@@ -26,6 +25,8 @@
 
 \includepdf[pages={-}]{art2}
 
+\includepdf[pages={-}]{art2_supplementary}
+
 \begin{titlepage}
   \large
   \textbf{Article 3}
@@ -35,4 +36,6 @@
 \end{titlepage}
 
 \includepdf[pages={-}]{art3}
+
+\includepdf[pages={-}]{art3_supplementary}
 }
