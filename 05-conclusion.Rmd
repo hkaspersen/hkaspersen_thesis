@@ -1,15 +1,10 @@
 # Conclusions
 
-- The main quinolone resistance mechanisms in QREC from broilers, pigs, red foxes and wilds birds in Norway was mutations in the QRDR of the _gyrA_ and _parC_ genes. PMQR seemed to play a small role in the occurrence of quinolone resistance.
+- The overall occurrence of QREC in Norwegian animal species is low
 
-- Low occurrence of QREC in various animal species in Norway
+- The low occurrence of PMQR in the broiler production chain indicate that vertical rather than horizontal dissemination is a major contributor to the observed QREC occurrence in this environment
 
-- Significant difference in QREC occurrence between animal species in Norway
+- Temporal variations in major QREC lineages suggest re-introduction of QREC from a higher level in the pyramid
 
-- High diversity of QREC in broilers, pigs, red foxes and wild birds in Norway
+- The detection of the same major STs as in other studies in Scandinavia give strong indications that the QREC identified in the Norwegian broiler production originate from imported breeding animals
 
-- Litte PMQR determinants in animals in Norway
-
-- QREC from broilers had a lower intra-species similarity than the other species
-
-- Closely related isolates with similar resistance mechanisms were identified in multiple animal species, indicating dissemination events
