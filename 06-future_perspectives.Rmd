@@ -2,6 +2,8 @@
 
 - Investigate QREC isolates from imported birds
 
+- Plasmid characterization in isolates from pigs and wild birds
+
 - Investigate the origins of PMQR, especially qnrB19 in the pig production environment
 
-- Studies on the normal flora in production animals are needed
+- Studies on the normal flora in production animals are needed, presumably metagenomics and quiantification of QREC in the gut
