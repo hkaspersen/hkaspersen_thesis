@@ -23,6 +23,8 @@ knitr::include_graphics("images/mapping.png")
 
 ARIBA is a read-based algorithm that works by clustering the reference sequences from the selected database (Figure \@ref(fig:mapping)). Then, read pairs are mapped to the clusters and locally assembled. Then, the closest reference to the assembled sequence is identified, and various quality metrics are calculated, such as gene completeness and overall success of the local assembly [@Hunt2017]. These metrics are encoded into flags, which represent the overall quality of the identified gene or mutation. Each flag has a specific interpretation, as exemplified for flag 27 in Table \@ref(tab:flag). In the present study, flags that represented the following were accepted:
 
+\newpage
+
 - The gene is adequately assembled
 
 - The gene is assembled into one contig
@@ -36,7 +38,10 @@ ARIBA is a read-based algorithm that works by clustering the reference sequences
 - No errors when identifying closest reference sequence
 
 In total, 16 different flags represented these criteria, and were used to ensure high quality of the predicted genes and variants. An R script was used to select the genes or variants that fulfilled these criteria (www.github.com/hkaspersen/VAMPIR).
-
+\
+\
+\
+\
 ```{r flag, echo=FALSE}
 data.frame("Status" = c("TRUE",
                             "TRUE",
@@ -69,14 +74,15 @@ data.frame("Status" = c("TRUE",
 ### Assembly, annotation and pan-genome analysis
 All software used for assembly, annotation and pan-genome analysis is presented in Figure \@ref(fig:assembly). Major software settings are listed in each box.
 
-```{r, fig.cap="\\label{fig:assembly}Flowchart of assembly and annotation pipeline. Yellow rectangle: Analysis on the Abel cluster, with important program settings listed. Dark blue ellipses: Analyses in R. Green folders: Output data. Illustration: H. Kaspersen.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="55%"}
+```{r, fig.cap="\\label{fig:assembly}Flowchart of assembly and annotation pipeline. Yellow rectangle: analyses on the Abel cluster, with important program settings listed. Dark blue ellipses: analyses in R. Green folders: output data. Illustration: H. Kaspersen.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="55%"}
 knitr::include_graphics("images/assembly_pipeline.png")
 ```
 
 ### Phylogenetic analysis
 Phylogenetic analysis methods are summarized in Figure \@ref(fig:flowchart). The left pathway was used to identify the overall relationship between all isolates in each paper. The right pathway was used to further analyse clades of interest with deeper resolution and recombination removal.
-
-```{r, fig.cap="\\label{fig:flowchart}Flowchart of phylogenetic methods. Left: Phylogenetic analysis for all isolates. Right: Phylogenetic analysis for selected clades. Analysis on the Abel cluster, with important program settings listed. Dark blue ellipses: Analyses in R. Green folders: Output data. Illustration: H. Kaspersen", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="99%"}
+\
+\
+```{r, fig.cap="\\label{fig:flowchart}Flowchart of phylogenetic methods. Left: phylogenetic analysis for all isolates. Right: phylogenetic analysis for selected clades. Yellow rectangle: analyses on the Abel cluster. Dark blue ellipses: analyses in R. Green folders: output data. Illustration: H. Kaspersen", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="99%"}
 knitr::include_graphics("images/flowchart.png")
 ```
 
