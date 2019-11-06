@@ -1,10 +1,3 @@
 # Conclusions
 
-- The overall occurrence of QREC in Norwegian animal species is low
-
-- The low occurrence of PMQR in the broiler production chain indicate that vertical rather than horizontal dissemination is a major contributor to the observed QREC occurrence in this environment
-
-- Temporal variations in major QREC lineages suggest re-introduction of QREC from a higher level in the pyramid
-
-- The detection of the same major STs as in other studies in Scandinavia give strong indications that the QREC identified in the Norwegian broiler production originate from imported breeding animals
-
+The overall occurrence of QREC in Norwegian animals is low, especially among terrestrial wild animals. The resistance mechanisms identified in this project indicate that the majority of the mechanisms are being clonally disseminated, and that transferrable quinolone resistance is rare in Norwegian livestock. The results also show QREC dissemination throughout the Norwegian broiler production. Temporal variations in major QREC lineages suggests re-introduction of QREC into the broiler production environment from a higher level in the pyramid. Furthermore, the detection of the same major STs as in other studies on QREC in broilers in Scandinavia give strong indications that the QREC identified in the Norwegian broiler production originate from imported breeding animals. Also, little evidence for the development of quinolone resistance in wild type _E. coli_ further suggest that dissemination is the major contributor to the ocurrence of QREC in the Norwegian broiler production. These findings highlight the importance of biosecurity measures at a higher level in the pyramid, to prevent dissemination into the Norwegian broiler production environment. Additionally, even with the overall low occurrence of QREC, these results also highlight the importance of continued surveillance to further monitor the situation.
