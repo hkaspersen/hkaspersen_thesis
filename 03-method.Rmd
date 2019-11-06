@@ -40,8 +40,6 @@ ARIBA is a read-based algorithm that works by clustering the reference sequences
 In total, 16 different flags represented these criteria, and were used to ensure high quality of the predicted genes and variants. An R script was used to select the genes or variants that fulfilled these criteria (www.github.com/hkaspersen/VAMPIR).
 \
 \
-\
-\
 ```{r flag, echo=FALSE}
 data.frame("Status" = c("TRUE",
                             "TRUE",
