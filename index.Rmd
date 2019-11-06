@@ -24,9 +24,9 @@ link-citations: yes
 ---
 \pagestyle{empty}
 # Acknowledgements {-}
-During my time as a Ph.D. student I've been acquainted with many supportive and fantastic people, both at NVI and the Institute of Veterinary Sciences at NMBU. I am humbled by all the support and kind words I have recieved during these three years. First and foremost, I would like to thank my main supervisor, Dr. Karin Lagesen, for being available at all times, giving structured feedback, and for sparking my interest for bioinformatics. I would like to thank Dr. Anne Margrete Urdahl for her support and interest, as well as the occasional coffee you brought in times of dire need. Furthermore, I thank Dr. Roger Simm for his knowledge in molecular biology, and the helpful discussions we had about genes and mutations. Dr. Madelaine Norström, your help in extracting data from the internal data system at the institute was invaluable, and your knowledge of epidemiology and statistics have been a pillar in both the isolate selection process and analysis. Lastly, I would like to thank Henning Sørum for his innate curiosity of science and seemingly endless knowledge. 
+During my time as a Ph.D. student I've been acquainted with many supportive and fantastic people, both at NVI and the Institute of Veterinary Sciences at NMBU. I am humbled by all the support and kind words I have recieved during these three years. First and foremost, I would like to thank my main supervisor, Dr. Karin Lagesen, for being available at all times, giving structured feedback, and for sparking my interest for bioinformatics. I would like to thank Dr. Anne Margrete Urdahl for her support and interest, as well as the occasional coffee you brought. Furthermore, I thank Dr. Roger Simm for his knowledge in molecular biology, and the helpful discussions we had about genes and mutations. Dr. Madelaine Norström, your help in extracting data from the internal data system at the institute was invaluable, and your knowledge of epidemiology and statistics have been a pillar in both the isolate selection process and analysis. Lastly, I would like to thank Henning Sørum for his innate curiosity of science and seemingly endless knowledge. 
 
-As for my coworkers at NVI, I would like to show my immense gratitute to Solveig Sølverød Mo, Camilla Sekse and Jannice Schau Slettemeås, who have been amazingly supportive both at a personal and professional level. Thank you for the helpful discussions and coffee breaks, and the general interest you have shown in my work. Your everyday support meant more to me than you may have realized. I would like to extend my gratitute toward the rest of the Research group for food safety and animal health - thank you for the friday cake discussions and support. Also, I would like to thank Eve Zeyl Fiskebeck for disseminating her knowledge on phylogenetics and evolution to me in an understandable and informative way.
+As for my coworkers at NVI, I would like to show my immense gratitute to Solveig Sølverød Mo, Camilla Sekse and Jannice Schau Slettemeås, who have been amazingly supportive both at a personal and professional level. Thank you for the helpful discussions and coffee breaks, and the general interest you have shown in my work. Your everyday support meant more to me than you may have realized. I would like to extend my gratitute toward the rest of the Research group for food safety and animal health - thank you for the friday cake discussions and support. Also, I would like to thank Eve Zeyl Fiskebeck for sharing her knowledge on phylogenetics and evolution to me in an understandable and informative way.
 
 For my colleagues at the Institute of Veterinary Sciences, I would like to thank Erik Paulshus, Karla Meza, Leif Lotherington, Aud Kari Fauske, Gaute Skogtun, Stanislav Iakhno, Mari Røken, Ane Mohn Bjelland, Cristopher Nilsson and Silje Mogstad Finstad for being amazing coworkers and supporters throughout the years. Thank you for the ski trips, barbecues and cabin trips, and the good work environment.
 
@@ -60,6 +60,7 @@ packages <- c("bookdown",
               "vegan",
               "adephylo",
               "ggtree",
+              "phangorn",
               "Biostrings",
               "kableExtra",
               "kable")
@@ -68,9 +69,12 @@ knitr::write_bib(c(.packages(), packages), 'packages.bib')
 ```
 
 # Summary (English)
-The monitoring programme for antimicrobial resistance in feed, food and animals (NORM-VET) have monitored quinolone resistant _E. coli_ (QREC) in multiple animal species since 2006. Sample material is cultured according to EU regulations, which includes culturing of indicator _E. coli_. The programme has since 2009 indicated a low occurrence of QREC in the tested animal species. However, an increased occurrence in broilers was observed in 2009, which instigated further investigations with selective culturing methods. A selective method was introduced in 2014, and the results revealed a very high occurrence of QREC in broilers. The use of quinolones is known to induce quinolone resistance in commensal _E. coli_. However, the use of quinolones is nearly negligible in Norwegian food producing animals, which raised the question of the origin of these bacteria. The goal of this study was to identify the occurrence of QREC in multiple animal species, characterize genomic factors that may explain the observed resistance, identify possible associations between isolates from various origins, and investigate possible underlying risk factors for the occurrence of QREC. Data from NORM-VET 2006 to 2016 was compiled and analysed to get an overview of the occurrence of QREC in multiple animal species. QREC isolates were whole genome sequenced, and the quinolone resistance mechanisms were characterized. Furthermore, phylogenetic analysis was used to describe the relationship between the QREC isolates. The phylogenetic relationship between QREC and sensitive isolates was also determined, together with the presence of mutations in major mutator genes. The results indicate that there is an interspecies variation in QREC occurrence, which may indicate that other factors than quinolone usage may play a role in the occurrence of QREC. Furthermore, quinolone resistance mechanisms identified in the QREC isolates followed the population structure, and phylogenetically related QREC isolates were identified in samples from broilers and red foxes, and also in samples from pigs. Lastly, the phylogenetic relationship between sensitive _E. coli_ isolates and QREC seem to be separate. Taken together, the results indicate a clonal expansion of closely related QREC isolates through the norwegian broiler and pig production chain. This expansion is worrisome, and measures should be taken to ensure their exclusion from the food production. 
+
+The occurrence of antimicrobial resistance in Norwegian livestock is generally low. This is a consequence of good animal health and welfare, which reduces the need for antimicrobial use. Quinolones are highly important and effective antimicrobial compounds both for human and animal health, and increased occurrence of resistance toward these compounds in livestock have been observed in many European countries. In Norway, the use of quinolones in livestock has been greatly restricted, and prophylactic use is prohibited, resulting in a very low usage of this antimicrobial. The Norwegian monitoring programme for antimicrobial resistance in feed, food and animals (NORM-VET) do surveillance of antimicrobial resistance among commensal _E. coli_, and identified a low overall occurrence among several tested animal species. However, using a selective screening method for quinolone resistant _E. coli_ (QREC), QREC was identified at low levels in a high proportion of samples from both pigs and broilers. This finding was surprising, and further information about these isolates and their origin was of interest. The goal of this study was to compile and compare existing data on quinolone resistance occurrence, characterize quinolone resistance mechanisms in QREC isolates, and use high-resolution phylogenetic methods with whole genome sequencing data to describe the relationship between the isolates to possibly identify their origins. The results showed an overall low occurrence of QREC in animals in Norway, but a significantly higher occurrence was observed in wild birds and broilers. _In-silico_ characterization of quinolone resistance mechanisms identified chromosomal mutations as the predominant resistance determinant. Investigations into the phylogenetic relationships between the isolates provided evidence for a clonal dissemination of QREC isolates in the broiler and pig production chains, and possible persistence in the broiler production environment. However, phylogenetic analysis of QREC and wild type _E. coli_ revealed a temporal re-introduction of major sequence type groups of QREC and wild type _E. coli_. The results give strong evidence for re-introduction of QREC to the Norwegian broiler production via imported breeding birds, and highlight the importance of biosecurity measures at the top of the pyramid to prevent dissemination of QREC isolates down the pyramid.
 
 # Summary (Norwegian)
+
+Et lavt forbruk av antibiotika grunnet god dyrehelse og -velferd har ført til at Norge har en av de laveste forekomstene av antibiotikaresistens i verden. Kinoloner er svært viktige antibiotika både for mennesker og dyr, men en økt forekomst av resistens mot dette antibiotikumet er oppdaget i mange Europeiske land. I Norge er forbruket av dette antibiotikumet svært lavt, og profylaktisk bruk av kinoloner er forbudt. Data fra overvåkningsprogrammet for antibiotikaresistens i mikrober fra fôr, dyr og næringsmidler (NORM-VET) viser en lav totalforekomst av kinolonresistente _E. coli_ (QREC) blant Norske husdyr. Ved bruk av en selektiv metode for å identifisere QREC direkte fra prøvematerialet ble det derimot funnet QREC i små mengder i en stor andel av prøver fra gris og slaktekylling. Dette var overraskende funn som førte til spørsmål om deres opphav, og nødvendigheten av mer informasjon om disse bakteriene. Målet med dette prosjektet var å samle og sammenlikne eksisterende data på forekomst av QREC i ulike dyrearter i Norge, karakterisere kinolonresistensmekanismer i QREC stammer, samt beskrive forholdet mellom stammene med dype fylogenetiske metoder for å kunne identifisere deres opphav. Resultatene viser en overordnet lav forekomst av QREC blant Norske dyrearter, men en signifikant høyere relativ forekomst ble observert i villfugl og slaktekylling. Kromosomale mutasjoner ble identifisert som hovedmekanisme for den observerte kinolonresistensen. Fylogenetiske analyser av sekvensdataene ga bevis for en klonal spredning av QREC i både slaktekyllingpyramiden og slaktegrisproduksjonen, og mulig persistens av QREC i slaktekyllingmiljøet. Videre fylogenetisk analyse av både villtype _E. coli_ og QREC viste at både QREC og villtype _E. coli_ blir re-introdusert i slaktekyllingpyramiden. Resultatene gir bevis for at re-introduksjon av QREC fra importerte foreldredyr er hovedårsaken til den observerte forekomsten av QREC i den Norske slaktekyllingproduksjonen. Disse resultatene belyser viktigheten av biosikkerhetstiltak høyere i slaktekyllingpyramiden for å forhindre spredning av QREC nedover i produksjonen.
 
 # Abbreviations
 
@@ -86,7 +90,6 @@ tibble(
            "Multi drug resistance",
            "Epidemiological cut off",
            "Minimum inhibitory concentration",
-           "Norwegian Sequencing Centre",
            "Locally colinear blocks",
            "Maximum likelihood"),
   Abbreviation = c("QREC",
@@ -95,7 +98,6 @@ tibble(
                    "MDR",
                    "ECOFF",
                    "MIC",
-                   "NSC",
                    "LCB",
                    "ML"))%>%
   arrange(Term) %>% # i.e. alphabetical order by Term
@@ -104,11 +106,18 @@ tibble(
 
 # List of publications
 
-1. **Occurrence of quinolone resistant _E. coli_ originating from different animal species in Norway**
+**Occurrence of quinolone resistant _E. coli_ originating from different animal species in Norway.**
+
 Håkon Kaspersen, Anne Margrete Urdahl, Roger Simm, Jannice Schau Slettemeås, Karin Lagesen, Madelaine Norström (2018). _Veterinary Microbiology_, 217(February):25-31. (10.1016/j.vetmic.2018.02.022).
+\
+\
+\
+**Phylogenetic analysis indicate dissemination and persistence of quinolone resistant Escherichia coli in the broiler and pig production chain in Norway.**
 
-2. **Phylogenetic analysis indicate dissemination and persistence of quinolone resistant Escherichia coli in the broiler and pig production chain in Norway**
 Håkon Kaspersen, Camilla Sekse, Eve Zeyl Fiskebeck, Jannice Schau Slettemeås, Roger Simm, Anne Margrete Urdahl, Madelaine Norström, Karin Lagesen.
+\
+\
+\
+**Comparative genome analyses of wild type- and quinolone resistant Escherichia coli indicate dissemination of QREC in the broiler production pyramid and potential sporadic local resistance development.**
 
-3. **Comparative genome analyses of wild type- and quinolone resistant Escherichia coli indicate dissemination of QREC in the broiler production pyramid and potential sporadic local resistance development**
 Håkon Kaspersen, Eve Zeyl Fiskebeck, Camilla Sekse, Jannice Schau Slettemeås, Anne Margrete Urdahl, Madelaine Norström, Karin Lagesen, Roger Simm.
