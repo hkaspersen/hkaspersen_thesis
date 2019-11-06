@@ -1,9 +1,7 @@
 # Future Perspectives
 
-- Investigate QREC isolates from imported birds
+- In-depth characterization using comparative genomics of QREC isolates from Norway and other countries in Europe are needed to further investigate international dissemination of these isolates
 
-- Plasmid characterization in isolates from pigs and wild birds
+- Characterization of plasmids harbouring _qnr_ genes are needed to confirm if these plasmids are conjugative, and if they coincide with other resistance genes
 
-- Investigate the origins of PMQR, especially qnrB19 in the pig production environment
-
-- Studies on the normal flora in production animals are needed, presumably metagenomics and quiantification of QREC in the gut
+- Quantification of QREC in livestock species is important to get a number on the proportion of QREC in the gut of these animals. Knowledge about their normal flora is therefore important, and further studies are needed to gain insight into these aspects
