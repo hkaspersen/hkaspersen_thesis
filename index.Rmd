@@ -92,7 +92,10 @@ tibble(
            "Epidemiological cut off",
            "Minimum inhibitory concentration",
            "Locally colinear blocks",
-           "Maximum likelihood"),
+           "Maximum likelihood",
+           "Quinolone resistance determining region",
+           "Antimicrobial susceptibility testing",
+           "Plasmid mediated quinolone resistance"),
   Abbreviation = c("QREC",
                    "AMR",
                    "WGS",
@@ -100,7 +103,10 @@ tibble(
                    "ECOFF",
                    "MIC",
                    "LCB",
-                   "ML"))%>%
+                   "ML",
+                   "QRDR",
+                   "AST",
+                   "PMQR"))%>%
   arrange(Term) %>% # i.e. alphabetical order by Term
   kable(booktab = T) # create nice table
 ```
