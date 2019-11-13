@@ -17,7 +17,7 @@ Bioinformatic analysis was largely performed on the Abel Cluster, owned by the U
 
 Antimicrobial Resistance gene Identification by Assembly (ARIBA) [@Hunt2017] was used to identify resistance genes with the Resfinder [@Zankari2012] database and mutations with the MEGARes database [@Lakin2017], as well as determining the sequence types of the isolates, with the _E. coli_ scheme hosted by Enterobase [@Wirth2006]. The process by which ARIBA works is visualized in Figure \@ref(fig:mapping).
 
-```{r, fig.cap="\\label{fig:mapping}Overview of the ARIBA mapping and targeted assembly pipeline, reprinted from Microbiology Society \\citep{Hunt2017}.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="70%",out.height="70%"}
+```{r, fig.cap="\\label{fig:mapping}Overview of the ARIBA mapping and targeted assembly pipeline, reprinted from Hunt et al. 2017 \\citep{Hunt2017} with permission from Microbiology Society.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="70%",out.height="70%"}
 knitr::include_graphics("images/pdfs/mapping.pdf")
 ```
 
@@ -71,7 +71,7 @@ data.frame("Status" = c("TRUE",
 ### Assembly, annotation and pan-genome analysis
 All software used for assembly, annotation and pan-genome analysis is presented in Figure \@ref(fig:assembly). Major software settings are listed in each box.
 
-```{r, fig.cap="\\label{fig:assembly}Flowchart of assembly and annotation pipeline. Yellow rectangle: analyses on the Abel cluster, with important program settings listed. Dark blue ellipses: analyses in R. Green folders: output data. Illustration: H. Kaspersen.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="90%",out.height="90%"}
+```{r, fig.cap="\\label{fig:assembly}Flowchart of assembly and annotation pipeline. Light blue: input data. Yellow rectangle: analyses on the Abel cluster, with important program settings listed. Dark blue ellipses: analyses in R. Green folders: output data.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="90%",out.height="90%"}
 knitr::include_graphics("images/pdfs/assembly_pipeline.pdf")
 ```
 
@@ -79,13 +79,13 @@ knitr::include_graphics("images/pdfs/assembly_pipeline.pdf")
 Phylogenetic analysis methods are summarized in Figure \@ref(fig:flowchart). The left pathway was used to identify the overall relationship between all isolates in each paper. The right pathway was used to further analyse clades of interest with deeper resolution and recombination removal.
 \
 \
-```{r, fig.cap="\\label{fig:flowchart}Flowchart of phylogenetic methods. Left: phylogenetic analysis for all isolates. Right: phylogenetic analysis for selected clades. Yellow rectangle: analyses on the Abel cluster. Dark blue ellipses: analyses in R. Green folders: output data. Illustration: H. Kaspersen.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="99%"}
+```{r, fig.cap="\\label{fig:flowchart}Flowchart of phylogenetic methods. Left: phylogenetic analysis for all isolates. Right: phylogenetic analysis for selected clades. Light blue: input data. Yellow rectangle: analyses on the Abel cluster. Dark blue ellipses: analyses in R. Green folders: output data.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="99%"}
 knitr::include_graphics("images/pdfs/flowchart.pdf")
 ```
 
 <!-- Chapter 3 -->
 ## Statistical methods
-Statistical analysis was done in R `r version$version.string`[@R-base].
+Statistical analysis was done in `r version$version.string`[@R-base].
 Significant differences between groups was calculated by using $\chi$^2^-test. Confidence intervals were calculated by using the two-sided exact binomial test at 95% confidence level.
 
 A non-parametric permutation test was used to assess significant aggregation of isolates in phylogenetic trees. Here, the mean/median minimum SNP distance to closest isolate within the same animal species (Paper II) or phenotype (Paper III) was calculated. Then, a permutation test was used to calculate the mean/median minimum SNP distance for each iteration (_n_ = 1000). Non-exact p-values were calculated based on the number of expected values that were lower than the observed value for all iterations.
