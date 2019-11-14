@@ -1,11 +1,11 @@
 # Materials and Methods
 
-Here follows a summary of methods used - for details, see enclosed articles.
+Here follows a summary of methods used - for details, see enclosed papers.
 
 <!-- Chapter 1  -->
 ## Laboratory methods
 
-All _E. coli_ isolates included in this project were isolated through the NORM-VET programme, and the methods used for isolating _E. coli_ and susceptibility testing are described in Section \@ref(norwmonitor). An _E. coli_ was categorized as quinolone resistant if the MIC value for ciprofloxacin or nalidixic acid was above 0.06 mg/L or 16 mg/L, respectively.
+All _E. coli_ isolates included in this project were isolated through the NORM-VET programme, and the methods used for isolating _E. coli_ and susceptibility testing are described in Section \@ref(norwmonitor). An _E. coli_ was categorized as quinolone resistant if the MIC value for ciprofloxacin or nalidixic acid was above 0.06 mg/L or 16 mg/L, respectively, based on ECOFF values defined by EUCAST (ECOFF values as of 01.08.2019, www.eucast.org).
 
 Library preparation and sequencing service was provided by the Norwegian Sequencing Centre (NSC, www.sequencing.uio.no), a national technology platform hosted by the University of Oslo and supported by the "Functional Genomics" and "Infrastructure" programs of the Research Council of Norway and the Southeastern Regional Health Authorities.
 
@@ -17,25 +17,20 @@ Bioinformatic analysis was largely performed on the Abel Cluster, owned by the U
 
 Antimicrobial Resistance gene Identification by Assembly (ARIBA) [@Hunt2017] was used to identify resistance genes with the Resfinder [@Zankari2012] database and mutations with the MEGARes database [@Lakin2017], as well as determining the sequence types of the isolates, with the _E. coli_ scheme hosted by Enterobase [@Wirth2006]. The process by which ARIBA works is visualized in Figure \@ref(fig:mapping).
 
-```{r, fig.cap="\\label{fig:mapping}Overview of the ARIBA mapping and targeted assembly pipeline, reprinted from Hunt et al. 2017 \\citep{Hunt2017} with permission from Microbiology Society.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="70%",out.height="70%"}
+```{r, fig.cap="\\label{fig:mapping}Overview of the ARIBA mapping and targeted assembly pipeline, reprinted from Hunt et al. 2017 \\citep{Hunt2017} with permission from Microbiology Society. Program names are listed in brackets.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="70%",out.height="70%"}
 knitr::include_graphics("images/pdfs/mapping.pdf")
 ```
 
-ARIBA is a read-based algorithm that works by clustering the reference sequences from the selected database (Figure \@ref(fig:mapping)). Then, read pairs are mapped to the clusters and locally assembled. Then, the closest reference to the assembled sequence is identified, and various quality metrics are calculated, such as gene completeness and overall success of the local assembly [@Hunt2017]. These metrics are encoded into flags, which represent the overall quality of the identified gene or mutation. Each flag has a specific interpretation, as exemplified for flag 27 in Table \@ref(tab:flag). In the present study, flags that represented the following were accepted:
+ARIBA is a read-based algorithm that works by clustering the reference sequences from the selected database (Figure \@ref(fig:mapping)). Then, read pairs are mapped to the clusters and locally assembled. The closest reference to the assembled sequence is identified, and various quality metrics are calculated, such as gene completeness and overall success of the local assembly [@Hunt2017]. These metrics are encoded into flags, which represent the overall quality of the identified gene or mutation. Each flag has a specific interpretation, as exemplified for flag 27 in Table \@ref(tab:flag). In the present study, flags that represented the following were accepted:
 
 \newpage
 
 - The gene is adequately assembled
+  + 95% of the reference sequence is identical to the assembled sequence
+  + The gene is assembled into only one contig
+  + No assembly scaffold graph ambiguity
 
-- The gene is assembled into one contig
-
-- No regions in the assemblies are assembled twice
-
-- No assembly scaffold ambiguity
-
-- Adequate read depth
-
-- No errors when identifying closest reference sequence
+- No technical errors when identifying closest reference sequence
 
 In total, 16 different flags represented these criteria, and were used to ensure high quality of the predicted genes and variants. An R script was used to select the genes or variants that fulfilled these criteria (www.github.com/hkaspersen/VAMPIR).
 \
