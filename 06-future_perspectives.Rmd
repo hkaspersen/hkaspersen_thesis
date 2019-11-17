@@ -1,11 +1,9 @@
 # Future Perspectives
 
-- In-depth characterization using comparative genomics of QREC isolates from Norway and other countries in Europe are needed to further investigate international dissemination of these isolates
+- In-depth characterization using comparative genomics of QREC isolates from Norway and other countries in Europe. This data is necessary to further investigate international dissemination of QREC in the broiler production chain. It would be interesting to identify and compare possible common sequence types, and also see if ST355 and ST349 is still present. Also, sampling breeding and broiler flocks and investigating QREC occurrence from succeeding sampling of these would provide further data on dissemination and persistence of QREC in the production chain, and can possibly confirm if QREC is indeed disseminated from parent animals
 
-- Temporal analysis of QREC occurrence from succeeding sampling from both broiler and breeding houses will provide further data on dissemination and persistence
+- Further characterization of plasmids harbouring _qnr_ genes. Identifying these plasmids _in silico_ followed by conjugation experiments will provide necessary data when assesssing their transferability. Characterizing the plasmids opens up the possibility to see if these plasmids are similar to plasmids from similar production sites in other countries.
 
-- Characterization of plasmids harbouring _qnr_ genes are needed to confirm if these plasmids are conjugative, and if they coincide with other resistance genes, especially in samples from pigs
+- Further investigate QREC in the Norwegian pig population. Since the origin and/or development of these isolates is largely unknown, further studies similar to the one described in paper III should be implemented on isolates from pigs. It would be interesting to see if there is a higher occurrence of quinolone resistance development among commensal _E. coli_ in pigs than in broilers that may explain the observed QREC occurrence.
 
-- Further investigate QREC in the Norwegian pig population, as the origin of these isolates are still unknown
-
-- Quantification of QREC in livestock species is important to get a number on the proportion of QREC in the gut of these animals. Knowledge about their normal flora is therefore important, and further studies are needed to gain insight into these aspects
+- Quantification of QREC in livestock species. QREC was identified at low levels in a high proportion of samples, but the exact proportions of these bacteria are largely unknown. A combination of culture-based quantification and metagenomic quantification from the same samples may provide high quality data that can be used to deduce the amount of QREC in the gut of these animals.
