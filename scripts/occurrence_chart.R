@@ -31,9 +31,9 @@ p<-ggplot(data, aes(Year, Occurrence, color = Report, group = Report)) +
   facet_wrap(~Species, nrow = 3, ncol = 1)
 
 
-ggsave("images/pdfs/qrec_occurrence_nordic.pdf",
+ggsave("images/pdfs/qrec_occurrence_nordic.png",
        p,
-       device = "pdf",
+       device = "png",
        units = "cm",
        dpi = 600,
        height = 25,
