@@ -52,7 +52,7 @@ p <- ggmap(hmap) + coord_map(xlim = xlim, ylim = ylim) +
   scale_fill_gradient(
     high = "#67000d",
     low = "#fff5f0",
-    na.value = "grey90",
+    na.value = "grey80",
     limits = c(0, 100),
     labels = c("0", "25", "50", "75", "100"),
     guide = guide_colourbar(
@@ -70,7 +70,9 @@ p <- ggmap(hmap) + coord_map(xlim = xlim, ylim = ylim) +
     legend.direction = "horizontal",
     legend.title = element_blank(),
     panel.border = element_rect(color = "black", fill = NA),
-    strip.text = element_text(size = 10)
+    strip.text = element_text(size = 14),
+    strip.background = element_rect(fill = "white"),
+    legend.text = element_text(size = 10)
   ) +
   facet_wrap( ~ key, ncol = 2, nrow = 2)
 
@@ -78,8 +80,8 @@ ggsave("images/ecdcdata2.png",
        p,
        dpi = 600,
        units = "cm",
-       height = 15,
-       width = 15,
+       height = 25,
+       width = 25,
        device = "png")
 
 
