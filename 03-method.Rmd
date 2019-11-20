@@ -15,23 +15,26 @@ Bioinformatic analysis was mainly performed on the Abel Cluster, owned by the Un
 
 ### Identification of resistance mechanisms {#aribaflag}
 
-Antimicrobial Resistance gene Identification by Assembly (ARIBA) [@Hunt2017] was used to identify resistance genes with the Resfinder [@Zankari2012] database and mutations with the MEGARes database [@Lakin2017], as well as determining the sequence types of the isolates, with the _E. coli_ scheme hosted by Enterobase [@Wirth2006]. The process by which ARIBA works is visualized in Figure \@ref(fig:mapping).
+The program ARIBA (Antimicrobial Resistance gene Identification by Assembly) [@Hunt2017] was used to identify resistance genes with the Resfinder [@Zankari2012] database and mutations with the MEGARes database [@Lakin2017], as well as determining the sequence types of the isolates, with the _E. coli_ scheme hosted by Enterobase [@Wirth2006]. The process by which ARIBA works is visualized in Figure \@ref(fig:mapping).
 
-```{r, fig.cap="\\label{fig:mapping}Overview of the ARIBA mapping and targeted assembly pipeline, reprinted from Hunt et al. 2017 \\citep{Hunt2017} with permission from Microbiology Society. Program names are listed in brackets.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="70%",out.height="70%"}
+```{r, fig.cap="\\label{fig:mapping}Overview of the ARIBA mapping and targeted assembly pipeline, reprinted from Hunt et al. 2017 \\citep{Hunt2017} with permission from Microbiology Society. Program names are listed in brackets.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="80%",out.height="80%"}
 knitr::include_graphics("images/pdfs/mapping.pdf")
 ```
 
-ARIBA is a read-based algorithm that works by clustering the reference sequences from the selected database (Figure \@ref(fig:mapping)). Then, reads and their mates, i.e. the corresponding reverse sequence, are mapped to the clusters and locally assembled. The closest reference to the assembled sequence is identified, and various quality metrics are calculated, such as gene completeness and overall success of the local assembly [@Hunt2017]. These metrics are encoded into flags, which is a number given by ARIBA based on the underlying quality metrics for each predicted gene or mutation. Only one flag is given for each predicted variant or gene, and each flag has a specific interpretation, as exemplified for flag 27 in Table \@ref(tab:flag). In the present study, flags that represented the following were accepted (variables in parentheses denote the metrics reported by ARIBA for each flag):
+ARIBA is a read-based algorithm that works by clustering the reference sequences from the selected database (Figure \@ref(fig:mapping)). Then, reads and their mates, i.e. the corresponding reverse sequence, are mapped to the clusters and locally assembled. The closest reference to the assembled sequence is identified, and 11 different quality metrics are calculated, such as gene completeness and overall success of the local assembly [@Hunt2017]. The combination of all metrics is encoded into a flag, which is a number given by ARIBA based on the underlying quality metrics for each predicted gene or mutation. Only one flag is given for each predicted mutation or gene, and each flag has a specific interpretation. To ensure high quality of the predicted mutation or gene, three of the 11 metrics had to be evaluated as TRUE, while four had to be evaluated as FALSE. The remaining four metrics could be either TRUE or FALSE. The metrics that were only regarded as TRUE represented the following:
 
 - 95% of the reference sequence is identical to the assembled sequence (Assembled = TRUE)
 - The gene is assembled into only one contig (Assembled into one contig = TRUE)
-- Less than 3% of the reference sequence has more than one match to the assembly (region assembled twice = FALSE)
 - Exactly one contig in the assembly matches the reference (unique contig = TRUE)
+
+The metrics that were regarded only as FALSE represented the following:
+
+- Less than 3% of the reference sequence has more than one match to the assembly (region assembled twice = FALSE)
 - No assembly graph ambiguity (Scaffold graph bad = FALSE)
 - Assembly did not fail (Assembly fail = FALSE)
 - No technical errors when identifying closest reference sequence (ref seq choose fail = FALSE)
 
-The rest of the metrics could either be TRUE or FALSE. In total, 16 different flags represented these criteria, and were used to ensure high quality of the predicted genes and variants. An R script was used to select the genes or variants that fulfilled these criteria (www.github.com/hkaspersen/VAMPIR).
+All allowed combinations of metrics are listed in Table \@ref(tab:flag). These criteria resulted in 16 different flags that were accepted. All genes or mutations that were predicted with a non-accepted flag were removed. An R script was used to select the genes or mutations that fulfilled these criteria (www.github.com/hkaspersen/VAMPIR).
 \
 ```{r flag, echo=FALSE}
 data.frame(
@@ -52,27 +55,29 @@ data.frame(
     "TRUE",
     "TRUE",
     "FALSE",
+    "TRUE | FALSE",
     "TRUE",
-    "TRUE",
     "FALSE",
     "FALSE",
-    "FALSE",
-    "FALSE",
-    "FALSE",
+    "TRUE | FALSE",
+    "TRUE | FALSE",
+    "TRUE | FALSE",
     "FALSE"
   )
 ) %>%
   kable("latex",
         booktabs = TRUE,
-        caption = "The TRUE/FALSE combination of metrics that result in flag 27, as reported by ARIBA. For example, when 'Assembled into one contig' is TRUE, it means that exactly one contig in the assembly matches the reference. See github.com/sanger-pathogens/ariba/wiki/Task:-flag for a detailed description of each metric.") %>%
+        caption = "All allowed combinations of metrics reported by ARIBA. All possible combinations of these metrics resulted in 16 different allowed flags. See github.com/sanger-pathogens/ariba/wiki/Task:-flag for a detailed description of each metric.") %>%
   kable_styling(latex_option = "HOLD_position",
                 full_width = TRUE)
 ```
 
-### Assembly, annotation and pan-genome analysis
-All software used for assembly, annotation and pan-genome analysis is presented in Figure \@ref(fig:assembly). Major software settings are listed in each box.
+\newpage
 
-```{r, fig.cap="\\label{fig:assembly}Flowchart of assembly and annotation pipeline. Light blue: input data. Yellow rectangle: analyses on the Abel cluster, with important program settings listed. Dark blue ellipses: analyses in R. Green folders: output data.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="90%",out.height="90%"}
+### Assembly, annotation and pan-genome analysis
+All software used for assembly, annotation and pan-genome analysis is presented in Figure \@ref(fig:assembly).
+
+```{r, fig.cap="\\label{fig:assembly}Flowchart of assembly and annotation pipeline. Light blue: input data. Yellow rectangle: name of the analysis tool used on the Abel cluster, with important program settings listed. Dark blue ellipses: analyses in R. Green folders: output data.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="85%",out.height="85%"}
 knitr::include_graphics("images/pdfs/assembly_pipeline.pdf")
 ```
 
@@ -80,7 +85,7 @@ knitr::include_graphics("images/pdfs/assembly_pipeline.pdf")
 Phylogenetic analysis methods are summarised in Figure \@ref(fig:flowchart). The left pathway was used to identify the overall relationship between all isolates in each paper. The right pathway was used to further analyse clades of interest with deeper resolution and recombination removal.
 \
 \
-```{r, fig.cap="\\label{fig:flowchart}Flowchart of phylogenetic methods. Left: phylogenetic analysis for all isolates. Right: phylogenetic analysis for selected clades. Light blue: input data. Yellow rectangle: analyses on the Abel cluster. Dark blue ellipses: analyses in R. Green folders: output data.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="99%"}
+```{r, fig.cap="\\label{fig:flowchart}Flowchart of phylogenetic methods. Left: phylogenetic analysis for all isolates. Right: phylogenetic analysis for selected clades. Light blue: input data. Yellow rectangle: name of the analysis tool used on the Abel cluster. Dark blue ellipses: analyses in R. Green folders: output data.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="100%", out.height="100%"}
 knitr::include_graphics("images/pdfs/flowchart.pdf")
 ```
 
@@ -89,6 +94,6 @@ knitr::include_graphics("images/pdfs/flowchart.pdf")
 Statistical analysis was done in `r version$version.string`[@R-base].
 Significant differences between groups were calculated by using $\chi$^2^-test. Confidence intervals were calculated by using the two-sided exact binomial test at 95% confidence level.
 
-A non-parametric permutation test was used to assess significant aggregation of isolates in phylogenetic trees. Here, the median minimum SNP distance to closest isolate within the same animal species was calculated. Then, a permutation test was used to calculate the median minimum SNP distance for each iteration (_n_ = 1000). Non-exact p-values were calculated based on the number of expected values that were lower than the observed value for all iterations.
+A non-parametric permutation test was used to assess significant aggregation of isolates in phylogenetic trees. Here, the median minimum SNP distance to the closest isolate within the same animal species was calculated. Then, a permutation test was used to calculate the median minimum SNP distance for each iteration (_n_ = 1000). Non-exact p-values were calculated based on the number of expected values that were lower than the observed value for all iterations.
 
 Non-metric multidimensional scaling (NMDS) was used to cluster isolates based on presence/absence of quinolone resistance conferring substitutions and genes by using the vegan package [@R-vegan]. NMDS is an ordination technique that has previously been used to relate the presence of acquired AMR genes to sample source or type [@Wang2016;@Liu2019]. A stress plot (Shepard diagram) was calculated to determine how well the ordination represented the data [@R-vegan].
