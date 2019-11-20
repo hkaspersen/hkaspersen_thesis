@@ -11,9 +11,9 @@ grViz("digraph {
       roary [label = 'Roary']
       snpsites [label = 'Snp-sites']
       iqtree [label = 'IQTree']
-      ggtree [label = 'Ggtree', fillcolor = '#3B7097', shape = ellipse]
+      ggtree [label = 'Ggtree', fillcolor = '#3B7097', shape = ellipse, fontcolor = 'white']
       snpdists [label = 'Snp-dists']
-      disttips [label = 'distTips', fillcolor = '#3B7097', shape = ellipse]
+      disttips [label = 'distTips', fillcolor = '#3B7097', shape = ellipse, fontcolor = 'white']
       distmatrix [label = 'SNP distance \nmatrix', shape = folder, fillcolor = '#A9D09E']
       patdist [label = 'Patristic \ndistances', shape = folder, fillcolor = '#A9D09E']
       tree [label = 'Phylogenetic \ntree', shape = folder, fillcolor = '#A9D09E']
@@ -33,7 +33,7 @@ grViz("digraph {
       
       assembly [label = 'Annotated \nassembly', shape = diamond, fillcolor = '#75BDE0']
       iqtree [label = 'IQTree']
-      ggtree [label = 'Ggtree', fillcolor = '#3B7097', shape = ellipse]
+      ggtree [label = 'Ggtree', fillcolor = '#3B7097', shape = ellipse, fontcolor = 'white']
       snpdists [label = 'Snp-dists']
       distmatrix [label = 'SNP distance \nmatrix', shape = folder, fillcolor = '#A9D09E']
       tree [label = 'Phylogenetic \ntree', shape = folder, fillcolor = '#A9D09E']
@@ -70,8 +70,8 @@ grViz("digraph {
       assemblyqual [label = 'Assembly \nquality', shape = folder, fillcolor = '#A9D09E']
       annotgenome [label = 'Annotated \nassemblies', shape = folder, fillcolor = '#A9D09E']
       contreport [label = 'Contamination \nreport', shape = folder, fillcolor = '#A9D09E']
-      rscript1 [label = 'R Script', fillcolor = '#3B7097', shape = ellipse]
-      rscript2 [label = 'R Script', fillcolor = '#3B7097', shape = ellipse]
+      rscript1 [label = 'R Script', fillcolor = '#3B7097', shape = ellipse, fontcolor = 'white']
+      rscript2 [label = 'R Script', fillcolor = '#3B7097', shape = ellipse, fontcolor = 'white']
       
       reads -> mash -> rscript1 -> contreport
       trim -> bwamem

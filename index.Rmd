@@ -71,7 +71,7 @@ knitr::write_bib(c(.packages(), packages), 'packages.bib')
 
 # Summary (English)
 
-The occurrence of antimicrobial resistance in Norwegian livestock is generally low. This is a consequence of good animal health and welfare, which reduces the need for antimicrobial use. Quinolones are important antimicrobial compounds both for human and animal health. An increased occurrence of resistance toward these compounds in livestock have been observed in many European countries. In Norway, the use of quinolones in livestock has been restricted. Prophylactic use of any antimicrobial is prohibited. The Norwegian monitoring programme for antimicrobial resistance in feed, food and animals (NORM-VET) perform surveillance of antimicrobial resistance among commensal _E. coli_. The programme identified a low occurrence of quinolone resistance among several tested animal species. However, quinolone resistant _E. coli_ (QREC) has been detected at low levels in a high proportion of samples from both pigs and broilers. Due to the low quinolone usage, this finding was somewhat surprising. Thus, further investigation of the origin of these bacteria was warranted. The aim of this study was to compile existing data on quinolone resistance occurrence. Furthermore, quinolone resistance mechanism characterization was performed. Relationships between the isolates were investigated by using a high resolution phylogenetic approach. The results showed a low occurrence of QREC among the included animal species. A significantly higher occurrence was observed in broilers. _In-silico_ characterization of quinolone resistance mechanisms identified chromosomal mutations as the major resistance determinant. Phylogenetic analysis of QREC provided evidence for dissemination in the broiler and pig production chains. Possible persistence of QREC was detected in the broiler production environment. Major QREC sequence types were detected among the samples from broilers. Some of these sequence types had previously been reported in other Nordic countries. Furthermore, phylogenetic analysis indicate that commensal _E. coli_ rarely develop quinolone resistance in the broiler production environment. The results provide evidence for introduction of QREC to the Norwegian broiler production via imported breeding birds. The results also highlight the importance of biosecurity measures at the top of the pyramid, to prevent dissemination of QREC.
+The occurrence of antimicrobial resistance in Norwegian livestock is generally low. This is a consequence of good animal health and welfare, which reduces the need for antimicrobial use. Quinolones are important antimicrobial compounds both for human and animal health. An increased occurrence of resistance toward these compounds in livestock have been observed in many European countries. In Norway, the use of quinolones in livestock has been restricted. Prophylactic use of any antimicrobial is prohibited. The Norwegian monitoring programme for antimicrobial resistance in feed, food and animals (NORM-VET) perform surveillance of antimicrobial resistance among commensal _E. coli_. The programme identified a low occurrence of quinolone resistance among several tested animal species. However, quinolone resistant _E. coli_ (QREC) has been detected at low levels in a high proportion of samples from both pigs and broilers. Due to the low quinolone usage, this finding was somewhat surprising. Thus, further investigation of the origin of these bacteria was warranted. The aim of this study was to compile existing data on quinolone resistance occurrence. Furthermore, quinolone resistance mechanism characterization was performed. Relationships between the isolates were investigated by using a high resolution phylogenetic approach. The results showed a low occurrence of QREC among the included animal species. A significantly higher occurrence was observed in broilers. _In silico_ characterization of quinolone resistance mechanisms identified chromosomal mutations as the major resistance determinant. Phylogenetic analysis of QREC provided evidence for dissemination in the broiler and pig production chains. Possible persistence of QREC was detected in the broiler production environment. Major QREC sequence types were detected among the samples from broilers. Some of these sequence types had previously been reported in other Nordic countries. Furthermore, phylogenetic analysis indicate that commensal _E. coli_ rarely develop quinolone resistance in the broiler production environment. These results provide evidence for introduction of QREC to the Norwegian broiler production via imported breeding birds. The results also highlight the importance of biosecurity measures at the top of the pyramid, to prevent dissemination of QREC.
 
 # Summary (Norwegian)
 
@@ -88,25 +88,43 @@ tibble(
   Term = c("Quinolone resistant E. coli",
            "Antimicrobial resistance",
            "Whole genome sequencing",
-           "Multi drug resistance",
+           "Open Reading Frame",
+           "European Committee on Antimicrobial Susceptibility Testing",
            "Epidemiological cut off",
            "Minimum inhibitory concentration",
-           "Locally colinear blocks",
            "Maximum likelihood",
            "Quinolone resistance determining region",
            "Antimicrobial susceptibility testing",
-           "Plasmid mediated quinolone resistance"),
+           "Plasmid mediated quinolone resistance",
+           "Basic Local Alignment Search Tool",
+           "High Throughput Sequencing",
+           "Single Nucleotide Polymophism",
+           "Antimicrobial Resistance Identification By Assembly",
+           "Non-Metric Multidimentional Scaling",
+           "Sequence Type",
+           "Akaike's Information Criteria",
+           "Bayesian Information Criteria",
+           "Principal Component Analysis"),
   Abbreviation = c("QREC",
                    "AMR",
                    "WGS",
-                   "MDR",
+                   "ORF",
+                   "EUCAST",
                    "ECOFF",
                    "MIC",
-                   "LCB",
                    "ML",
                    "QRDR",
                    "AST",
-                   "PMQR"))%>%
+                   "PMQR",
+                   "BLAST",
+                   "HTS",
+                   "SNP",
+                   "ARIBA",
+                   "NMDS",
+                   "ST",
+                   "AIC",
+                   "BIC",
+                   "PCA"))%>%
   arrange(Term) %>% # i.e. alphabetical order by Term
   kable(booktab = T) # create nice table
 ```

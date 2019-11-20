@@ -21,35 +21,22 @@ The program ARIBA (Antimicrobial Resistance gene Identification by Assembly) [@H
 knitr::include_graphics("images/pdfs/mapping.pdf")
 ```
 
-ARIBA is a read-based algorithm that works by clustering the reference sequences from the selected database (Figure \@ref(fig:mapping)). Then, reads and their mates, i.e. the corresponding reverse sequence, are mapped to the clusters and locally assembled. The closest reference to the assembled sequence is identified, and 11 different quality metrics are calculated, such as gene completeness and overall success of the local assembly [@Hunt2017]. The combination of all metrics is encoded into a flag, which is a number given by ARIBA based on the underlying quality metrics for each predicted gene or mutation. Only one flag is given for each predicted mutation or gene, and each flag has a specific interpretation. To ensure high quality of the predicted mutation or gene, three of the 11 metrics had to be evaluated as TRUE, while four had to be evaluated as FALSE. The remaining four metrics could be either TRUE or FALSE. The metrics that were only regarded as TRUE represented the following:
-
-- 95% of the reference sequence is identical to the assembled sequence (Assembled = TRUE)
-- The gene is assembled into only one contig (Assembled into one contig = TRUE)
-- Exactly one contig in the assembly matches the reference (unique contig = TRUE)
-
-The metrics that were regarded only as FALSE represented the following:
-
-- Less than 3% of the reference sequence has more than one match to the assembly (region assembled twice = FALSE)
-- No assembly graph ambiguity (Scaffold graph bad = FALSE)
-- Assembly did not fail (Assembly fail = FALSE)
-- No technical errors when identifying closest reference sequence (ref seq choose fail = FALSE)
-
-All allowed combinations of metrics are listed in Table \@ref(tab:flag). These criteria resulted in 16 different flags that were accepted. All genes or mutations that were predicted with a non-accepted flag were removed. An R script was used to select the genes or mutations that fulfilled these criteria (www.github.com/hkaspersen/VAMPIR).
+ARIBA is a read-based algorithm that works by clustering the reference sequences from the selected database (Figure \@ref(fig:mapping)). Then, reads and their pairs (mate in Figure \@ref(fig:mapping)) are mapped to the clusters and locally assembled. The closest reference to the assembled sequence is identified, and 11 different quality metrics are calculated, such as gene completeness and overall success of the local assembly [@Hunt2017]. The combination of all metrics is encoded into a flag, which is a number given by ARIBA based on the underlying set of quality metrics for each predicted gene or mutation. Only one flag is given for each predicted mutation or gene, and each flag has a specific interpretation. In the current study, three of the 11 metrics were evaluated as TRUE, while four were evaluated as FALSE to ensure high quality of the predicted mutation or gene. The remaining four metrics could be either TRUE or FALSE. All allowed combinations of metrics are listed in Table \@ref(tab:flag). These criteria resulted in 16 different flags that were accepted. All genes or mutations that were predicted with a non-accepted flag were removed. An R script was used to select the genes or mutations that fulfilled these criteria (www.github.com/hkaspersen/VAMPIR).
 \
 ```{r flag, echo=FALSE}
 data.frame(
   "Metric" = c(
-    "Assembled",
-    "Assembled into one contig",
-    "Region assembled twice",
-    "Complete gene",
-    "Unique contig",
-    "Scaffold graph bad",
-    "Assembly fail",
-    "Variants suggests collapsed repeat",
-    "Hit both strands",
-    "Has variant",
-    "Ref seq choose fail"
+    "95% of the reference sequence is identical to the assembly",
+    "The gene is assembled into only one contig",
+    "< 3% of the reference has more than one match to the assembly",
+    "The gene is complete (from start to stop)",
+    "Exactly one contig in the assembly matches the reference",
+    "Assembly graph ambiguity",
+    "No output from assembler",
+    "Variant in position that matches to the reference",
+    "Two or more matches to the reference in opposite orientations",
+    "Variant present",
+    "Error when selecting closest reference"
   ),
   "Status" = c(
     "TRUE",
@@ -67,9 +54,21 @@ data.frame(
 ) %>%
   kable("latex",
         booktabs = TRUE,
-        caption = "All allowed combinations of metrics reported by ARIBA. All possible combinations of these metrics resulted in 16 different allowed flags. See github.com/sanger-pathogens/ariba/wiki/Task:-flag for a detailed description of each metric.") %>%
+        caption = "All metrics reported by ARIBA and their combinations used in this study. All possible combinations of these metrics resulted in 16 different allowed flags. See github.com/sanger-pathogens/ariba/wiki/Task:-flag for a detailed description of each metric.") %>%
   kable_styling(latex_option = "HOLD_position",
-                full_width = TRUE)
+                full_width = FALSE,
+                font_size = 10) %>%
+  pack_rows("Assembled", 1, 1) %>%
+  pack_rows("Assembled into one contig", 2, 2) %>%
+  pack_rows("Region assembled twice", 3, 3) %>%
+  pack_rows("Complete gene", 4,4) %>%
+  pack_rows("Unique contig", 5,5) %>%
+  pack_rows("Scaffold graph bad", 6,6) %>%
+  pack_rows("Assembly fail", 7,7) %>%
+  pack_rows("Variant suggests collapsed repeat", 8,8) %>%
+  pack_rows("Hit both strands", 9,9) %>%
+  pack_rows("Has variant", 10,10) %>%
+  pack_rows("Ref seq choose fail", 11,11)
 ```
 
 \newpage
