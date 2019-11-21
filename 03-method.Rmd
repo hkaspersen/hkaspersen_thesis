@@ -38,7 +38,7 @@ data.frame(
     "Variant present",
     "Error when selecting closest reference"
   ),
-  "Status" = c(
+  "Value" = c(
     "TRUE",
     "TRUE",
     "FALSE",
@@ -54,7 +54,7 @@ data.frame(
 ) %>%
   kable("latex",
         booktabs = TRUE,
-        caption = "All metrics reported by ARIBA and their combinations used in this study. All possible combinations of these metrics resulted in 16 different allowed flags. See github.com/sanger-pathogens/ariba/wiki/Task:-flag for a detailed description of each metric.") %>%
+        caption = "All metrics reported by ARIBA and their allowed values used in this study. All possible combinations of these metrics resulted in 16 different allowed flags. See github.com/sanger-pathogens/ariba/wiki/Task:-flag for a detailed description of each metric.") %>%
   kable_styling(latex_option = "HOLD_position",
                 full_width = FALSE,
                 font_size = 10) %>%
