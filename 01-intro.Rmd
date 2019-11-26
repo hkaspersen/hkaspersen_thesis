@@ -100,7 +100,7 @@ In this project, we wanted to investigate the evolutionary relationship between 
 ### High throughput sequencing
 The process of Illumina HTS builds upon that of Sanger sequencing. First, genomic DNA is extracted and purified. The gDNA is then fragmented and amplified through a process called library preparation. In this process, the gDNA is fragmented and adapters are placed on each end of each DNA fragment. Then, the fragments are amplified, usually by PCR. Then, the prepared fragments are placed on a flow-cell and the sequencing begins. The machine detects and registers each nucleotide through their unique fluorescent signal. The fragments are polymerized to a given length, usually between 100 - 300 base pairs [@Illumina2019]. Following sequencing, the reads can be used in a multitude of analyses, briefly summarised in Figure \@ref(fig:bioinfo).
 
-```{r, fig.cap="\\label{fig:bioinfo}Main analysis pathway for culture-based genomic data, modified from Boolchandani et al. 2019 \\citep{Boolchandani2019} with permission from Springer Nature.", echo=FALSE, message=FALSE, fig.pos="H", fig.align="center", out.width="110%",out.height="110%"}
+```{r, fig.cap="\\label{fig:bioinfo}Main analysis pathway for culture-based genomic data, modified from Boolchandani et al. 2019 \\citep{Boolchandani2019} with permission from Springer Nature.", echo=FALSE, message=FALSE, fig.pos="H", fig.align='center', out.width="110%"}
 knitr::include_graphics("images/pdfs/bioinfo.pdf")
 ```
 
