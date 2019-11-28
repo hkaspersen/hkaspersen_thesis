@@ -5,7 +5,7 @@ Here follows a summary of methods used - for details, see enclosed papers.
 <!-- Chapter 1  -->
 ## Laboratory methods
 
-All _E. coli_ isolates included in this project were isolated through the NORM-VET programme, and the methods used for isolating _E. coli_ and susceptibility testing are described in Section \@ref(norwmonitor). An _E. coli_ was categorized as quinolone resistant if the MIC value for ciprofloxacin or nalidixic acid was above 0.06 mg/L or 16 mg/L, respectively, based on ECOFF values defined by EUCAST (ECOFF values as of 01.08.2019, www.eucast.org).
+All _Escherichia coli_ isolates included in this project were isolated through the NORM-VET programme, and the methods used for isolating _E. coli_ and susceptibility testing are described in Section \@ref(norwmonitor). An _E. coli_ was categorized as quinolone resistant if the MIC value for ciprofloxacin or nalidixic acid was above 0.06 mg/L or 16 mg/L, respectively, based on ECOFF values defined by EUCAST (ECOFF values as of 01.08.2019, www.eucast.org).
 
 Library preparation and sequencing service was provided by the Norwegian Sequencing Centre (NSC, www.sequencing.uio.no), a national technology platform hosted by the University of Oslo and supported by the "Functional Genomics" and "Infrastructure" programmes of the Research Council of Norway and the South-eastern Regional Health Authorities.
 
